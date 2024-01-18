@@ -156,62 +156,65 @@ export default function Home() {
       </div>
       
 
-      {/*Count*/}
-      <div>
-        <div className="container mx-auto mt-10">
-          <div className="flex flex-col md:flex-row space-y-8 md:space-y-0 md:space-x-8 ">
-            {/* First Column */}
-            <div className="flex flex-col items-center">
-              <p className="text-sm text-gray-500">Websites build till now</p>
-              <p className="cursor-default font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-600">
-                50+
-              </p>
-            </div>
-
-            {/* Second Column */}
-            <div className="flex flex-col items-center mt-8 md:mt-0">
-              <p className="text-sm text-gray-500">Advertising run till date</p>
-              <p className="cursor-default font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-600">
-                1500+
-              </p>
-            </div>
-
-            {/* Third Column */}
-            <div className="flex flex-col items-center mt-8 md:mt-0">
-              <p className="text-sm text-gray-500">DIGITAL MARKETING clients</p>
-              <p className="cursor-default font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-600">
-                16
-              </p>
-            </div>
-          </div>
-
-          <div className="flex flex-col md:flex-row mt-8 space-y-8 md:space-y-0 md:space-x-8">
-            {/* First Column */}
-            <div className="flex flex-col items-center">
-              <p className="text-sm text-gray-500">Brands Made till now</p>
-              <p className="cursor-default font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-600">
-                9
-              </p>
-            </div>
-
-            {/* Second Column */}
-            <div className="flex flex-col items-center mt-8 md:mt-0">
-              <p className="text-sm text-gray-500">client repulsion rate</p>
-              <p className="cursor-default font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-600">
-                100%
-              </p>
-            </div>
-
-            {/* Third Column */}
-            <div className="flex flex-col items-center mt-8 md:mt-0">
-              <p className="text-sm text-gray-500">Apps developed till now</p>
-              <p className="cursor-default font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-600">
-                7
-              </p>
-            </div>
-          </div>
-        </div>
+{/*Count*/}
+<div className="flex flex-wrap items-center">
+  <div className="w-auto sm:mr-20">
+    <div className="column ">
+      {/* First Column */}
+      <div className="flex flex-col items-center p-1">
+        <p className="text-xs text-gray-500">Websites Build</p>
+        <p className="cursor-default font-extrabold text-transparent text-2xl sm:text-4xl bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-600">
+          50+
+        </p>
       </div>
+      <div className="flex flex-col items-center p-1">
+        <p className="text-xs text-gray-500">Brands Build</p>
+        <p className="cursor-default font-extrabold text-transparent text-2xl sm:text-4xl bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-600">
+          9
+        </p>
+      </div>
+    </div>
+  </div>
+  
+  <div className="w-auto sm:mr-20 ">
+    <div className="column">
+      {/* Second Column */}
+      <div className="flex flex-col items-center p-1">
+        <p className="text-xs text-gray-500">Advertisements Run</p>
+        <p className="cursor-default font-extrabold text-transparent text-2xl sm:text-4xl bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-600">
+          1500+
+        </p>
+      </div>
+      <div className="flex flex-col items-center p-1">
+        <p className="text-xs text-gray-500">clients Recursion Rate</p>
+        <p className="cursor-default font-extrabold text-transparent text-2xl sm:text-4xl bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-600">
+          100%
+        </p>
+      </div>
+    </div>
+  </div>
+  
+  <div className="w-auto sm:mr-20">
+    <div className="column ">
+      {/* Third Column */}
+      <div className="flex flex-col items-center p-1">
+        <p className="text-xs text-gray-500">Digital Marketing Clients</p>
+        <p className="cursor-default font-extrabold text-transparent text-2xl sm:text-4xl bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-600">
+          16
+        </p>
+      </div>
+      <div className="flex flex-col items-center p-1">
+        <p className="text-xs text-gray-500">Apps Developed</p>
+        <p className="cursor-default font-extrabold text-transparent text-2xl sm:text-4xl bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-600">
+          7
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    
 
       {/*Logos*/}
       <div className="pt-16">
@@ -249,6 +252,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+
 
       {/*Web Development*/}
       <div className="min-h-screen flex flex-col justify-center items-center">
