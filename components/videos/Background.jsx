@@ -2,10 +2,10 @@ import React from 'react';
 
 const VideoBackground = () => {
   return (
-    <div className="relative -mt-96 overflow-hidden flex items-center justify-center">
+    <div className="relative  flex items-center justify-center -z-10">
       <video
         className="w-full object-cover"
-        style={{ width: '70%', height: '70%' }}
+        style={{ width: '70%', height: '100%', marginTop: '-200px', overflow: 'hidden'}}
         autoPlay
         muted
         loop

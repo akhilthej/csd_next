@@ -10,13 +10,13 @@ export default function Home() {
     <main className="flex flex-col items-center">
 
 {/*herosection */}
-    <div className="min-h-screen flex items-center justify-center">
+    <div className=" flex items-center mb-20 justify-center">
       <VideoBackground />
-      <div className=" z-10 absolute ">
+      <div className=" z-10 absolute mt-40 ">
       <section class="flex items-center justify-center pt-40 pb-20 relative">
           <div class="mx-auto">
             <div class="text-center">
-              <null class="cursor-default text-sm sm:text-2xl font-extrabold leading-8 text-white">
+              <null class="cursor-default  text-sm sm:text-2xl font-extrabold leading-8 text-white">
                 DESIGN . DEVELOP & DEPLOY
               </null>
               <h1 class="cursor-default pb-0 sm:pb-5 upanddown font-extrabold text-transparent text-4xl md:text-7xl lg:text-8xl bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-600 mt-3 leading-[3.5rem] tracking-tight">
@@ -48,6 +48,7 @@ export default function Home() {
 
       
 {/*Services*/}
+<h2 className="cursor-default pb-0 sm:pb-5 upanddown font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-600 leading-[3.5rem] tracking-tight">Services</h2>
  <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
         <Link href="/services/webdevelopment"
           className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30">
