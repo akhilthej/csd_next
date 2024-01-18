@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import BrandsSlider from './Sliders/BrandsSlider'
 
 import VideoBackground from "./videos/Background";
 import {
@@ -12,6 +13,11 @@ import {
   ragingtuskers,
   serpsit,
 } from "@/public/Client_Logos/ClientsData";
+
+import BusinessWebsiteCover from '@/public/ServicesCover/BusinessWebsiteCover.webp'
+import CRMERPCover from '@/public/ServicesCover/CRMERPCover.webp'
+import CustomWebsiteCover from '@/public/ServicesCover/CustomWebsiteCover.webp'
+import EcommerceCoverImage from '@/public/ServicesCover/EcommerceCoverImage.webp'
 
 export const metadata = {
   title: 'Best Web Development & Digital marketing Company',
@@ -215,7 +221,7 @@ export default function Home() {
 
 
     
-
+<BrandsSlider />
       {/*Logos*/}
       <div className="pt-16">
         <div className="container mx-auto px-6 ">
@@ -316,7 +322,7 @@ export default function Home() {
     <div className="column">
       {/* Content for column 1 */}
       <Image
-        src={DFC}
+        src={BusinessWebsiteCover}
         alt="Card Image 1"
         className="w-full h-48 p-2 object-cover"
       />
@@ -339,7 +345,7 @@ export default function Home() {
     <div className="column">
       {/* Content for column 2 */}
       <Image
-        src={DFC}
+        src={EcommerceCoverImage}
         alt="Card Image 2"
         className="w-full h-48 p-2 object-cover"
       />
@@ -361,7 +367,7 @@ export default function Home() {
     <div className="column ">
       {/* Content for column 3 */}
       <Image
-        src={DFC}
+        src={CustomWebsiteCover}
         alt="Card Image 3"
         className="w-full h-48 p-2 object-cover"
       />
@@ -383,7 +389,7 @@ export default function Home() {
     <div className="column">
       {/* Content for column 4 */}
       <Image
-        src={DFC}
+        src={CRMERPCover}
         alt="Card Image 4"
         className="w-full h-48 p-2 object-cover"
       />
