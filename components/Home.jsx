@@ -269,115 +269,140 @@ export default function Home() {
           Build your business global today
         </div>
 
-        {/* Second Row */}
-        <div className="flex justify-center flex-col md:flex-row space-y-8 md:space-y-0 md:space-x-8">
-          {/* First Column */}
-          <div className="flex flex-col items-center">
-            <p className="text-sm text-gray-500">client retention rate</p>
-            <p className="cursor-default font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-600">
-              98.6%
-            </p>
-          </div>
+ {/*Count*/}
+<div className="flex flex-wrap items-center">
+  <div className="w-auto sm:mr-20">
+    <div className="column ">
+      {/* First Column */}
+      <div className="flex flex-col items-center p-1">
+        <p className="text-xs text-gray-500">Websites Build</p>
+        <p className="cursor-default font-extrabold text-transparent text-2xl sm:text-4xl bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-600">
+          50+
+        </p>
+      </div>
+    </div>
+  </div>
+  
+  <div className="w-auto sm:mr-20 ">
+    <div className="column">
+      {/* Second Column */}
+      <div className="flex flex-col items-center p-1">
+        <p className="text-xs text-gray-500">Advertisements Run</p>
+        <p className="cursor-default font-extrabold text-transparent text-2xl sm:text-4xl bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-600">
+          1500+
+        </p>
+      </div>
+      
+    </div>
+  </div>
+  
+  <div className="w-auto sm:mr-20">
+    <div className="column ">
+      {/* Third Column */}
+      <div className="flex flex-col items-center p-1">
+        <p className="text-xs text-gray-500">Digital Marketing Clients</p>
+        <p className="cursor-default font-extrabold text-transparent text-2xl sm:text-4xl bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-600">
+          16
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
 
-          {/* Second Column */}
-          <div className="flex flex-col items-center mt-8 md:mt-0">
-            <p className="text-sm text-gray-500">Websites build till now</p>
-            <p className="cursor-default font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-600">
-              50+
-            </p>
-          </div>
+ {/* Cards */}
+<div className="flex flex-wrap">
+  {/* First Column */}
+  <div className=" w-1/2 lg:w-1/4 p-2">
+    <div className="column">
+      {/* Content for column 1 */}
+      <Image
+        src={DFC}
+        alt="Card Image 1"
+        className="w-full h-48 p-2 object-cover"
+      />
+      <div className="p-4">
+        <h2 className="text-sm font-semibold text-white mb-2 text-center">
+          Business Websites
+        </h2>
+        <a className="text-white text-xs m-0 max-w-[20ch] opacity-50">
+          <li> Start-up Companies.</li>
+          <li> Marketing and Sales</li>
+          <li>Single Website for SEO</li>
+          <li>Enterprise</li>
+        </a>
+      </div>
+    </div>
+  </div>
 
-          {/* Third Column */}
-          <div className="flex flex-col items-center mt-8 md:mt-0">
-            <p className="text-sm text-gray-500">Project Delivery on time</p>
-            <p className="cursor-default font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-600">
-              96%
-            </p>
-          </div>
-        </div>
+  {/* Second Column */}
+  <div className=" w-1/2 lg:w-1/4 p-2">
+    <div className="column">
+      {/* Content for column 2 */}
+      <Image
+        src={DFC}
+        alt="Card Image 2"
+        className="w-full h-48 p-2 object-cover"
+      />
+      <div className="p-4">
+        <h2 className="text-sm font-semibold text-white mb-2 text-center">
+          E-commerce
+        </h2>
+        <a className="text-white text-xs m-0 max-w-[20ch] opacity-50">
+          <li>Single Vendor sales</li>
+          <li>Multi Vendor sales</li>
+          <li>Single sale page</li>
+        </a>
+      </div>
+    </div>
+  </div>
 
-        {/* Third Row */}
-        <div className="container mx-auto mt-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-            {/* Card 1 */}
-            <div className="bg-white rounded-lg overflow-hidden shadow-lg">
-              <img
-                src="https://placehold.co/300x200/d1d4ff/352cb5.png"
-                alt="Card Image 1"
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-4">
-                <h2 className="text-sm font-semibold text-black mb-2 text-center">
-                  Business Websites
-                </h2>
-                <a className="text-gray-700 text-sm">
-                  <li>Website for Start-up Compines.</li>
-                  <li>Website for Marketing and Sales</li>
-                  <li>Single Website Page for SEO</li>
-                  <li>Website for Enterprise</li>
-                </a>
-              </div>
-            </div>
+  {/* Third Column */}
+  <div className=" w-1/2 lg:w-1/4 p-2">
+    <div className="column ">
+      {/* Content for column 3 */}
+      <Image
+        src={DFC}
+        alt="Card Image 3"
+        className="w-full h-48 p-2 object-cover"
+      />
+      <div className="p-4">
+        <h2 className="text-sm font-semibold text-white mb-2 text-center">
+          Web Revamp
+        </h2>
+        <a className="text-white text-xs m-0 max-w-[20ch] opacity-50">
+          <li>Complete Redesign</li>
+          <li>Complete Custom Code.</li>
+          <li>Theme Change</li>
+        </a>
+      </div>
+    </div>
+  </div>
 
-            {/* Card 2 */}
-            <div className="bg-white rounded-lg overflow-hidden shadow-lg">
-              <img
-                src="https://placehold.co/300x200/d1d4ff/352cb5.png"
-                alt="Card Image 2"
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-4">
-                <h2 className="text-sm font-semibold text-black mb-2 text-center">
-                  E-commerce
-                </h2>
-                <a className="text-gray-700 text-sm">
-                  <li>Single Vendor sales</li>
-                  <li>Multi Vendor sales</li>
-                  <li>Single sale page</li>
-                </a>
-              </div>
-            </div>
+  {/* Fourth Column */}
+  <div className=" w-1/2 lg:w-1/4 p-2">
+    <div className="column">
+      {/* Content for column 4 */}
+      <Image
+        src={DFC}
+        alt="Card Image 4"
+        className="w-full h-48 p-2 object-cover"
+      />
+      <div className="p-4">
+        <h2 className="text-sm font-semibold text-white mb-2 text-center">
+          CRM/ERP Panels
+        </h2>
+        <a className="text-white text-xs m-0 max-w-[20ch] opacity-50">
+          <li>Custom Dashboard</li>
+          <li>Custom Management</li>
+          <li>All-in-one ERP solution.</li>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
 
-            {/* Card 3 */}
-            <div className="bg-white rounded-lg overflow-hidden shadow-lg">
-              <img
-                src="https://placehold.co/300x200/d1d4ff/352cb5.png"
-                alt="Card Image 3"
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-4">
-                <h2 className="text-sm font-semibold text-black mb-2 text-center">
-                  Web Revamp
-                </h2>
-                <a className="text-gray-700 text-sm">
-                  <li>Complete website redesign</li>
-                  <li>Complete Development and Designing</li>
-                  <li>Theme Change</li>
-                </a>
-              </div>
-            </div>
-
-            {/* Card 4 */}
-            <div className="bg-white rounded-lg overflow-hidden shadow-lg">
-              <img
-                src="https://placehold.co/300x200/d1d4ff/352cb5.png"
-                alt="Card Image 4"
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-4">
-                <h2 className="text-sm font-semibold text-black mb-2 text-center">
-                  CRM/ERP Panels
-                </h2>
-                <a className="text-gray-700 text-sm">
-                  <li>Custom dashboard for your business.</li>
-                  <li>Custom management tool.</li>
-                  <li>All in one erp solution.</li>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <button className="m-10 text-sm">Know More</button>
+<div className="text-center p-2 mt-2 bg-white text-black text-sm rounded-sm">
+       <Link href='/services/webdevelopment'> <button>Know More</button></Link></div>
       </div>
 
       {/*Digital Marketing*/}
