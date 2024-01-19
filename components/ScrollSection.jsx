@@ -57,182 +57,139 @@ function ScrollSection() {
             flexDirection: "row",
             position: "relative",
           }}>
-          <div className="h-screen w-screen flex justify-center items-center">
+          <div className=" h-screen w-screen flex justify-center items-center">
             <div className="min-h-screen min-w-full flex flex-col items-center">
               {/*Section 1*/}
-              {/*Our Services*/}
+              {/*Services*/}
               <div className="min-h-screen  lg:max-w-5xl lg:w-full flex flex-col justify-center items-center">
+
                 {/* First Row */}
                 <div className="text-center ">
                   <h2 className="cursor-default mt-8 upanddown font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-600 leading-[3.5rem] tracking-tight">
                     Our Services
                   </h2>
                   <p className=" text-sm opacity-50">
-                    Every business requires a unique website to effectively
-                    reach its customers or clients. At Cyber Space Digital,
-                    we're here to help you discover the best choices tailored to
-                    your needs.
+                    We provide the best.
                   </p>
                 </div>
-                <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-                  <Link
-                    href="/services/webdevelopment"
-                    className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-                  >
-                    <h2 className={`mb-3 text-2xl font-semibold`}>
-                      Web Development{" "}
-                      <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-                        -&gt;
-                      </span>
-                    </h2>
-                    <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-                      Find in-depth information about Next.js features and API.
-                    </p>
-                  </Link>
 
-                  <Link
-                    href="/services/digitalmarketing"
-                    className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-                  >
-                    <h2 className={`mb-3 text-2xl font-semibold`}>
-                      Digital Marketing{" "}
-                      <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-                        -&gt;
-                      </span>
-                    </h2>
-                    <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-                      Learn about Next.js in an interactive course
-                      with&nbsp;quizzes!
-                    </p>
-                  </Link>
-
-                  <Link
-                    href="/services/multimedia"
-                    className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-                  >
-                    <h2 className={`mb-3 text-2xl font-semibold`}>
-                      MultiMedia{" "}
-                      <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-                        -&gt;
-                      </span>
-                    </h2>
-                    <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-                      Explore starter templates for Next.js.
-                    </p>
-                  </Link>
-
-                  <Link
-                    href="/services/branding"
-                    className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-                  >
-                    <h2 className={`mb-3 text-2xl font-semibold`}>
-                      Branding{" "}
-                      <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-                        -&gt;
-                      </span>
-                    </h2>
-                    <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-                      Instantly deploy your Next.js site to a shareable URL with
-                      Vercel.
-                    </p>
-                  </Link>
-                  <div></div>
-                  <Link
-                    href="/services/advertising"
-                    className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-                  >
-                    <h2 className={`mb-3 text-2xl font-semibold`}>
-                      Advertising{" "}
-                      <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-                        -&gt;
-                      </span>
-                    </h2>
-                    <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-                      Find in-depth information about Next.js features and API.
-                    </p>
-                  </Link>
-
-                  <Link
-                    href="/services/mobileappdevelopment"
-                    className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-                  >
-                    <h2 className={`mb-3 text-2xl font-semibold`}>
-                      Mobile App Development{" "}
-                      <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-                        -&gt;
-                      </span>
-                    </h2>
-                    <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-                      Find in-depth information about Next.js features and API.
-                    </p>
-                  </Link>
-                  <div></div>
-                </div>
-                {/*Count*/}
-                <div className="flex flex-wrap items-center">
-                  <div className="w-auto sm:mr-20">
-                    <div className="column ">
-                      {/* First Column */}
-                      <div className="flex flex-col items-center p-1">
-                        <p className="text-xs text-gray-500">Websites Build</p>
-                        <p className="cursor-default font-extrabold text-transparent text-2xl sm:text-4xl bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-600">
-                          50+
-                        </p>
-                      </div>
-                      <div className="flex flex-col items-center p-1">
-                        <p className="text-xs text-gray-500">Brands Build</p>
-                        <p className="cursor-default font-extrabold text-transparent text-2xl sm:text-4xl bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-600">
-                          9
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="w-auto sm:mr-20 ">
+                <div className="flex flex-wrap">
+                  {/* First Column */}
+                  <div className=" w-1/2 lg:w-1/4 p-2">
                     <div className="column">
-                      {/* Second Column */}
-                      <div className="flex flex-col items-center p-1">
-                        <p className="text-xs text-gray-500">
-                          Advertisements Run
-                        </p>
-                        <p className="cursor-default font-extrabold text-transparent text-2xl sm:text-4xl bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-600">
-                          1500+
-                        </p>
-                      </div>
-                      <div className="flex flex-col items-center p-1">
-                        <p className="text-xs text-gray-500">
-                          clients Recursion Rate
-                        </p>
-                        <p className="cursor-default font-extrabold text-transparent text-2xl sm:text-4xl bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-600">
-                          100%
-                        </p>
+                      {/* Content for column 1 */}
+
+                      
+                      <div className="p-4 group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30">
+                        <h2 className="text-sm font-semibold text-white mb-2 text-center">
+                          Business Websites
+                          <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
+                        -&gt;
+                      </span>
+                        </h2>
+                        <a className="text-white text-xs m-0 max-w-[20ch] opacity-50">
+                          Description
+                        </a>
                       </div>
                     </div>
                   </div>
 
-                  <div className="w-auto sm:mr-20">
-                    <div className="column ">
-                      {/* Third Column */}
-                      <div className="flex flex-col items-center p-1">
-                        <p className="text-xs text-gray-500">
-                          Digital Marketing Clients
-                        </p>
-                        <p className="cursor-default font-extrabold text-transparent text-2xl sm:text-4xl bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-600">
-                          16
-                        </p>
-                      </div>
-                      <div className="flex flex-col items-center p-1">
-                        <p className="text-xs text-gray-500">Apps Developed</p>
-                        <p className="cursor-default font-extrabold text-transparent text-2xl sm:text-4xl bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-600">
-                          7
-                        </p>
+                  {/* Second Column */}
+                  <div className=" w-1/2 lg:w-1/4 p-2">
+                    <div className="column">
+                      {/* Content for column 2 */}
+                      <div className="p-4 group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30">
+                        <h2 className="text-sm font-semibold text-white mb-2 text-center">
+                          E-commerce
+                          <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
+                        -&gt;
+                      </span>
+                        </h2>
+                        <a className="text-white text-xs m-0 max-w-[20ch] opacity-50">
+                          Description
+                        </a>
                       </div>
                     </div>
                   </div>
+
+                  {/* Third Column */}
+                  <div className=" w-1/2 lg:w-1/4 p-2">
+                    <div className="column ">
+                      {/* Content for column 3 */}
+                      <div className="p-4 group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30">
+                        <h2 className="text-sm font-semibold text-white mb-2 text-center">
+                          Web Revamp
+                          <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
+                        -&gt;
+                      </span>
+                        </h2>
+                        <a className="text-white text-xs m-0 max-w-[20ch] opacity-50">
+                          Description
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Fourth Column */}
+                  <div className=" w-1/2 lg:w-1/4 p-2">
+                    <div className="column">
+                      {/* Content for column 4 */}
+                      <div className="p-4 group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30">
+                        <h2 className="text-sm font-semibold text-white mb-2 text-center">
+                          CRM/ERP Panels
+                          <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
+                        -&gt;
+                      </span>
+                        </h2>
+                        <a className="text-white text-xs m-0 max-w-[20ch] opacity-50">
+                          Description
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  {/* 5th Column */}
+                  <div className=" w-1/2 lg:w-1/4 p-2">
+                    <div className="column ">
+                      {/* Content for column 3 */}
+                      <div className="p-4 group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30">
+                        <h2 className="text-sm font-semibold text-white mb-2 text-center">
+                          Web Revamp
+                          <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
+                        -&gt;
+                      </span>
+                        </h2>
+                        <a className="text-white text-xs m-0 max-w-[20ch] opacity-50">
+                          Description
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* 6th Column */}
+                  <div className=" w-1/2 lg:w-1/4 p-2">
+                    <div className="column">
+                      {/* Content for column 4 */}
+                      <div className="p-4 group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30">
+                        <h2 className="text-sm font-semibold text-white mb-2 text-center">
+                          CRM/ERP Panels
+                          <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
+                        -&gt;
+                      </span>
+                        </h2>
+                        <a className="text-white text-xs m-0 max-w-[20ch] opacity-50">
+                          Description
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  
                 </div>
+
+                
               </div>
             </div>
-          </div>
+          </div> 
 
           <div className=" h-screen w-screen flex justify-center items-center">
             <div className="min-h-screen min-w-full flex flex-col items-center">
@@ -1054,7 +1011,7 @@ function ScrollSection() {
             </div>
           </div>
 
-          <div className=" h-screen w-screen flex justify-center items-center">
+          <section className=" h-screen w-screen flex justify-center items-center">
             <div className="min-h-screen min-w-full flex flex-col items-center">
               {/*Section 3*/}
               {/*MultiMedia*/}
@@ -1062,7 +1019,7 @@ function ScrollSection() {
                 {/* First Row */}
                 <div className="text-center ">
                   <h2 className="cursor-default mt-8 upanddown font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-600 leading-[3.5rem] tracking-tight">
-                    Web Development
+                    Web Development about
                   </h2>
                   <p className=" text-sm opacity-50">
                     Every business requires a unique website to effectively
@@ -1216,7 +1173,7 @@ function ScrollSection() {
                 </div>
               </div>
             </div>
-          </div>
+          </section>
 
         </div>
       </div>
