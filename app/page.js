@@ -1,11 +1,14 @@
 import Home from '@/components/Home'
-import React from 'react'
+import ScrollSmoother from '@/components/ScrollSection'
+import Home2 from '@/components/Home2'
 
 const page = () => {
   return (
-    <div>
+    <>
     <Home />
-    </div>
+    <ScrollSmoother />
+    <Home2 />
+    </>
   )
 }
 
