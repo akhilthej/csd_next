@@ -61,7 +61,7 @@ function ScrollSection() {
             <div className="min-h-screen min-w-full flex flex-col items-center">
               {/*Section 1*/}
               {/*Services*/}
-              <div className="min-h-screen  lg:max-w-5xl lg:w-full flex flex-col justify-center items-center">
+              <div className=" min-h-screen  lg:max-w-5xl lg:w-full flex flex-col justify-center items-center">
 
                 {/* First Row */}
                 <div className="text-center ">
