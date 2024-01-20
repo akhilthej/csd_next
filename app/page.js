@@ -1,4 +1,5 @@
 import Home from '@/components/Home'
+import Home2 from '@/components/Home2'
 import ScrollSmoother from '@/components/ScrollSection'
 
 const page = () => {
@@ -6,7 +7,7 @@ const page = () => {
     <>
     <Home />
     <ScrollSmoother />
-    <Home />
+    <Home2 />
     </>
   )
 }

@@ -253,93 +253,73 @@ function ScrollSection() {
                   </div>
                 </div>
 
-                {/* Cards */}
-                <div className="flex flex-wrap">
-                  {/* First Column */}
-                  <div className=" w-1/2 lg:w-1/4 p-2">
-                    <div className="column">
-                      {/* Content for column 1 */}
-                      <Image
-                        src={BusinessWebsiteCover}
-                        alt="Card Image 1"
-                        className="w-full h-48 p-2 object-cover"
-                      />
-                      <div className="p-4">
-                        <h2 className="text-sm font-semibold text-white mb-2 text-center">
-                          Business Websites
-                        </h2>
-                        <a className="text-white text-xs m-0 max-w-[20ch] opacity-50">
-                          <li> Start-up Companies.</li>
-                          <li> Marketing and Sales</li>
-                          <li>Single Website for SEO</li>
-                          <li>Enterprise</li>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
+                <div className="text-center p-2 mt-2 bg-white text-black text-sm rounded-sm">
+                  <Link href="/services/webdevelopment">
+                    {" "}
+                    <button>Know More</button>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
 
-                  {/* Second Column */}
-                  <div className=" w-1/2 lg:w-1/4 p-2">
-                    <div className="column">
-                      {/* Content for column 2 */}
-                      <Image
-                        src={EcommerceCoverImage}
-                        alt="Card Image 2"
-                        className="w-full h-48 p-2 object-cover"
-                      />
-                      <div className="p-4">
-                        <h2 className="text-sm font-semibold text-white mb-2 text-center">
-                          E-commerce
-                        </h2>
-                        <a className="text-white text-xs m-0 max-w-[20ch] opacity-50">
-                          <li>Single Vendor sales</li>
-                          <li>Multi Vendor sales</li>
-                          <li>Single sale page</li>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
+          <div className=" h-screen w-screen flex justify-center items-center">
+            <div className="min-h-screen min-w-full flex flex-col items-center">
+              {/*Section 2*/}
+              {/*Web Development*/}
+              <div className="min-h-screen  lg:max-w-5xl lg:w-full flex flex-col justify-center items-center">
+                {/* First Row */}
+                <div className="text-center ">
+                  <h2 className="cursor-default mt-8 upanddown font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-600 leading-[3.5rem] tracking-tight">
+                    Digital Marketing
+                  </h2>
+                  <p className=" text-sm opacity-50">
+                    Every business requires a unique website to effectively
+                    reach its customers or clients. At Cyber Space Digital,
+                    we're here to help you discover the best choices tailored to
+                    your needs.
+                  </p>
+                  Build your business global today
+                </div>
 
-                  {/* Third Column */}
-                  <div className=" w-1/2 lg:w-1/4 p-2">
+                {/*Count*/}
+                <div className="flex flex-wrap items-center">
+                  <div className="w-auto sm:mr-20">
                     <div className="column ">
-                      {/* Content for column 3 */}
-                      <Image
-                        src={CustomWebsiteCover}
-                        alt="Card Image 3"
-                        className="w-full h-48 p-2 object-cover"
-                      />
-                      <div className="p-4">
-                        <h2 className="text-sm font-semibold text-white mb-2 text-center">
-                          Web Revamp
-                        </h2>
-                        <a className="text-white text-xs m-0 max-w-[20ch] opacity-50">
-                          <li>Complete Redesign</li>
-                          <li>Complete Custom Code.</li>
-                          <li>Theme Change</li>
-                        </a>
+                      {/* First Column */}
+                      <div className="flex flex-col items-center p-1">
+                        <p className="text-xs text-gray-500">Websites Build</p>
+                        <p className="cursor-default font-extrabold text-transparent text-2xl sm:text-4xl bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-600">
+                          50+
+                        </p>
                       </div>
                     </div>
                   </div>
 
-                  {/* Fourth Column */}
-                  <div className=" w-1/2 lg:w-1/4 p-2">
+                  <div className="w-auto sm:mr-20 ">
                     <div className="column">
-                      {/* Content for column 4 */}
-                      <Image
-                        src={CRMERPCover}
-                        alt="Card Image 4"
-                        className="w-full h-48 p-2 object-cover"
-                      />
-                      <div className="p-4">
-                        <h2 className="text-sm font-semibold text-white mb-2 text-center">
-                          CRM/ERP Panels
-                        </h2>
-                        <a className="text-white text-xs m-0 max-w-[20ch] opacity-50">
-                          <li>Custom Dashboard</li>
-                          <li>Custom Management</li>
-                          <li>All-in-one ERP solution.</li>
-                        </a>
+                      {/* Second Column */}
+                      <div className="flex flex-col items-center p-1">
+                        <p className="text-xs text-gray-500">
+                          Advertisements Run
+                        </p>
+                        <p className="cursor-default font-extrabold text-transparent text-2xl sm:text-4xl bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-600">
+                          1500+
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="w-auto sm:mr-20">
+                    <div className="column ">
+                      {/* Third Column */}
+                      <div className="flex flex-col items-center p-1">
+                        <p className="text-xs text-gray-500">
+                          Digital Marketing Clients
+                        </p>
+                        <p className="cursor-default font-extrabold text-transparent text-2xl sm:text-4xl bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-600">
+                          16
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -357,13 +337,13 @@ function ScrollSection() {
 
           <div className=" h-screen w-screen flex justify-center items-center">
             <div className="min-h-screen min-w-full flex flex-col items-center">
-              {/*Section 3*/}
-              {/*Digital Market*/}
+              {/*Section 2*/}
+              {/*Web Development*/}
               <div className="min-h-screen  lg:max-w-5xl lg:w-full flex flex-col justify-center items-center">
                 {/* First Row */}
                 <div className="text-center ">
                   <h2 className="cursor-default mt-8 upanddown font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-600 leading-[3.5rem] tracking-tight">
-                    Web Development
+                    Multi Media
                   </h2>
                   <p className=" text-sm opacity-50">
                     Every business requires a unique website to effectively
@@ -412,98 +392,6 @@ function ScrollSection() {
                         <p className="cursor-default font-extrabold text-transparent text-2xl sm:text-4xl bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-600">
                           16
                         </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Cards */}
-                <div className="flex flex-wrap">
-                  {/* First Column */}
-                  <div className=" w-1/2 lg:w-1/4 p-2">
-                    <div className="column">
-                      {/* Content for column 1 */}
-                      <Image
-                        src={BusinessWebsiteCover}
-                        alt="Card Image 1"
-                        className="w-full h-48 p-2 object-cover"
-                      />
-                      <div className="p-4">
-                        <h2 className="text-sm font-semibold text-white mb-2 text-center">
-                          Business Websites
-                        </h2>
-                        <a className="text-white text-xs m-0 max-w-[20ch] opacity-50">
-                          <li> Start-up Companies.</li>
-                          <li> Marketing and Sales</li>
-                          <li>Single Website for SEO</li>
-                          <li>Enterprise</li>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Second Column */}
-                  <div className=" w-1/2 lg:w-1/4 p-2">
-                    <div className="column">
-                      {/* Content for column 2 */}
-                      <Image
-                        src={EcommerceCoverImage}
-                        alt="Card Image 2"
-                        className="w-full h-48 p-2 object-cover"
-                      />
-                      <div className="p-4">
-                        <h2 className="text-sm font-semibold text-white mb-2 text-center">
-                          E-commerce
-                        </h2>
-                        <a className="text-white text-xs m-0 max-w-[20ch] opacity-50">
-                          <li>Single Vendor sales</li>
-                          <li>Multi Vendor sales</li>
-                          <li>Single sale page</li>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Third Column */}
-                  <div className=" w-1/2 lg:w-1/4 p-2">
-                    <div className="column ">
-                      {/* Content for column 3 */}
-                      <Image
-                        src={CustomWebsiteCover}
-                        alt="Card Image 3"
-                        className="w-full h-48 p-2 object-cover"
-                      />
-                      <div className="p-4">
-                        <h2 className="text-sm font-semibold text-white mb-2 text-center">
-                          Web Revamp
-                        </h2>
-                        <a className="text-white text-xs m-0 max-w-[20ch] opacity-50">
-                          <li>Complete Redesign</li>
-                          <li>Complete Custom Code.</li>
-                          <li>Theme Change</li>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Fourth Column */}
-                  <div className=" w-1/2 lg:w-1/4 p-2">
-                    <div className="column">
-                      {/* Content for column 4 */}
-                      <Image
-                        src={CRMERPCover}
-                        alt="Card Image 4"
-                        className="w-full h-48 p-2 object-cover"
-                      />
-                      <div className="p-4">
-                        <h2 className="text-sm font-semibold text-white mb-2 text-center">
-                          CRM/ERP Panels
-                        </h2>
-                        <a className="text-white text-xs m-0 max-w-[20ch] opacity-50">
-                          <li>Custom Dashboard</li>
-                          <li>Custom Management</li>
-                          <li>All-in-one ERP solution.</li>
-                        </a>
                       </div>
                     </div>
                   </div>
@@ -521,13 +409,13 @@ function ScrollSection() {
 
           <div className=" h-screen w-screen flex justify-center items-center">
             <div className="min-h-screen min-w-full flex flex-col items-center">
-              {/*Section 3*/}
-              {/*MultiMedia*/}
+              {/*Section 2*/}
+              {/*Web Development*/}
               <div className="min-h-screen  lg:max-w-5xl lg:w-full flex flex-col justify-center items-center">
                 {/* First Row */}
                 <div className="text-center ">
                   <h2 className="cursor-default mt-8 upanddown font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-600 leading-[3.5rem] tracking-tight">
-                    Web Development
+                    Branding
                   </h2>
                   <p className=" text-sm opacity-50">
                     Every business requires a unique website to effectively
@@ -576,98 +464,6 @@ function ScrollSection() {
                         <p className="cursor-default font-extrabold text-transparent text-2xl sm:text-4xl bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-600">
                           16
                         </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Cards */}
-                <div className="flex flex-wrap">
-                  {/* First Column */}
-                  <div className=" w-1/2 lg:w-1/4 p-2">
-                    <div className="column">
-                      {/* Content for column 1 */}
-                      <Image
-                        src={BusinessWebsiteCover}
-                        alt="Card Image 1"
-                        className="w-full h-48 p-2 object-cover"
-                      />
-                      <div className="p-4">
-                        <h2 className="text-sm font-semibold text-white mb-2 text-center">
-                          Business Websites
-                        </h2>
-                        <a className="text-white text-xs m-0 max-w-[20ch] opacity-50">
-                          <li> Start-up Companies.</li>
-                          <li> Marketing and Sales</li>
-                          <li>Single Website for SEO</li>
-                          <li>Enterprise</li>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Second Column */}
-                  <div className=" w-1/2 lg:w-1/4 p-2">
-                    <div className="column">
-                      {/* Content for column 2 */}
-                      <Image
-                        src={EcommerceCoverImage}
-                        alt="Card Image 2"
-                        className="w-full h-48 p-2 object-cover"
-                      />
-                      <div className="p-4">
-                        <h2 className="text-sm font-semibold text-white mb-2 text-center">
-                          E-commerce
-                        </h2>
-                        <a className="text-white text-xs m-0 max-w-[20ch] opacity-50">
-                          <li>Single Vendor sales</li>
-                          <li>Multi Vendor sales</li>
-                          <li>Single sale page</li>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Third Column */}
-                  <div className=" w-1/2 lg:w-1/4 p-2">
-                    <div className="column ">
-                      {/* Content for column 3 */}
-                      <Image
-                        src={CustomWebsiteCover}
-                        alt="Card Image 3"
-                        className="w-full h-48 p-2 object-cover"
-                      />
-                      <div className="p-4">
-                        <h2 className="text-sm font-semibold text-white mb-2 text-center">
-                          Web Revamp
-                        </h2>
-                        <a className="text-white text-xs m-0 max-w-[20ch] opacity-50">
-                          <li>Complete Redesign</li>
-                          <li>Complete Custom Code.</li>
-                          <li>Theme Change</li>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Fourth Column */}
-                  <div className=" w-1/2 lg:w-1/4 p-2">
-                    <div className="column">
-                      {/* Content for column 4 */}
-                      <Image
-                        src={CRMERPCover}
-                        alt="Card Image 4"
-                        className="w-full h-48 p-2 object-cover"
-                      />
-                      <div className="p-4">
-                        <h2 className="text-sm font-semibold text-white mb-2 text-center">
-                          CRM/ERP Panels
-                        </h2>
-                        <a className="text-white text-xs m-0 max-w-[20ch] opacity-50">
-                          <li>Custom Dashboard</li>
-                          <li>Custom Management</li>
-                          <li>All-in-one ERP solution.</li>
-                        </a>
                       </div>
                     </div>
                   </div>
@@ -685,13 +481,13 @@ function ScrollSection() {
 
           <div className=" h-screen w-screen flex justify-center items-center">
             <div className="min-h-screen min-w-full flex flex-col items-center">
-              {/*Section 3*/}
-              {/*MultiMedia*/}
+              {/*Section 2*/}
+              {/*Web Development*/}
               <div className="min-h-screen  lg:max-w-5xl lg:w-full flex flex-col justify-center items-center">
                 {/* First Row */}
                 <div className="text-center ">
                   <h2 className="cursor-default mt-8 upanddown font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-600 leading-[3.5rem] tracking-tight">
-                    Web Development
+                    Advertising
                   </h2>
                   <p className=" text-sm opacity-50">
                     Every business requires a unique website to effectively
@@ -740,98 +536,6 @@ function ScrollSection() {
                         <p className="cursor-default font-extrabold text-transparent text-2xl sm:text-4xl bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-600">
                           16
                         </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Cards */}
-                <div className="flex flex-wrap">
-                  {/* First Column */}
-                  <div className=" w-1/2 lg:w-1/4 p-2">
-                    <div className="column">
-                      {/* Content for column 1 */}
-                      <Image
-                        src={BusinessWebsiteCover}
-                        alt="Card Image 1"
-                        className="w-full h-48 p-2 object-cover"
-                      />
-                      <div className="p-4">
-                        <h2 className="text-sm font-semibold text-white mb-2 text-center">
-                          Business Websites
-                        </h2>
-                        <a className="text-white text-xs m-0 max-w-[20ch] opacity-50">
-                          <li> Start-up Companies.</li>
-                          <li> Marketing and Sales</li>
-                          <li>Single Website for SEO</li>
-                          <li>Enterprise</li>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Second Column */}
-                  <div className=" w-1/2 lg:w-1/4 p-2">
-                    <div className="column">
-                      {/* Content for column 2 */}
-                      <Image
-                        src={EcommerceCoverImage}
-                        alt="Card Image 2"
-                        className="w-full h-48 p-2 object-cover"
-                      />
-                      <div className="p-4">
-                        <h2 className="text-sm font-semibold text-white mb-2 text-center">
-                          E-commerce
-                        </h2>
-                        <a className="text-white text-xs m-0 max-w-[20ch] opacity-50">
-                          <li>Single Vendor sales</li>
-                          <li>Multi Vendor sales</li>
-                          <li>Single sale page</li>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Third Column */}
-                  <div className=" w-1/2 lg:w-1/4 p-2">
-                    <div className="column ">
-                      {/* Content for column 3 */}
-                      <Image
-                        src={CustomWebsiteCover}
-                        alt="Card Image 3"
-                        className="w-full h-48 p-2 object-cover"
-                      />
-                      <div className="p-4">
-                        <h2 className="text-sm font-semibold text-white mb-2 text-center">
-                          Web Revamp
-                        </h2>
-                        <a className="text-white text-xs m-0 max-w-[20ch] opacity-50">
-                          <li>Complete Redesign</li>
-                          <li>Complete Custom Code.</li>
-                          <li>Theme Change</li>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Fourth Column */}
-                  <div className=" w-1/2 lg:w-1/4 p-2">
-                    <div className="column">
-                      {/* Content for column 4 */}
-                      <Image
-                        src={CRMERPCover}
-                        alt="Card Image 4"
-                        className="w-full h-48 p-2 object-cover"
-                      />
-                      <div className="p-4">
-                        <h2 className="text-sm font-semibold text-white mb-2 text-center">
-                          CRM/ERP Panels
-                        </h2>
-                        <a className="text-white text-xs m-0 max-w-[20ch] opacity-50">
-                          <li>Custom Dashboard</li>
-                          <li>Custom Management</li>
-                          <li>All-in-one ERP solution.</li>
-                        </a>
                       </div>
                     </div>
                   </div>
@@ -849,13 +553,13 @@ function ScrollSection() {
 
           <div className=" h-screen w-screen flex justify-center items-center">
             <div className="min-h-screen min-w-full flex flex-col items-center">
-              {/*Section 3*/}
-              {/*MultiMedia*/}
+              {/*Section 2*/}
+              {/*Web Development*/}
               <div className="min-h-screen  lg:max-w-5xl lg:w-full flex flex-col justify-center items-center">
                 {/* First Row */}
                 <div className="text-center ">
                   <h2 className="cursor-default mt-8 upanddown font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-600 leading-[3.5rem] tracking-tight">
-                    Web Development
+                    Mobile App's
                   </h2>
                   <p className=" text-sm opacity-50">
                     Every business requires a unique website to effectively
@@ -904,98 +608,6 @@ function ScrollSection() {
                         <p className="cursor-default font-extrabold text-transparent text-2xl sm:text-4xl bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-600">
                           16
                         </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Cards */}
-                <div className="flex flex-wrap">
-                  {/* First Column */}
-                  <div className=" w-1/2 lg:w-1/4 p-2">
-                    <div className="column">
-                      {/* Content for column 1 */}
-                      <Image
-                        src={BusinessWebsiteCover}
-                        alt="Card Image 1"
-                        className="w-full h-48 p-2 object-cover"
-                      />
-                      <div className="p-4">
-                        <h2 className="text-sm font-semibold text-white mb-2 text-center">
-                          Business Websites
-                        </h2>
-                        <a className="text-white text-xs m-0 max-w-[20ch] opacity-50">
-                          <li> Start-up Companies.</li>
-                          <li> Marketing and Sales</li>
-                          <li>Single Website for SEO</li>
-                          <li>Enterprise</li>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Second Column */}
-                  <div className=" w-1/2 lg:w-1/4 p-2">
-                    <div className="column">
-                      {/* Content for column 2 */}
-                      <Image
-                        src={EcommerceCoverImage}
-                        alt="Card Image 2"
-                        className="w-full h-48 p-2 object-cover"
-                      />
-                      <div className="p-4">
-                        <h2 className="text-sm font-semibold text-white mb-2 text-center">
-                          E-commerce
-                        </h2>
-                        <a className="text-white text-xs m-0 max-w-[20ch] opacity-50">
-                          <li>Single Vendor sales</li>
-                          <li>Multi Vendor sales</li>
-                          <li>Single sale page</li>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Third Column */}
-                  <div className=" w-1/2 lg:w-1/4 p-2">
-                    <div className="column ">
-                      {/* Content for column 3 */}
-                      <Image
-                        src={CustomWebsiteCover}
-                        alt="Card Image 3"
-                        className="w-full h-48 p-2 object-cover"
-                      />
-                      <div className="p-4">
-                        <h2 className="text-sm font-semibold text-white mb-2 text-center">
-                          Web Revamp
-                        </h2>
-                        <a className="text-white text-xs m-0 max-w-[20ch] opacity-50">
-                          <li>Complete Redesign</li>
-                          <li>Complete Custom Code.</li>
-                          <li>Theme Change</li>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Fourth Column */}
-                  <div className=" w-1/2 lg:w-1/4 p-2">
-                    <div className="column">
-                      {/* Content for column 4 */}
-                      <Image
-                        src={CRMERPCover}
-                        alt="Card Image 4"
-                        className="w-full h-48 p-2 object-cover"
-                      />
-                      <div className="p-4">
-                        <h2 className="text-sm font-semibold text-white mb-2 text-center">
-                          CRM/ERP Panels
-                        </h2>
-                        <a className="text-white text-xs m-0 max-w-[20ch] opacity-50">
-                          <li>Custom Dashboard</li>
-                          <li>Custom Management</li>
-                          <li>All-in-one ERP solution.</li>
-                        </a>
                       </div>
                     </div>
                   </div>
@@ -1010,170 +622,6 @@ function ScrollSection() {
               </div>
             </div>
           </div>
-
-          <section className=" h-screen w-screen flex justify-center items-center">
-            <div className="min-h-screen min-w-full flex flex-col items-center">
-              {/*Section 3*/}
-              {/*MultiMedia*/}
-              <div className="min-h-screen  lg:max-w-5xl lg:w-full flex flex-col justify-center items-center">
-                {/* First Row */}
-                <div className="text-center ">
-                  <h2 className="cursor-default mt-8 upanddown font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-600 leading-[3.5rem] tracking-tight">
-                    Web Development about
-                  </h2>
-                  <p className=" text-sm opacity-50">
-                    Every business requires a unique website to effectively
-                    reach its customers or clients. At Cyber Space Digital,
-                    we're here to help you discover the best choices tailored to
-                    your needs.
-                  </p>
-                  Build your business global today
-                </div>
-
-                {/*Count*/}
-                <div className="flex flex-wrap items-center">
-                  <div className="w-auto sm:mr-20">
-                    <div className="column ">
-                      {/* First Column */}
-                      <div className="flex flex-col items-center p-1">
-                        <p className="text-xs text-gray-500">Websites Build</p>
-                        <p className="cursor-default font-extrabold text-transparent text-2xl sm:text-4xl bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-600">
-                          50+
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="w-auto sm:mr-20 ">
-                    <div className="column">
-                      {/* Second Column */}
-                      <div className="flex flex-col items-center p-1">
-                        <p className="text-xs text-gray-500">
-                          Advertisements Run
-                        </p>
-                        <p className="cursor-default font-extrabold text-transparent text-2xl sm:text-4xl bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-600">
-                          1500+
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="w-auto sm:mr-20">
-                    <div className="column ">
-                      {/* Third Column */}
-                      <div className="flex flex-col items-center p-1">
-                        <p className="text-xs text-gray-500">
-                          Digital Marketing Clients
-                        </p>
-                        <p className="cursor-default font-extrabold text-transparent text-2xl sm:text-4xl bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-600">
-                          16
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Cards */}
-                <div className="flex flex-wrap">
-                  {/* First Column */}
-                  <div className=" w-1/2 lg:w-1/4 p-2">
-                    <div className="column">
-                      {/* Content for column 1 */}
-                      <Image
-                        src={BusinessWebsiteCover}
-                        alt="Card Image 1"
-                        className="w-full h-48 p-2 object-cover"
-                      />
-                      <div className="p-4">
-                        <h2 className="text-sm font-semibold text-white mb-2 text-center">
-                          Business Websites
-                        </h2>
-                        <a className="text-white text-xs m-0 max-w-[20ch] opacity-50">
-                          <li> Start-up Companies.</li>
-                          <li> Marketing and Sales</li>
-                          <li>Single Website for SEO</li>
-                          <li>Enterprise</li>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Second Column */}
-                  <div className=" w-1/2 lg:w-1/4 p-2">
-                    <div className="column">
-                      {/* Content for column 2 */}
-                      <Image
-                        src={EcommerceCoverImage}
-                        alt="Card Image 2"
-                        className="w-full h-48 p-2 object-cover"
-                      />
-                      <div className="p-4">
-                        <h2 className="text-sm font-semibold text-white mb-2 text-center">
-                          E-commerce
-                        </h2>
-                        <a className="text-white text-xs m-0 max-w-[20ch] opacity-50">
-                          <li>Single Vendor sales</li>
-                          <li>Multi Vendor sales</li>
-                          <li>Single sale page</li>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Third Column */}
-                  <div className=" w-1/2 lg:w-1/4 p-2">
-                    <div className="column ">
-                      {/* Content for column 3 */}
-                      <Image
-                        src={CustomWebsiteCover}
-                        alt="Card Image 3"
-                        className="w-full h-48 p-2 object-cover"
-                      />
-                      <div className="p-4">
-                        <h2 className="text-sm font-semibold text-white mb-2 text-center">
-                          Web Revamp
-                        </h2>
-                        <a className="text-white text-xs m-0 max-w-[20ch] opacity-50">
-                          <li>Complete Redesign</li>
-                          <li>Complete Custom Code.</li>
-                          <li>Theme Change</li>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Fourth Column */}
-                  <div className=" w-1/2 lg:w-1/4 p-2">
-                    <div className="column">
-                      {/* Content for column 4 */}
-                      <Image
-                        src={CRMERPCover}
-                        alt="Card Image 4"
-                        className="w-full h-48 p-2 object-cover"
-                      />
-                      <div className="p-4">
-                        <h2 className="text-sm font-semibold text-white mb-2 text-center">
-                          CRM/ERP Panels
-                        </h2>
-                        <a className="text-white text-xs m-0 max-w-[20ch] opacity-50">
-                          <li>Custom Dashboard</li>
-                          <li>Custom Management</li>
-                          <li>All-in-one ERP solution.</li>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="text-center p-2 mt-2 bg-white text-black text-sm rounded-sm">
-                  <Link href="/services/webdevelopment">
-                    {" "}
-                    <button>Know More</button>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </section>
 
         </div>
       </div>
