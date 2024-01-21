@@ -6,7 +6,6 @@ const page = () => {
   return (
     <>
     <Home />
-    <ScrollSmoother />
     <Home2 />
     </>
   )
