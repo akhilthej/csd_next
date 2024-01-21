@@ -7,6 +7,10 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import VideoBackground from "./videos/Background";
 import Link from "next/link";
 
+import BusinessWebsiteCover from "@/public/ServicesCover/BusinessWebsiteCover.webp";
+import CRMERPCover from "@/public/ServicesCover/CRMERPCover.webp";
+import CustomWebsiteCover from "@/public/ServicesCover/CustomWebsiteCover.webp";
+import EcommerceCoverImage from "@/public/ServicesCover/EcommerceCoverImage.webp";
 
 function ScrollSection() {
   const sectionRef = useRef(null);
