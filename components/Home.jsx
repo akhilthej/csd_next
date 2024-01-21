@@ -8,7 +8,7 @@ export const metadata = {
 
 export default function Home() {
   return (
-      <main className=" flex items-center justify-center min-h-screen">
+      <section className=" flex items-center justify-center min-h-screen">
         <VideoBackground />
         <div className=" z-10 relative mt-60 ">
           <section class="flex items-center justify-center relative">
@@ -40,7 +40,7 @@ export default function Home() {
             </div>
           </section>
         </div>
-      </main>
+      </section>
    
   );
 }

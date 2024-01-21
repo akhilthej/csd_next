@@ -24,7 +24,7 @@ function ScrollSection() {
         translateX: 0,
       },
       {
-        translateX: "-600vw",
+        translateX: "-800vw",
         ease: "none",
         duration: 1,
         scrollTrigger: {
@@ -52,11 +52,85 @@ function ScrollSection() {
           className=""
           style={{
             height: "100vh",
-            width: "700vw",
+            width: "900vw",
             display: "flex",
             flexDirection: "row",
             position: "relative",
           }}>
+
+            <div className=" h-screen w-screen flex justify-center items-center">
+             <div className="min-h-screen min-w-full flex flex-col items-center">
+              {/*Section 2*/}
+              {/*Web Development*/}
+              <div className="min-h-screen  lg:max-w-5xl lg:w-full flex flex-col justify-center items-center">
+                {/* First Row */}
+                <div className="text-center ">
+                  <h2 className="cursor-default mt-8 upanddown font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-600 leading-[3.5rem] tracking-tight">
+                    Mobile App's
+                  </h2>
+                  <p className=" text-sm opacity-50">
+                    Every business requires a unique website to effectively
+                    reach its customers or clients. At Cyber Space Digital,
+                    we're here to help you discover the best choices tailored to
+                    your needs.
+                  </p>
+                  Build your business global today
+                </div>
+
+                {/*Count*/}
+                <div className="flex flex-wrap items-center">
+                  <div className="w-auto sm:mr-20">
+                    <div className="column ">
+                      {/* First Column */}
+                      <div className="flex flex-col items-center p-1">
+                        <p className="text-xs text-gray-500">Websites Build</p>
+                        <p className="cursor-default font-extrabold text-transparent text-2xl sm:text-4xl bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-600">
+                          50+
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="w-auto sm:mr-20 ">
+                    <div className="column">
+                      {/* Second Column */}
+                      <div className="flex flex-col items-center p-1">
+                        <p className="text-xs text-gray-500">
+                          Advertisements Run
+                        </p>
+                        <p className="cursor-default font-extrabold text-transparent text-2xl sm:text-4xl bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-600">
+                          1500+
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="w-auto sm:mr-20">
+                    <div className="column ">
+                      {/* Third Column */}
+                      <div className="flex flex-col items-center p-1">
+                        <p className="text-xs text-gray-500">
+                          Digital Marketing Clients
+                        </p>
+                        <p className="cursor-default font-extrabold text-transparent text-2xl sm:text-4xl bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-600">
+                          16
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="text-center p-2 mt-2 bg-white text-black text-sm rounded-sm">
+                  <Link href="/services/webdevelopment">
+                    {" "}
+                    <button>Know More</button>
+                  </Link>
+                </div>
+              </div>
+             </div>
+           </div>
+
+
           <div className=" h-screen w-screen flex justify-center items-center">
             <div className="min-h-screen min-w-full flex flex-col items-center">
               {/*Section 1*/}
@@ -622,6 +696,39 @@ function ScrollSection() {
               </div>
             </div>
           </div>
+
+          <div className=" h-screen w-screen flex justify-center items-center">
+            <div className="min-h-screen min-w-full flex flex-col items-center">
+              {/*Section 2*/}
+              {/*Web Development*/}
+              <div className="min-h-screen  lg:max-w-5xl lg:w-full flex flex-col justify-center items-center">
+              <section className="text-center mx-auto my-8">
+             <h2 className="cursor-default pb-2 font-extrabold text-transparent text-2xl md:text-5xl lg:text-6xl bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-600 mt-3  tracking-tight ">
+            Need Help ?
+             </h2>
+            <p className="cursor-default text-sm font-medium text-white mt-5 mb-10">
+            Explore our comprehensive documentation for more information on our
+            services.
+             </p>
+            <div className="flex items-center justify-center gap-4 flex-wrap">
+            <Link href="/contact">
+              <button className="text-xs sm:text-sm transform rounded bg-yellow-500 border border-slate-200 px-20 py-2 font-medium text-black transition-colors hover:bg-slate-50 ">
+                FAQ
+              </button>
+            </Link>
+            <Link href="/contact">
+              <button className="text-xs sm:text-sm transform rounded border border-slate-200 px-14 py-2 font-medium text-white transition-colors hover:bg-slate-50 hover:text-black">
+                Contact us
+              </button>
+            </Link>
+            </div>
+            </section>
+
+               
+              </div>
+            </div>
+          </div>
+ 
 
         </div>
       </div>

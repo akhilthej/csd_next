@@ -18,7 +18,6 @@ export default function RootLayout({ children }) {
       <Navbar/>
       
       {children}
-      <Footerport/>
       
       </body>
     </html>
