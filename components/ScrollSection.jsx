@@ -4,7 +4,6 @@ import Image from "next/image";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
-import VideoBackground from "./videos/Background";
 import Link from "next/link";
 
 import BusinessWebsiteCover from "@/public/ServicesCover/BusinessWebsiteCover.webp";
@@ -58,46 +57,6 @@ function ScrollSection() {
             flexDirection: "row",
             position: "relative",
           }}>
-
-          <div className=" h-screen w-screen flex justify-center items-center">
-            <div className="min-h-screen min-w-full flex flex-col items-center">
-              {/*Section 1*/}
-              <main className=" flex items-center justify-center min-h-screen">
-             <VideoBackground />
-           <div className=" z-10 relative mt-60 ">
-           <section class="flex items-center justify-center relative">
-            <div class="mx-auto">
-              <div class="text-center">
-                <null class="cursor-default  text-sm sm:text-2xl font-extrabold leading-8  text-white">
-                  DESIGN . DEVELOP & DEPLOY
-                </null>
-                <h1 class="cursor-default upanddown font-extrabold text-transparent text-4xl md:text-7xl lg:text-8xl bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-600 leading-[3.5rem] tracking-tight">
-                  Cyber Space Digital
-                </h1>
-
-                <p class="cursor-default text-sm sm:text-xl font-extrabold leading-8 text-gray-200">
-                  Take your brand online today for a global presence.
-                </p>
-              </div>
-              <div class="mt-6 flex items-center justify-center gap-4 flex-wrap">
-                <a href="/contactus">
-                  <button class="text-xs sm:text-sm transform rounded bg-yellow-500 px-12 py-2 font-medium text-black transition-colors hover:bg-orange-500">
-                    Build Today
-                  </button>
-                </a>
-                <a href="/getquotation">
-                  <button class="text-xs sm:text-sm transform rounded bg-yellow-500 px-12 py-2 font-medium text-black transition-colors hover:bg-orange-500">
-                    Get Quotation
-                  </button>
-                </a>
-              </div>
-             </div>
-             </section>
-              </div>
-              </main>
-            </div>
-          </div>
-
           <div className=" h-screen w-screen flex justify-center items-center">
             <div className="min-h-screen min-w-full flex flex-col items-center">
               {/*Section 1*/}
@@ -663,7 +622,6 @@ function ScrollSection() {
               </div>
             </div>
           </div>
-
 
         </div>
       </div>
