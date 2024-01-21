@@ -4,12 +4,9 @@ import Image from "next/image";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
-import Link from "next/link";
+import Actionsection from './actionsection'
 
-import BusinessWebsiteCover from "@/public/ServicesCover/BusinessWebsiteCover.webp";
-import CRMERPCover from "@/public/ServicesCover/CRMERPCover.webp";
-import CustomWebsiteCover from "@/public/ServicesCover/CustomWebsiteCover.webp";
-import EcommerceCoverImage from "@/public/ServicesCover/EcommerceCoverImage.webp";
+import Link from "next/link";
 
 function ScrollSection() {
   const sectionRef = useRef(null);
@@ -18,6 +15,8 @@ function ScrollSection() {
   gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {
+
+
     const pin = gsap.fromTo(
       sectionRef.current,
       {
@@ -31,11 +30,14 @@ function ScrollSection() {
           trigger: triggerRef.current,
           start: "top top",
           end: "2000 top",
-          scrub: 0.6,
+          scrub: 1,
           pin: true,
+
         },
       }
     );
+
+    
     return () => {
       {
         /* A return function for killing the animation on component unmount */
@@ -45,7 +47,7 @@ function ScrollSection() {
   }, []);
 
   return (
-    <section className="overflow-hidden">
+    <div className="overflow-hidden">
       <div ref={triggerRef}>
         <div
           ref={sectionRef}
@@ -58,7 +60,7 @@ function ScrollSection() {
             position: "relative",
           }}>
 
-            <div className=" h-screen w-screen flex justify-center items-center">
+            <section className="h-screen w-screen flex justify-center items-center">
              <div className="min-h-screen min-w-full flex flex-col items-center">
               {/*Section 2*/}
               {/*Web Development*/}
@@ -128,10 +130,10 @@ function ScrollSection() {
                 </div>
               </div>
              </div>
-           </div>
+           </section>
 
 
-          <div className=" h-screen w-screen flex justify-center items-center">
+          <section className=" h-screen w-screen flex justify-center items-center">
             <div className="min-h-screen min-w-full flex flex-col items-center">
               {/*Section 1*/}
               {/*Services*/}
@@ -139,7 +141,7 @@ function ScrollSection() {
 
                 {/* First Row */}
                 <div className="text-center ">
-                  <h2 className="cursor-default mt-8 upanddown font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-600 leading-[3.5rem] tracking-tight">
+                  <h2 className=" cursor-default mt-8 upanddown font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-600 leading-[3.5rem] tracking-tight">
                     Our Services
                   </h2>
                   <p className=" text-sm opacity-50">
@@ -263,9 +265,9 @@ function ScrollSection() {
                 
               </div>
             </div>
-          </div> 
+          </section> 
 
-          <div className=" h-screen w-screen flex justify-center items-center">
+          <section className=" h-screen w-screen flex justify-center items-center">
             <div className="min-h-screen min-w-full flex flex-col items-center">
               {/*Section 2*/}
               {/*Web Development*/}
@@ -335,9 +337,9 @@ function ScrollSection() {
                 </div>
               </div>
             </div>
-          </div>
+          </section>
 
-          <div className=" h-screen w-screen flex justify-center items-center">
+          <section className=" h-screen w-screen flex justify-center items-center">
             <div className="min-h-screen min-w-full flex flex-col items-center">
               {/*Section 2*/}
               {/*Web Development*/}
@@ -407,9 +409,9 @@ function ScrollSection() {
                 </div>
               </div>
             </div>
-          </div>
+          </section>
 
-          <div className=" h-screen w-screen flex justify-center items-center">
+          <section className=" h-screen w-screen flex justify-center items-center">
             <div className="min-h-screen min-w-full flex flex-col items-center">
               {/*Section 2*/}
               {/*Web Development*/}
@@ -479,9 +481,9 @@ function ScrollSection() {
                 </div>
               </div>
             </div>
-          </div>
+          </section>
 
-          <div className=" h-screen w-screen flex justify-center items-center">
+          <section className=" h-screen w-screen flex justify-center items-center">
             <div className="min-h-screen min-w-full flex flex-col items-center">
               {/*Section 2*/}
               {/*Web Development*/}
@@ -551,9 +553,9 @@ function ScrollSection() {
                 </div>
               </div>
             </div>
-          </div>
+          </section>
 
-          <div className=" h-screen w-screen flex justify-center items-center">
+          <section className=" h-screen w-screen flex justify-center items-center">
             <div className="min-h-screen min-w-full flex flex-col items-center">
               {/*Section 2*/}
               {/*Web Development*/}
@@ -623,9 +625,9 @@ function ScrollSection() {
                 </div>
               </div>
             </div>
-          </div>
+          </section>
 
-          <div className=" h-screen w-screen flex justify-center items-center">
+          <section className=" h-screen w-screen flex justify-center items-center">
             <div className="min-h-screen min-w-full flex flex-col items-center">
               {/*Section 2*/}
               {/*Web Development*/}
@@ -695,14 +697,14 @@ function ScrollSection() {
                 </div>
               </div>
             </div>
-          </div>
+          </section>
 
-          <div className=" h-screen w-screen flex justify-center items-center">
+          <section className=" h-screen w-screen flex justify-center items-center">
             <div className="min-h-screen min-w-full flex flex-col items-center">
               {/*Section 2*/}
               {/*Web Development*/}
               <div className="min-h-screen  lg:max-w-5xl lg:w-full flex flex-col justify-center items-center">
-              <section className="text-center mx-auto my-8">
+              <div className="text-center mx-auto my-8">
              <h2 className="cursor-default pb-2 font-extrabold text-transparent text-2xl md:text-5xl lg:text-6xl bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-600 mt-3  tracking-tight ">
             Need Help ?
              </h2>
@@ -722,17 +724,17 @@ function ScrollSection() {
               </button>
             </Link>
             </div>
-            </section>
+            </div>
 
                
               </div>
             </div>
-          </div>
+          </section>
  
 
         </div>
       </div>
-    </section>
+    </div>
   );
 }
 
