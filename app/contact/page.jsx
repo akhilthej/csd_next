@@ -1,19 +1,9 @@
 'use client'
 import React, { useState } from "react";
 import Contactcover from './images/Contact_us.png'
-import WebsiteQuotation from '../../components/Forms/WebsiteQuotation'
 
 const ContactForm = () => {
-  {/*Popup Logic*/}
-  const [isPopupOpen, setPopupOpen] = useState(false);
-
-  const handleQuotationClick = () => {
-    setPopupOpen(true);
-  };
-
-  const handlePopupClose = () => {
-    setPopupOpen(false);
-  };
+  
 
   const [formData, setFormData] = useState({
     name: '',
@@ -274,9 +264,7 @@ const ContactForm = () => {
           Website Quotation <p className="text-xs text-gray-400">Get your Website Quotation now! </p>
         </section>
         </button>
-          {isPopupOpen && (
-            <WebsiteQuotation onClose={handlePopupClose} />
-          )}
+        
     </div>
 
 
