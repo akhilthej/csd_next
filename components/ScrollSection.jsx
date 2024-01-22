@@ -4,7 +4,6 @@ import Image from "next/image";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
-import Actionsection from './actionsection'
 
 import Link from "next/link";
 import Home from "./Home";
