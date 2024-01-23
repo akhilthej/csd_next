@@ -4,9 +4,9 @@ import Image from "next/image";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
-
 import Link from "next/link";
 import Home from "./Home";
+import BrandsSlider from "./Sliders/BrandsSlider";
 
 function ScrollSection() {
   const sectionRef = useRef(null);
@@ -78,132 +78,18 @@ function ScrollSection() {
                 {/* First Row */}
                 <div className="text-center ">
                   <h2 className=" cursor-default mt-8 upanddown font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-600 leading-[3.5rem] tracking-tight">
-                    Our Services
+                    Our Clients
                   </h2>
                   <p className=" text-sm opacity-50">
                     We provide the best.
                   </p>
                 </div>
-
-                <div className="flex flex-wrap">
-                  {/* First Column */}
-                  <div className=" w-1/2 lg:w-1/4 p-2">
-                    <div className="column">
-                      {/* Content for column 1 */}
-
-                      
-                      <div className="p-4 group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30">
-                        <h2 className="text-sm font-semibold text-white mb-2 text-center">
-                          Business Websites
-                          <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-                        -&gt;
-                      </span>
-                        </h2>
-                        <a className="text-white text-xs m-0 max-w-[20ch] opacity-50">
-                          Description
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Second Column */}
-                  <div className=" w-1/2 lg:w-1/4 p-2">
-                    <div className="column">
-                      {/* Content for column 2 */}
-                      <div className="p-4 group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30">
-                        <h2 className="text-sm font-semibold text-white mb-2 text-center">
-                          E-commerce
-                          <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-                        -&gt;
-                      </span>
-                        </h2>
-                        <a className="text-white text-xs m-0 max-w-[20ch] opacity-50">
-                          Description
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Third Column */}
-                  <div className=" w-1/2 lg:w-1/4 p-2">
-                    <div className="column ">
-                      {/* Content for column 3 */}
-                      <div className="p-4 group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30">
-                        <h2 className="text-sm font-semibold text-white mb-2 text-center">
-                          Web Revamp
-                          <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-                        -&gt;
-                      </span>
-                        </h2>
-                        <a className="text-white text-xs m-0 max-w-[20ch] opacity-50">
-                          Description
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Fourth Column */}
-                  <div className=" w-1/2 lg:w-1/4 p-2">
-                    <div className="column">
-                      {/* Content for column 4 */}
-                      <div className="p-4 group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30">
-                        <h2 className="text-sm font-semibold text-white mb-2 text-center">
-                          CRM/ERP Panels
-                          <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-                        -&gt;
-                      </span>
-                        </h2>
-                        <a className="text-white text-xs m-0 max-w-[20ch] opacity-50">
-                          Description
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  {/* 5th Column */}
-                  <div className=" w-1/2 lg:w-1/4 p-2">
-                    <div className="column ">
-                      {/* Content for column 3 */}
-                      <div className="p-4 group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30">
-                        <h2 className="text-sm font-semibold text-white mb-2 text-center">
-                          Web Revamp
-                          <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-                        -&gt;
-                      </span>
-                        </h2>
-                        <a className="text-white text-xs m-0 max-w-[20ch] opacity-50">
-                          Description
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* 6th Column */}
-                  <div className=" w-1/2 lg:w-1/4 p-2">
-                    <div className="column">
-                      {/* Content for column 4 */}
-                      <div className="p-4 group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30">
-                        <h2 className="text-sm font-semibold text-white mb-2 text-center">
-                          CRM/ERP Panels
-                          <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-                        -&gt;
-                      </span>
-                        </h2>
-                        <a className="text-white text-xs m-0 max-w-[20ch] opacity-50">
-                          Description
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-
-                  
-                </div>
-
-                
+<BrandsSlider />
               </div>
             </div>
           </section> 
 
-          <section className=" h-screen w-screen flex justify-center items-center">
+          <section  className=" h-screen w-screen flex justify-center items-center">
             <div className="min-h-screen min-w-full flex flex-col items-center">
               {/*Section 2*/}
               {/*Web Development*/}

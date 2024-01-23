@@ -11,76 +11,74 @@ import {
 } from "@/public/Client_Logos/ClientsData";
 import Image from 'next/image';
 
+
 const BrandsSlider = () => {
+  
   return (
 
-    <div className="py-16">
-  <div className="container m-auto px-6 space-y-8 md:px-12 lg:px-56">
-    <div className="m-auto text-center lg:w-7/12">
-      <h2 className="text-2xl text-gray-700 font-bold md:text-4xl">
-        Your favorite companies are our partners.
-      </h2>
-    </div>
-    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4">
-      <div className="p-4">
+    <div className="container mx-auto mt-8">
+    <div className="grid grid-cols-3 sm:grid-cols-3 gap-1">
+      {/* Item 1 */}
+      <div className="p-1 ">
+        {/* Add content for Item 1 */}
         <Image
           src={DFC}
           className="w-32"
           alt=""
         />
       </div>
-      <div className="p-4">
+
+      {/* Item 2 */}
+      <div className="p-1 ">
+        {/* Add content for Item 2 */}
         <Image
           src={Archivitus}
-          className="w-32 "
-          alt=""
-        />
-      </div>
-      <div className="p-4">
-        <Image
-          src={iliha}
-          className="w-32 "
-          alt=""
-        />
-      </div>
-      <div className="p-4">
-        <Image
-          src={labelanuneni}
-          className="w-32 "
-          alt=""
-        />
-      </div>
-      <div className="p-4">
-        <Image
-          src={latonskincare}
           className="w-32"
           alt=""
         />
       </div>
-      <div className="p-4">
+
+      {/* Item 3 */}
+      <div className="p-1 ">
+        {/* Add content for Item 3 */}
         <Image
-          src={Prasidda_logo}
+          src={DFC}
           className="w-32"
           alt=""
         />
       </div>
-      <div className="p-4">
+
+      {/* Item 4 */}
+      <div className="p-1 ">
+        {/* Add content for Item 4 */}
         <Image
-          src={serpsit}
-          className="w-20"
+          src={DFC}
+          className="w-32"
           alt=""
         />
       </div>
-      <div className="p-4">
+
+      {/* Item 5 */}
+      <div className="p-1 ">
+        {/* Add content for Item 5 */}
         <Image
-          src={ragingtuskers}
-          className="w-24"
+          src={DFC}
+          className="w-32"
+          alt=""
+        />
+      </div>
+
+      {/* Item 6 */}
+      <div className="p-1 ">
+        {/* Add content for Item 6 */}
+        <Image
+          src={DFC}
+          className="w-32"
           alt=""
         />
       </div>
     </div>
   </div>
-</div>
 
   )
 }

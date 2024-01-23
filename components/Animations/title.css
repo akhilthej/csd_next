@@ -13,6 +13,97 @@
   animation: fade-in 3s ease-in-out forwards;
 }
 
+
+@keyframes fade-in {
+  0% {
+      opacity: 0%;
+  }
+  75% {
+      opacity: 0%;
+  }
+  100% {
+      opacity: 100%;
+  }
+}
+.animate-fade-in-services {
+  animation: fade-in 4s ease-in-out forwards;
+}
+
+@keyframes fade-in {
+  0% {
+      opacity: 0%;
+  }
+  75% {
+      opacity: 0%;
+  }
+  100% {
+      opacity: 100%;
+  }
+}
+.animate-fade-in-services2 {
+  animation: fade-in 4.3s ease-in-out forwards;
+}
+
+@keyframes fade-in {
+  0% {
+      opacity: 0%;
+  }
+  75% {
+      opacity: 0%;
+  }
+  100% {
+      opacity: 100%;
+  }
+}
+.animate-fade-in-services3 {
+  animation: fade-in 4.6s ease-in-out forwards;
+}
+
+@keyframes fade-in {
+  0% {
+      opacity: 0%;
+  }
+  75% {
+      opacity: 0%;
+  }
+  100% {
+      opacity: 100%;
+  }
+}
+.animate-fade-in-services4 {
+  animation: fade-in 4.9s ease-in-out forwards;
+}
+
+@keyframes fade-in {
+  0% {
+      opacity: 0%;
+  }
+  75% {
+      opacity: 0%;
+  }
+  100% {
+      opacity: 100%;
+  }
+}
+.animate-fade-in-services5 {
+  animation: fade-in 5.2s ease-in-out forwards;
+}
+
+@keyframes fade-in {
+  0% {
+      opacity: 0%;
+  }
+  75% {
+      opacity: 0%;
+  }
+  100% {
+      opacity: 100%;
+  }
+}
+.animate-fade-in-services6 {
+  animation: fade-in 5.5s ease-in-out forwards;
+}
+
 @keyframes fade-left {
   0% {
       transform: translateX(100%);
