@@ -7,7 +7,7 @@ import {
   latonskincare,
   Prasidda_logo,
   ragingtuskers,
-  serpsit,
+  serpsit,ThreeFatLogo,UJB,
 } from "@/public/Client_Logos/ClientsData";
 import Image from 'next/image';
 
@@ -42,7 +42,7 @@ const BrandsSlider = () => {
       <div className="p-1 ">
         {/* Add content for Item 3 */}
         <Image
-          src={DFC}
+          src={iliha}
           className="w-32"
           alt=""
         />
@@ -52,7 +52,7 @@ const BrandsSlider = () => {
       <div className="p-1 ">
         {/* Add content for Item 4 */}
         <Image
-          src={DFC}
+          src={labelanuneni}
           className="w-32"
           alt=""
         />
@@ -62,7 +62,7 @@ const BrandsSlider = () => {
       <div className="p-1 ">
         {/* Add content for Item 5 */}
         <Image
-          src={DFC}
+          src={latonskincare}
           className="w-32"
           alt=""
         />
@@ -72,7 +72,47 @@ const BrandsSlider = () => {
       <div className="p-1 ">
         {/* Add content for Item 6 */}
         <Image
-          src={DFC}
+          src={Prasidda_logo}
+          className="w-32"
+          alt=""
+        />
+      </div>
+
+      {/* Item 7 */}
+      <div className="p-1 ">
+        {/* Add content for Item 6 */}
+        <Image
+          src={ragingtuskers}
+          className="w-32"
+          alt=""
+        />
+      </div>
+
+       {/* Item 7 */}
+       <div className="p-1 ">
+        {/* Add content for Item 6 */}
+        <Image
+          src={serpsit}
+          className="w-32"
+          alt=""
+        />
+      </div>
+
+       {/* Item 7 */}
+       <div className="p-1 ">
+        {/* Add content for Item 6 */}
+        <Image
+          src={ThreeFatLogo}
+          className="w-32"
+          alt=""
+        />
+      </div>
+
+       {/* Item 7 */}
+       <div className="p-1 ">
+        {/* Add content for Item 6 */}
+        <Image
+          src={UJB}
           className="w-32"
           alt=""
         />

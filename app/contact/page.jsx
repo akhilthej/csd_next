@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from "react";
-import Contactcover from './images/Contact_us.png'
+
 
 const ContactForm = () => {
   
@@ -51,10 +51,9 @@ const ContactForm = () => {
 
   return (
     <div>
-      
-
      {/* Title Card */}
-     <section className="py-10 sm:py-40 bg-cover bg-center" style={{ backgroundImage: `url("${Contactcover}")` }}>
+     <section className="py-10 sm:py-40 bg-cover bg-center" style={{backgroundImage: `url(/Contactus/img01.png)`,}}>
+     
         <div className="flex flex-col items-center md:flex-row justify-center">
           <div className="md:w-1/2 md:pr-10"></div>
           <div className="md:w-1/2 px-5">
@@ -129,7 +128,7 @@ const ContactForm = () => {
                         d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                       />
                     </svg>
-                    <div class="ml-2 text-sm sm:text-base text-md tracking-wide font-semibold w-">
+                    <div class="ml-2 text-xs sm:text-xs text-md tracking-wide font-semibold w-">
                       Shivaji Palem, Maddilapalem,
                       <br /> Visakhapatnam, Andhra Pradesh 530017
                     </div>
@@ -152,8 +151,8 @@ const ContactForm = () => {
                         d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                       />
                     </svg>
-                    <div class="ml-4 text-sm sm:text-base tracking-wide font-semibold w-40">
-                      +91 8143407758
+                    <div class="ml-4 text-sm sm:text-sm tracking-wide font-semibold w-40">
+                      +91-814 340 7758
                     </div>
                   </div>
 
@@ -174,7 +173,7 @@ const ContactForm = () => {
                         d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                       />
                     </svg>
-                    <div class="ml-4 text-sm sm:text-base tracking-wide font-semibold w-40">
+                    <div class="ml-4 text-xs sm:text-xs tracking-wide font-semibold w-40">
                       admin@cyberspacedigital.in
                     </div>
                   </div>
