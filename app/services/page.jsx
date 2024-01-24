@@ -205,7 +205,7 @@ const SERVICES = () => {
                   Social Media Presents
                 </h3>
                 <p className="text-white ">
-                  A company's social media presence is how they portray
+                  A company social media presence is how they portray
                   themselves online through their social networking accounts and
                   activity. Building a social media presence starts with
                   developing your goals.
@@ -292,7 +292,7 @@ const SERVICES = () => {
                       </h2>
                       <p className="mt-3 text-white ">
                         Customer relationship management (CRM) is a technology
-                        for managing all your company's relationships and
+                        for managing all your company relationships and
                         interactions with customers and potential customers. The
                         goal is simple: Improve business relationships.
                       </p>
