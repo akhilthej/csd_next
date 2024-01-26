@@ -2,6 +2,11 @@ import Image from "next/image";
 import CsdLogo from './csdv2Logo.svg';
 import Link from "next/link";
 
+import {
+  FaWhatsapp,
+} from "react-icons/fa";
+
+
 const Navbar = () => {
   return (
     <nav>
@@ -36,7 +41,7 @@ const Navbar = () => {
   {/* Container */}
   <div className="flex items-center fixed bottom-0 z-10 w-full justify-center">
     <div className="flex flex-col">
-      <div className=" px-7 py-5 mx-auto rounded-2xl shadow-xl">
+      <div className=" px-7 py-5 mx-auto rounded-2xl ">
         {/* Navigation Bar */}
         <div className="px-5 pt-3 bg-black/50 backdrop-blur-xl shadow-lg rounded-2xl">
           <div className="flex flex-row space-x-3">
@@ -154,6 +159,19 @@ const Navbar = () => {
       </div>
     </div>
   </div>
+
+
+  <section className=" flex items-end justify-start fixed bottom-0 left-0 ">
+    <div> 
+      <ul className='flex items-center  -mb-5'>
+        <div className='px-2'>
+        <Link href='https://wa.me/918143407758?text=Im%20inquiring%20from%20web%20site'><FaWhatsapp className="w-10 h-10 text-green-500 mb-5 " /></Link>
+          </div>
+        </ul>
+        <null className=' cursor-default text-white italic text-xs pb-2'>Designed & Developed by <Link href="https://cyberspacedigital.in/"> Cyber Space Digital</Link></null>
+    </div>
+  </section>
+
 </>
 
 

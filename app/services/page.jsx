@@ -40,7 +40,7 @@ const SERVICES = () => {
    <div className="grid grid-cols-3 sm:grid-cols-3 gap-2">
         {/* Item 1 */}
         <a href="/services/webdevelopment"
-          className=" animate-fade-in-services group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30">
+          className="  group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30">
 
           <h2 className=' mb-3 font-semibold text-sm'>
             Web <br/> Development{" "}
@@ -55,7 +55,7 @@ const SERVICES = () => {
 
         {/* Item 2 */}
         <Link href="/services/digitalmarketing"
-          className="animate-fade-in-services2 group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30">
+          className=" group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30">
 
           <h2 className='mb-3 font-semibold text-sm'>
             Digital <br/> Marketing{" "}
@@ -70,7 +70,7 @@ const SERVICES = () => {
 
         {/* Item 3 */}
         <Link href="/services/multimedia"
-          className="animate-fade-in-services3 group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30">
+          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30">
 
           <h2 className='mb-3 font-semibold text-sm'>
             Multi<br/> Media{" "}
@@ -85,7 +85,7 @@ const SERVICES = () => {
 
         {/* Item 4 */}
         <Link href="/services/branding"
-          className="animate-fade-in-services4 group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30">
+          className=" group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30">
 
           <h2 className='mb-3 font-semibold text-sm'>
           Branding{" "}
@@ -100,7 +100,7 @@ const SERVICES = () => {
 
         {/* Item 5 */}
         <Link href="/services/advertising"
-          className="animate-fade-in-services5 group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30">
+          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30">
 
           <h2 className='mb-3 font-semibold text-sm'>
           Advertising{" "}
@@ -115,7 +115,7 @@ const SERVICES = () => {
 
         {/* Item 6 */}
         <Link href="/services/mobileappdevelopment"
-          className="animate-fade-in-services6 group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30">
+          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30">
 
           <h2 className='mb-3 font-semibold text-sm'>
           Mobile app{" "}
