@@ -1,8 +1,8 @@
 import React from "react";
 import Link from "next/link";
 
-import { goodfirms } from "./images/Goodfirms_Logo.jpg";
-import { googlereview } from "./images/googlereview.png";
+import  goodfirms  from "./images/Goodfirms_Logo.jpg";
+import  googlereview  from "./images/googlereview.png";
 
 import footer_csd from "./images/csdv2Logofooter.svg";
 
@@ -11,7 +11,7 @@ import Image from "next/image";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   return (
-    <main className="bg-black pb-20 justify-center text-center">
+    <main className="bg-black pb-20 justify-center ">
       {/* Footer */}
       <section className="bg-black pb-5">
         <footer>
@@ -23,8 +23,8 @@ const Footer = () => {
                     src={footer_csd}
                     className="mr-5 h-10 sm:h-10"
                     alt="footer_csd"
-                    width="200" // Specify the width in pixels or another suitable unit
-                    height="200" // Specify the height in pixels or another suitable unit
+                    width="200" 
+                    height="200" 
                   />
                 </Link>
                 <p className="max-w-xs mt-4 text-sm text-gray-600 ">
