@@ -1,5 +1,3 @@
-import React from 'react'
-import VideoBackground from "../../components/videos/Background";
 
 import Link from "next/link";
 
@@ -7,7 +5,6 @@ const HomeTitle = () => {
   return (
 
      <section className="flex items-center justify-center min-h-screen">
-     <VideoBackground />
      <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden ">
        <div className="animate-fade-in">
          <null class="animate-fade-in-screen cursor-default text-sm sm:text-2xl font-bold leading-8  text-white">
