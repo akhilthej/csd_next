@@ -1,7 +1,8 @@
 "use client"
 import React from 'react';
-import blogs from './BlogsData';
+import blogs from './Data/BlogsData';
 import Link from 'next/link';
+
 import Footer from '@/components/Footer/Footer';
 
 
@@ -34,16 +35,15 @@ const Blogs = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 py-5">
       {blogs.map((blog) => (
           <div key={blog.id} className="bg-white p-4 rounded-md shadow-md">
-          <Link href={`/blog/${blog.id}`} 
-              className="text-blue-500 hover:text-yellow-500  mt-2 inline-block"
-            >
-            <img src={blog.coverImage} alt={blog.title} className="mb-4 rounded-md " style={{ width: '500px', height: '200px', objectFit: 'cover' }}
-/>
+          <Link href={`/blog/${blog.id}`}>
+             <div className="text-blue-500 hover:text-yellow-500  mt-2 inline-block">
+            <img src={blog.coverImage} alt={blog.title} className="mb-4 rounded-md " style={{ width: '500px', height: '200px', objectFit: 'cover' }}/>
+
             <h2 className="text-xl font-semibold mb-2">{blog.title}</h2>
             <h2 className="px-4 py-1 bg-black text-gray-200 inline-flex items-center justify-center mb-2">{blog.category}</h2>
             <p className="text-gray-600">{blog.excerpt}</p>
            Read More ➤➤➤
-            </Link>
+            </div></Link>
           </div>
         ))}
       </div>
