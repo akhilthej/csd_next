@@ -23,7 +23,7 @@ const Aboutus = () => {
                      diverse range of local and international brands. We have been in business for the past 6 years, providing high-quality, innovative solutions to meet the unique needs 
                      of each of our clients. With a strong focus on user experience and a deep understanding of the latest industry trends and technologies, we have established a 
                      reputation for delivering exceptional results. Our team has a wide range of skills and expertise, including front-end and back-end development, digital marketing, 
-                     and project management, which allows us to provide comprehensive services that drive real results for our clients. Whether you're a small startup or a large enterprise, 
+                     and project management, which allows us to provide comprehensive services that drive real results for our clients. Whether your a small startup or a large enterprise, 
                      we have the skills and experience to help you achieve your goals.</p>
                     <h2 className="text-3xl lg:text-4xl font-bold leading-9  pb-4 text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-600">Our Story</h2>
                     <p className="font-normal text-base leading-6 text-black ">Our story began 6 years ago, when a group of 5 engineers students came together with a shared passion for 
