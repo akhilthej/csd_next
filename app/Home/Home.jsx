@@ -3,8 +3,6 @@ import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
-import "../../components/Animations/Title.css";
-
 import HomeTitle from "./HomeTitle";
 import Home_Section1 from "./Home_Section1";
 import Home_Section2 from "./Home_Section2";
