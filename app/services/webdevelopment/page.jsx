@@ -121,7 +121,6 @@ const Webdevelopment = () => {
               </p>
             </section>
 
-            {/* "Fixed Price Model" section */}
             <div className="flex flex-wrap flex-row -mx-4 text-center">
               <div
                 className="flex-shrink px-4 max-w-full w-full sm:w-1/2 lg:w-1/4 lg:px-6 wow fadeInUp"
@@ -219,7 +218,7 @@ const Webdevelopment = () => {
                   </h3>
                   <p className="text-gray-500 text-sm">
                     if your project requires additional manpower and extra
-                    resources, we're ready to scale up and bring in the
+                    resources, we are ready to scale up and bring in the
                     necessary talent to meet your needs.
                   </p>
                 </div>
