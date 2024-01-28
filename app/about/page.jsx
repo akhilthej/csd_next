@@ -9,6 +9,8 @@ import SaiKiran from '@/public/about/saikiran.webp'
 import Srikar from '@/public/about/srikar.webp'
 import Varun from '@/public/about/varun.webp'
 
+import Image from 'next/image';
+
 const Aboutus = () => {
   return (
     <div className='Aboutus'>
@@ -19,14 +21,14 @@ const Aboutus = () => {
             <div className="flex flex-col lg:flex-row justify-between gap-8">
                 <div className="w-full lg:w-5/12 flex flex-col justify-center">         
                     <h1 className="text-3xl mt-20 lg:text-4xl lg:mt-10 font-bold leading-9  pb-4  md:text-8xl text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-600 ">About Us</h1>
-                    <p className="font-normal text-base leading-6 text-black pb-4">We are a group of 5 experienced individuals working in web development and digital services for a
+                    <p className="font-normal text-base leading-6 text-white pb-4">We are a group of 5 experienced individuals working in web development and digital services for a
                      diverse range of local and international brands. We have been in business for the past 6 years, providing high-quality, innovative solutions to meet the unique needs 
                      of each of our clients. With a strong focus on user experience and a deep understanding of the latest industry trends and technologies, we have established a 
                      reputation for delivering exceptional results. Our team has a wide range of skills and expertise, including front-end and back-end development, digital marketing, 
                      and project management, which allows us to provide comprehensive services that drive real results for our clients. Whether your a small startup or a large enterprise, 
                      we have the skills and experience to help you achieve your goals.</p>
                     <h2 className="text-3xl lg:text-4xl font-bold leading-9  pb-4 text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-600">Our Story</h2>
-                    <p className="font-normal text-base leading-6 text-black ">Our story began 6 years ago, when a group of 5 engineers students came together with a shared passion for 
+                    <p className="font-normal text-base leading-6 text-white ">Our story began 6 years ago, when a group of 5 engineers students came together with a shared passion for 
                     web development and digital services. We had all studied computer science and had a keen interest in technology, and we saw an opportunity to use our skills to help local 
                     and international brands grow their online presence.<br/>We started small, working on freelance projects and building our portfolio. We quickly realized that there was a high 
                     demand for our services and that we had a real talent for creating custom websites and web applications that met the unique needs of each of our clients.<br/>As our business 
@@ -37,8 +39,8 @@ const Aboutus = () => {
                     
                 </div>
                 <div className="w-full lg:w-8/12 lg:h-3/5">
-                    <img className="w-full h-full rounded-2xl shadow-2xl" src= {aboutcover} alt="A group of People" />
-                    <p className="font-normal text-base leading-6 mt-10 text-black ">We have had many successes and also faced many challenges, 
+                    <Image className="w-full h-full rounded-2xl shadow-2xl" src= {aboutcover} alt="A group of People" />
+                    <p className="font-normal text-base leading-6 mt-10 text-white ">We have had many successes and also faced many challenges, 
                     but we have learned from our mistakes and have grown as a team. Now, we are a team of experts who have worked with a variety of industries and have developed a deep 
                     understanding of what works best for each of them.<br/>We are proud of our achievements and are excited about the future. We are committed to continuously learning and 
                     staying up-to-date with the latest industry trends and technologies, so that we can continue to provide the best possible service to our clients.<br/>Looking back, we can 
@@ -49,7 +51,7 @@ const Aboutus = () => {
             </div>
         </div>
         <h2 className="text-3xl text-center lg:text-4xl font-bold leading-9 pb-4 text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-600">More About us</h2>
-        <p className="font-normal text-base leading-6 text-black px-10 pb-4">As a group of web developers and digital service providers, we specialize in creating custom websites and 
+        <p className="font-normal text-base leading-6 text-white px-10 pb-4">As a group of web developers and digital service providers, we specialize in creating custom websites and 
         web applications that are tailored to the specific needs of each of our clients. Our team has a wealth of experience in various web development technologies and frameworks, 
         including HTML, CSS, JavaScript, React, Angular, Vue, and more.<br/> We are also proficient in back-end development, using technologies such as NodeJS, PHP, and Python to create 
         robust and scalable systems that can handle high traffic and complex business logic. Our team is also well-versed in database management and optimization, ensuring that our solutions 
@@ -67,7 +69,7 @@ const Aboutus = () => {
       <h2 className="mb-4 text-center text-2xl  font-bold md:text-4xl text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-600">
         Leadership Board
       </h2>
-      <p className="text-black lg:w-8/12 lg:mx-auto">
+      <p className="text-white lg:w-8/12 lg:mx-auto">
         CSD is known for its multi-project handeling. we deal with various technology and
          with on development projects,the talent of its people of some of the brightest 
          minds and most experienced executives in business.
@@ -75,7 +77,7 @@ const Aboutus = () => {
     </div>
     <div className="grid gap-12 items-center md:grid-cols-3">
       <div className="space-y-4 text-center">
-        <img
+        <Image
           className=" w-64 h-64 mx-auto object-cover rounded-xl md:w-40 md:h-40 lg:w-64 lg:h-64"
           src={COO}
          
@@ -83,12 +85,12 @@ const Aboutus = () => {
           height={805}
         />
         <div>
-          <h4 className="text-2xl text-black">Pavan Kumar</h4>
-          <span className="block text-sm text-gray-900">Partner<br/>Chief Operations Officer</span>
+          <h4 className="text-2xl text-white">Pavan Kumar</h4>
+          <span className="block text-sm text-gray-500">Partner<br/>Chief Operations Officer</span>
         </div>
       </div>
       <div className="space-y-4 text-center">
-        <img
+        <Image
           className=" w-64 h-64 mx-auto object-cover rounded-xl md:w-48 md:h-64 lg:w-64 lg:h-80"
           src={CEO}
           loading="lazy"
@@ -96,13 +98,13 @@ const Aboutus = () => {
           height={667}
         />
         <div>
-          <h4 className="text-2xl text-black ">Akhil Thej Reddy</h4>
-          <span className="block text-sm text-gray-900">
+          <h4 className="text-2xl text-white ">Akhil Thej Reddy</h4>
+          <span className="block text-sm text-gray-500">
             Founder<br/>Chief Executive Officer</span>
         </div>
       </div>
       <div className="space-y-4 text-center">
-        <img
+        <Image
           className="w-64 h-64 mx-auto object-cover rounded-xl md:w-40 md:h-40 lg:w-64 lg:h-64"
           src={CTO}
           loading="lazy"
@@ -110,8 +112,8 @@ const Aboutus = () => {
           height={667}
         />
         <div>
-          <h4 className="text-2xl text-black">Riya Varma</h4>
-          <span className="block text-sm text-gray-900">
+          <h4 className="text-2xl text-white">Riya Varma</h4>
+          <span className="block text-sm text-gray-500">
           Patner<br/>Chief Technical Officer
           </span>
         </div>
@@ -128,26 +130,26 @@ const Aboutus = () => {
     <h2 className="text-3xl pb-1 font-semibold text-center capitalize lg:text-4xl text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-600">
       Our Team, Friends & Family
     </h2>
-    <p className="max-w-2xl mx-auto my-6 text-center text-gray-900">
+    <p className="max-w-2xl mx-auto my-6 text-center text-gray-500">
       We have a dedicated team of quick-learners and more than 10 years of experince in each craft.
     </p>
     <div className="grid grid-cols-1 gap-8 mt-8 xl:mt-16 md:grid-cols-2 xl:grid-cols-4">
       <div className="flex flex-col items-center p-8 transition-colors duration-200 transform cursor-pointer group hover:bg-yellow-600 rounded-xl">
-        <img
+        <Image
           className="object-cover w-32 h-40 rounded-full ring-4 ring-gray-300"
           src={Chaitanya}
         />
-        <h2 className="mt-4 text-2xl font-semibold  capitalize text-black group-hover:text-black">
+        <h2 className="mt-4 text-2xl font-semibold  capitalize text-white group-hover:text-white">
           Chaitanya Teja
         </h2>
-        <p className="mt-2  capitalize text-gray-900 group-hover:text-gray-900">
+        <p className="mt-2  capitalize text-gray-500 group-hover:text-gray-500">
         Full Stack Developer
         </p>
         
         <div className="flex mt-3 -mx-2">
           <a
             href="#"
-            className="mx-2 text-gray-900 hover:text-gray-900 group-hover:text-black"
+            className="mx-2 text-gray-500 hover:text-gray-500 group-hover:text-white"
             aria-label="Reddit"
           >
             <svg
@@ -161,7 +163,7 @@ const Aboutus = () => {
           </a>
           <a
             href="#"
-            className="mx-2 text-gray-900 hover:text-gray-900 group-hover:text-black"
+            className="mx-2 text-gray-500 hover:text-gray-500 group-hover:text-white"
             aria-label="Facebook"
           >
             <svg
@@ -175,7 +177,7 @@ const Aboutus = () => {
           </a>
           <a
             href="#"
-            className="mx-2 text-gray-900 hover:text-gray-900 group-hover:text-black"
+            className="mx-2 text-gray-500 hover:text-gray-500 group-hover:text-white"
             aria-label="Github"
           >
             <svg
@@ -190,21 +192,21 @@ const Aboutus = () => {
         </div>
       </div>
       <div className="flex flex-col items-center p-8 transition-colors duration-200 transform cursor-pointer group hover:bg-yellow-600 rounded-xl">
-        <img
+        <Image
           className="object-cover w-32 h-40 rounded-full ring-4 ring-gray-300"
           src={Srikar}
         />
-        <h2 className="mt-4 text-2xl font-semibold capitalize text-black group-hover:text-black">
+        <h2 className="mt-4 text-2xl font-semibold capitalize text-white group-hover:text-white">
           Srikar
         </h2>
-        <p className="mt-2  capitalize text-gray-900 group-hover:text-gray-900">
+        <p className="mt-2  capitalize text-gray-500 group-hover:text-gray-500">
         Devops engineer
         </p>
         
         <div className="flex mt-3 -mx-2">
           <a
             href="#"
-            className="mx-2 text-gray-900 hover:text-gray-900 group-hover:text-black"
+            className="mx-2 text-gray-500 hover:text-gray-500 group-hover:text-white"
             aria-label="Reddit"
           >
             <svg
@@ -218,7 +220,7 @@ const Aboutus = () => {
           </a>
           <a
             href="#"
-            className="mx-2 text-gray-900 hover:text-gray-900 group-hover:text-black"
+            className="mx-2 text-gray-500 hover:text-gray-500 group-hover:text-white"
             aria-label="Facebook"
           >
             <svg
@@ -232,7 +234,7 @@ const Aboutus = () => {
           </a>
           <a
             href="#"
-            className="mx-2 text-gray-900 hover:text-gray-900 group-hover:text-black"
+            className="mx-2 text-gray-500 hover:text-gray-500 group-hover:text-white"
             aria-label="Github"
           >
             <svg
@@ -248,21 +250,21 @@ const Aboutus = () => {
       </div>
       
       <div className="flex flex-col items-center p-8 transition-colors duration-200 transform cursor-pointer group hover:bg-yellow-600 rounded-xl">
-        <img
+        <Image
           className="object-cover w-32 h-40 rounded-full ring-4 ring-gray-300"
           src={Varun}
         />
-        <h2 className="mt-4 text-2xl font-semibold  capitalize text-black group-hover:text-black">
+        <h2 className="mt-4 text-2xl font-semibold  capitalize text-white group-hover:text-white">
           Tej Varun
         </h2>
-        <p className="mt-2  capitalize text-gray-900 group-hover:text-gray-900">
+        <p className="mt-2  capitalize text-gray-500 group-hover:text-gray-500">
         Senior Graphic Designer
         </p>
        
         <div className="flex mt-3 -mx-2">
           <a
             href="#"
-            className="mx-2 text-gray-900 hover:text-gray-900 group-hover:text-black"
+            className="mx-2 text-gray-500 hover:text-gray-500 group-hover:text-white"
             aria-label="Reddit"
           >
             <svg
@@ -276,7 +278,7 @@ const Aboutus = () => {
           </a>
           <a
             href="#"
-            className="mx-2 text-gray-900 hover:text-gray-900 group-hover:text-black"
+            className="mx-2 text-gray-500 hover:text-gray-500 group-hover:text-white"
             aria-label="Facebook"
           >
             <svg
@@ -290,7 +292,7 @@ const Aboutus = () => {
           </a>
           <a
             href="#"
-            className="mx-2 text-gray-900 hover:text-gray-900 group-hover:text-black"
+            className="mx-2 text-gray-500 hover:text-gray-500 group-hover:text-white"
             aria-label="Github"
           >
             <svg
@@ -305,20 +307,20 @@ const Aboutus = () => {
         </div>
       </div>
       <div className="flex flex-col items-center p-8 transition-colors duration-200 transform cursor-pointer group hover:bg-yellow-600 rounded-xl">
-        <img
+        <Image
           className="object-cover w-32 h-40 rounded-full ring-4 ring-gray-300"
           src={SaiKiran}
         />
-        <h2 className="mt-4 text-2xl font-semibold  capitalize text-black group-hover:text-black">
+        <h2 className="mt-4 text-2xl font-semibold  capitalize text-white group-hover:text-white">
           Sai Kiran
         </h2>
-        <p className="mt-2  capitalize text-gray-900 group-hover:text-gray-900">
+        <p className="mt-2  capitalize text-gray-500 group-hover:text-gray-500">
          Brand Designer
         </p>
         <div className="flex mt-3 -mx-2">
           <a
             href="#"
-            className="mx-2 text-gray-900 hover:text-gray-900 group-hover:text-black"
+            className="mx-2 text-gray-500 hover:text-gray-500 group-hover:text-white"
             aria-label="Reddit"
           >
             <svg
@@ -332,7 +334,7 @@ const Aboutus = () => {
           </a>
           <a
             href="#"
-            className="mx-2 text-gray-900 hover:text-gray-900 group-hover:text-black"
+            className="mx-2 text-gray-500 hover:text-gray-500 group-hover:text-white"
             aria-label="Facebook"
           >
             <svg
@@ -346,7 +348,7 @@ const Aboutus = () => {
           </a>
           <a
             href="#"
-            className="mx-2 text-gray-900 hover:text-gray-900 group-hover:text-black"
+            className="mx-2 text-gray-500 hover:text-gray-500 group-hover:text-white"
             aria-label="Github"
           >
             <svg
