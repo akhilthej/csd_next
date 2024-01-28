@@ -72,7 +72,7 @@ const Webdevelopment = () => {
       Build Your Web Office Online.
       </h2>
       <p className="text-sm font-medium text-white">
-      "Every business requires a unique website to effectively reach its customers or clients. At Cyber Space Digital, we're here to help you discover the best choices tailored to your needs."
+      Every business requires a unique website to effectively reach its customers or clients. At Cyber Space Digital, we are here to help you discover the best choices tailored to your needs.
      </p></div></div>
     </section>
 
