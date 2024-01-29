@@ -50,7 +50,7 @@ const BrandCarousel = () => {
         <Slider {...settings}>
           {brandImages.map((image, index) => (
             <div key={index}>
-              <Image
+              <img
                 src={image.src}
                 alt={`Brand Logo ${index + 1}`}
                 width={200} // Set the desired width
