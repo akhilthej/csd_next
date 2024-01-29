@@ -1,5 +1,4 @@
 import React from 'react'
-import BrandsSlider from "../../components/Sliders/BrandsSlider";
 
 const Home_Section1 = () => {
   return (
@@ -11,7 +10,6 @@ const Home_Section1 = () => {
        </h2>
        <p className=" text-sm opacity-50 text-white ">We provide the best.</p>
      </div>
-     <BrandsSlider />
    </div>
   )
 }
