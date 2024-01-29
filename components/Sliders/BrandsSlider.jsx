@@ -13,7 +13,9 @@ import {
   latonskincare,
   Prasidda_logo,
   ragingtuskers,
-  serpsit,ThreeFatLogo,UJB,
+  serpsit,
+  ThreeFatLogo,
+  UJB,
 } from "@/public/Client_Logos/ClientsData";
 
 const BrandCarousel = () => {
@@ -29,30 +31,30 @@ const BrandCarousel = () => {
   };
 
   const brandImages = [
-    DFC,
-  Archivitus,
-  iliha,
-  labelanuneni,
-  latonskincare,
-  Prasidda_logo,
-  ragingtuskers,
-  serpsit,ThreeFatLogo,UJB,
-    
+    { src: DFC },
+    { src: Archivitus },
+    { src: iliha },
+    { src: labelanuneni },
+    { src: latonskincare },
+    { src: Prasidda_logo },
+    { src: ragingtuskers },
+    { src: serpsit },
+    { src: ThreeFatLogo },
+    { src: UJB },
     // Add more image URLs here
   ];
 
   return (
     <div className="py-10">
-      
       <div className="container mx-auto">
         <Slider {...settings}>
-          {brandImages.map((imageUrl, index) => (
+          {brandImages.map((image, index) => (
             <div key={index}>
               <Image
-                src={imageUrl}
+                src={image.src}
                 alt={`Brand Logo ${index + 1}`}
                 width={200} // Set the desired width
-                height={80}  // Set the desired height
+                height={80} // Set the desired height
                 className="mx-auto"
               />
             </div>
