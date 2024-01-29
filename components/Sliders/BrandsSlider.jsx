@@ -1,4 +1,5 @@
-"use client"
+'use client'
+import React, { useEffect, useState } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -19,6 +20,8 @@ import {
 } from "@/public/Client_Logos/ClientsData";
 
 const BrandCarousel = () => {
+  const [slidesToShow, setSlidesToShow] = useState(6);
+
   const settings = {
     autoplay: true,
     autoplaySpeed: 1000,
@@ -27,8 +30,25 @@ const BrandCarousel = () => {
     infinite: true,
     speed: 400,
     slidesToScroll: 1,
-    slidesToShow: window.innerWidth < 768 ? 3 : 6,
+    slidesToShow: slidesToShow,
   };
+
+  useEffect(() => {
+    const updateSlidesToShow = () => {
+      setSlidesToShow(window.innerWidth < 768 ? 3 : 6);
+    };
+
+    // Initial update
+    updateSlidesToShow();
+
+    // Add event listener to update on window resize
+    window.addEventListener('resize', updateSlidesToShow);
+
+    // Clean up the event listener on component unmount
+    return () => {
+      window.removeEventListener('resize', updateSlidesToShow);
+    };
+  }, []);
 
   const brandImages = [
     { src: DFC },
@@ -50,7 +70,7 @@ const BrandCarousel = () => {
         <Slider {...settings}>
           {brandImages.map((image, index) => (
             <div key={index}>
-              <img
+              <Image
                 src={image.src}
                 alt={`Brand Logo ${index + 1}`}
                 width={200} // Set the desired width
