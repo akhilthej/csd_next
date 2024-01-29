@@ -26,110 +26,110 @@ const Home_Section8 = () => {
     </div>
 
     <section className="flex items-center justify-center py-20 px-10">
-      <div className="grid grid-cols-3 sm:grid-cols-3 gap-2">
-        {/* Item 1 */}
-        <a
-          href="/services/webdevelopment"
-          className="  group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-        >
-          <h2 className=" mb-3 font-semibold text-sm">
-            Web <br /> Development{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] sm:text-sm text-xs opacity-50">
-            Find in-depth information about Next.js features and
-            API.
-          </p>
-        </a>
+    <div className="grid grid-cols-3 sm:grid-cols-3 gap-2">
+         {/* Item 1 */}
+         <a
+           href="/services/webdevelopment"
+           className=" animate-fade-in-services group rounded-lg border border-transparent px-5 py-4 transition-colors bg-black/70 hover:border-neutral-700 hover:bg-neutral-800/30 text-white"
+         >
+           <h2 className=" mb-3 font-semibold text-sm">
+             Web <br /> Development{" "}
+             <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
+               -&gt;
+             </span>
+           </h2>
+           <p className="m-0 max-w-[30ch] sm:text-sm text-xs opacity-50">
+             Find in-depth information about Next.js features and
+             API.
+           </p>
+         </a>
 
-        {/* Item 2 */}
-        <Link
-          href="/services/digitalmarketing"
-          className=" group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-        >
-          <h2 className="mb-3 font-semibold text-sm">
-            Digital <br /> Marketing{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] sm:text-sm text-xs opacity-50">
-            Find in-depth information about Next.js features and
-            API.
-          </p>
-        </Link>
+         {/* Item 2 */}
+         <Link
+           href="/services/digitalmarketing"
+           className="animate-fade-in-services2 group rounded-lg border border-transparent px-5 py-4 transition-colors bg-black/70 hover:border-neutral-700 hover:bg-neutral-800/30 text-white"
+         >
+           <h2 className="mb-3 font-semibold text-sm">
+             Digital <br /> Marketing{" "}
+             <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
+               -&gt;
+             </span>
+           </h2>
+           <p className="m-0 max-w-[30ch] sm:text-sm text-xs opacity-50">
+             Find in-depth information about Next.js features and
+             API.
+           </p>
+         </Link>
 
-        {/* Item 3 */}
-        <Link
-          href="/services/multimedia"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-        >
-          <h2 className="mb-3 font-semibold text-sm">
-            Multi
-            <br /> Media{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] sm:text-sm text-xs opacity-50">
-            Find in-depth information about Next.js features and
-            API.
-          </p>
-        </Link>
+         {/* Item 3 */}
+         <Link
+           href="/services/multimedia"
+           className="animate-fade-in-services3 group rounded-lg border border-transparent px-5 py-4 transition-colors bg-black/70 hover:border-neutral-700 hover:bg-neutral-800/30 text-white"
+         >
+           <h2 className="mb-3 font-semibold text-sm">
+             Multi
+             <br /> Media{" "}
+             <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
+               -&gt;
+             </span>
+           </h2>
+           <p className="m-0 max-w-[30ch] sm:text-sm text-xs opacity-50">
+             Find in-depth information about Next.js features and
+             API.
+           </p>
+         </Link>
 
-        {/* Item 4 */}
-        <Link
-          href="/services/branding"
-          className=" group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-        >
-          <h2 className="mb-3 font-semibold text-sm">
-            Branding{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] sm:text-sm text-xs opacity-50">
-            Find in-depth information about Next.js features and
-            API.
-          </p>
-        </Link>
+         {/* Item 4 */}
+         <Link
+           href="/services/branding"
+           className="animate-fade-in-services4 group rounded-lg border border-transparent px-5 py-4 transition-colors bg-black/70 hover:border-neutral-700 hover:bg-neutral-800/30 text-white"
+         >
+           <h2 className="mb-3 font-semibold text-sm">
+             Branding{" "}
+             <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
+               -&gt;
+             </span>
+           </h2>
+           <p className="m-0 max-w-[30ch] sm:text-sm text-xs opacity-50">
+             Find in-depth information about Next.js features and
+             API.
+           </p>
+         </Link>
 
-        {/* Item 5 */}
-        <Link
-          href="/services/advertising"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-        >
-          <h2 className="mb-3 font-semibold text-sm">
-            Advertising{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] sm:text-sm text-xs opacity-50">
-            Find in-depth information about Next.js features and
-            API.
-          </p>
-        </Link>
+         {/* Item 5 */}
+         <Link
+           href="/services/advertising"
+           className="animate-fade-in-services5 group rounded-lg border border-transparent px-5 py-4 transition-colors bg-black/70 hover:border-neutral-700 hover:bg-neutral-800/30 text-white"
+         >
+           <h2 className="mb-3 font-semibold text-sm">
+             Advertising{" "}
+             <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
+               -&gt;
+             </span>
+           </h2>
+           <p className="m-0 max-w-[30ch] sm:text-sm text-xs opacity-50">
+             Find in-depth information about Next.js features and
+             API.
+           </p>
+         </Link>
 
-        {/* Item 6 */}
-        <Link
-          href="/services/mobileappdevelopment"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-        >
-          <h2 className="mb-3 font-semibold text-sm">
-            Mobile app{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] sm:text-sm text-xs opacity-50">
-            Find in-depth information about Next.js features and
-            API.
-          </p>
-        </Link>
-      </div>
+         {/* Item 6 */}
+         <Link
+           href="/services/mobileappdevelopment"
+           className="animate-fade-in-services6 group rounded-lg border border-transparent px-5 py-4 transition-colors bg-black/70 hover:border-neutral-700 hover:bg-neutral-800/30 text-white"
+         >
+           <h2 className="mb-3 font-semibold text-sm">
+             Mobile app{" "}
+             <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
+               -&gt;
+             </span>
+           </h2>
+           <p className="m-0 max-w-[30ch] sm:text-sm text-xs opacity-50">
+             Find in-depth information about Next.js features and
+             API.
+           </p>
+         </Link>
+       </div>
     </section>
   </div>
   )
