@@ -9,7 +9,7 @@ const Home_Section1 = () => {
        <h2 className=" cursor-default mt-8 upanddown font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-600 leading-[3.5rem] tracking-tight">
          Our Clients
        </h2>
-       <p className=" text-sm opacity-50">We provide the best.</p>
+       <p className=" text-sm opacity-50 text-white ">We provide the best.</p>
      </div>
      <BrandsSlider />
    </div>

@@ -1,4 +1,10 @@
-import React from 'react'
+import React from 'react';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+
+import Image from 'next/image';
+
 import {
   DFC,
   Archivitus,
@@ -9,118 +15,52 @@ import {
   ragingtuskers,
   serpsit,ThreeFatLogo,UJB,
 } from "@/public/Client_Logos/ClientsData";
-import Image from 'next/image';
 
+const BrandCarousel = () => {
+  const settings = {
+    autoplay: true,
+    autoplaySpeed: 1000,
+    arrows: false,
+    dots: false,
+    infinite: true,
+    speed: 400,
+    slidesToScroll: 1,
+    slidesToShow: window.innerWidth < 768 ? 3 : 6,
+  };
 
-const BrandsSlider = () => {
-  
+  const brandImages = [
+    DFC,
+  Archivitus,
+  iliha,
+  labelanuneni,
+  latonskincare,
+  Prasidda_logo,
+  ragingtuskers,
+  serpsit,ThreeFatLogo,UJB,
+    
+    // Add more image URLs here
+  ];
+
   return (
-
-    <div className="container mx-auto mt-8">
-    <div className="grid grid-cols-3 sm:grid-cols-3 gap-1">
-      {/* Item 1 */}
-      <div className="p-1 ">
-        {/* Add content for Item 1 */}
-        <Image
-          src={DFC}
-          className="w-32"
-          alt=""
-        />
-      </div>
-
-      {/* Item 2 */}
-      <div className="p-1 ">
-        {/* Add content for Item 2 */}
-        <Image
-          src={Archivitus}
-          className="w-32"
-          alt=""
-        />
-      </div>
-
-      {/* Item 3 */}
-      <div className="p-1 ">
-        {/* Add content for Item 3 */}
-        <Image
-          src={iliha}
-          className="w-32"
-          alt=""
-        />
-      </div>
-
-      {/* Item 4 */}
-      <div className="p-1 ">
-        {/* Add content for Item 4 */}
-        <Image
-          src={labelanuneni}
-          className="w-32"
-          alt=""
-        />
-      </div>
-
-      {/* Item 5 */}
-      <div className="p-1 ">
-        {/* Add content for Item 5 */}
-        <Image
-          src={latonskincare}
-          className="w-32"
-          alt=""
-        />
-      </div>
-
-      {/* Item 6 */}
-      <div className="p-1 ">
-        {/* Add content for Item 6 */}
-        <Image
-          src={Prasidda_logo}
-          className="w-32"
-          alt=""
-        />
-      </div>
-
-      {/* Item 7 */}
-      <div className="p-1 ">
-        {/* Add content for Item 6 */}
-        <Image
-          src={ragingtuskers}
-          className="w-32"
-          alt=""
-        />
-      </div>
-
-       {/* Item 7 */}
-       <div className="p-1 ">
-        {/* Add content for Item 6 */}
-        <Image
-          src={serpsit}
-          className="w-32"
-          alt=""
-        />
-      </div>
-
-       {/* Item 7 */}
-       <div className="p-1 ">
-        {/* Add content for Item 6 */}
-        <Image
-          src={ThreeFatLogo}
-          className="w-32"
-          alt=""
-        />
-      </div>
-
-       {/* Item 7 */}
-       <div className="p-1 ">
-        {/* Add content for Item 6 */}
-        <Image
-          src={UJB}
-          className="w-32"
-          alt=""
-        />
+    <div className="py-10">
+      
+      <div className="container mx-auto">
+        <Slider {...settings}>
+          {brandImages.map((imageUrl, index) => (
+            <div key={index}>
+              <Image
+                src={imageUrl}
+                alt={`Brand Logo ${index + 1}`}
+                width={200} // Set the desired width
+                height={80}  // Set the desired height
+                className="mx-auto"
+              />
+            </div>
+          ))}
+        </Slider>
       </div>
     </div>
-  </div>
+  );
+};
 
-  )
-}
-
-export default BrandsSlider
+export default BrandCarousel;

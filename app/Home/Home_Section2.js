@@ -74,9 +74,7 @@ const Home_Section1 = () => {
        </Link>
      </div>
 
-<div className='absolute bottom-0 -mb-10'>
-     <Image src={Image1} width={1000} />
-     </div>
+
 
    </div>
   )
