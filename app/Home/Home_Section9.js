@@ -1,12 +1,16 @@
-import React from 'react'
+import React from 'react';
 
 const OpenBrowserButton = () => {
   const openBrowser = () => {
-    // Specify the URL you want to open in the browser
-    const url = 'https://www.example.com';
+    const url = 'https://myaccount.aumthegame.com/register';
 
-    // Open the browser window
-    window.open(url, '_blank');
+    if (/Mobi|Android/i.test(navigator.userAgent)) {
+      // If the user is on a mobile device, open in the browser app
+      window.location.href = url;
+    } else {
+      // If the user is on a desktop, open in a new tab
+      window.open(url, '_blank');
+    }
   };
 
   return (
@@ -16,4 +20,4 @@ const OpenBrowserButton = () => {
   );
 };
 
-export default OpenBrowserButton
+export default OpenBrowserButton;
