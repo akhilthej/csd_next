@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import Home_Section9 from './Home_Section9'
 
 const Home_Section8 = () => {
   return (
