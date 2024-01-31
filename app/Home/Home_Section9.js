@@ -14,7 +14,7 @@ const OpenBrowserButton = () => {
   };
 
   return (
-    <button className='text-white' onClick={openBrowser}>
+    <button className='text-white z-20 mx-center justify-center my-center' onClick={openBrowser}>
       Open Browser
     </button>
   );

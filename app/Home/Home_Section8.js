@@ -131,7 +131,6 @@ const Home_Section8 = () => {
            </p>
          </Link>
        </div>
-       <Home_Section9 />
     </section>
   </div>
   )

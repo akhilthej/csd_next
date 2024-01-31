@@ -13,6 +13,7 @@ import Home_Section5 from "./Home_Section5";
 import Home_Section6 from "./Home_Section6";
 import Home_Section7 from "./Home_Section7";
 import Home_Section8 from "./Home_Section8";
+import Home_Section9 from "./Home_Section9";
 
 function Home() {
   const sectionRef = useRef(null);
@@ -119,6 +120,13 @@ function Home() {
             <div className="min-h-screen min-w-full flex flex-col items-center">
               {/*Section 8*/}
               <Home_Section8 />
+              
+            </div>
+          </section>
+          <section className=" h-screen w-screen flex justify-center items-center">
+            <div className="min-h-screen min-w-full flex flex-col items-center">
+              {/*Section 8*/}
+              <Home_Section9 />
               
             </div>
           </section>
