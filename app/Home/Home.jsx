@@ -3,6 +3,7 @@ import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
+
 import HomeTitle from "./HomeTitle";
 import Home_Section1 from "./Home_Section1";
 import Home_Section2 from "./Home_Section2";
@@ -12,7 +13,7 @@ import Home_Section5 from "./Home_Section5";
 import Home_Section6 from "./Home_Section6";
 import Home_Section7 from "./Home_Section7";
 import Home_Section8 from "./Home_Section8";
-
+import Home_Section9 from "./Home_Section9";
 function Home() {
   const sectionRef = useRef(null);
   const triggerRef = useRef(null);
@@ -118,6 +119,7 @@ function Home() {
             <div className="min-h-screen min-w-full flex flex-col items-center">
               {/*Section 8*/}
               <Home_Section8 />
+              <Home_Section9 />
             </div>
           </section>
         </div>
