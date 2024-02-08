@@ -1,7 +1,5 @@
 "use client";
 import React, { useRef, useEffect } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 
 import HomeTitle from "./HomeTitle";
@@ -15,50 +13,10 @@ import Home_Section7 from "./Home_Section7";
 import Home_Section8 from "./Home_Section8";
 
 function Home() {
-  const sectionRef = useRef(null);
-  const triggerRef = useRef(null);
-
-  gsap.registerPlugin(ScrollTrigger);
-
-  useEffect(() => {
-    const pin = gsap.fromTo(
-      sectionRef.current,
-      {
-        translateX: 0,
-      },
-      {
-        translateX: "-800vw",
-        ease: "none",
-        duration: 1,
-        scrollTrigger: {
-          trigger: triggerRef.current,
-          start: "top top",
-          end: "2000 top",
-          scrub: 1,
-          pin: true,
-        },
-      }
-    );
-
-    return () => {
-      pin.kill();
-    };
-  }, []);
 
   return (
     <div className="overflow-hidden">
-      <div ref={triggerRef}>
-        <div
-          ref={sectionRef}
-          className=""
-          style={{
-            height: "100vh",
-            width: "900vw",
-            display: "flex",
-            flexDirection: "row",
-            position: "relative",
-          }}
-        >
+  
           <section className="h-screen w-screen flex justify-center items-center">
             <div className="min-h-screen min-w-full flex flex-col items-center">
               {/*Section title*/}
@@ -119,13 +77,10 @@ function Home() {
             <div className="min-h-screen min-w-full flex flex-col items-center">
               {/*Section 8*/}
               <Home_Section8 />
-              
             </div>
           </section>
-         
         </div>
-      </div>
-    </div>
+  
   );
 }
 
