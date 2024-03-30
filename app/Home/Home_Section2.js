@@ -1,8 +1,5 @@
 import React from 'react'
 
-import '../../components/Animations/title.css'
-import Image from 'next/image';
-import Image1 from '@/public/Homeimg/ecom.png'
 
 
 import Link from "next/link";
