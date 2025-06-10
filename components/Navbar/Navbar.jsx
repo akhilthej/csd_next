@@ -4,6 +4,7 @@ import Link from "next/link";
 import { FaChevronDown } from "react-icons/fa";
 import { Menu, Transition } from "@headlessui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { TiThMenu } from "react-icons/ti";
 import {
   DigitalmarketingIcon,
   Advertisingicon,
@@ -98,6 +99,7 @@ const Navbar = () => {
     link3: Brandingicon,
     link4: Advertisingicon,
     link5: Mobileappicon,
+    link6: Graphicdesignicon,
   };
 
   const webDevelopmentLinks = [
@@ -609,7 +611,7 @@ const Navbar = () => {
             {/* Web Development */}
             <Menu as="div" className="relative inline-block text-left">
               <div>
-                <Menu.Button className="lg:inline-flex font-semibold antialiased hidden justify-center w-full rounded-md px-4 py-2 text-sm text-black hover:bg-yellow-500 focus:outline-none">
+                <Menu.Button className="lg:inline-flex font-semibold antialiased hidden justify-center w-full rounded-md px-4 py-2 text-[12px] text-black hover:bg-yellow-500 focus:outline-none">
                   <div className="flex items-center gap-x-1">
                     <Link
                       className="text-[12px]"
@@ -643,7 +645,7 @@ const Navbar = () => {
                                   active
                                     ? "bg-yellow-500 text-white"
                                     : "text-black",
-                                  "block px-4 py-2 text-sm"
+                                  "block px-4 py-2 text-[12px]"
                                 )}
                               >
                                 <div className="Column1 flex items-center">
@@ -653,7 +655,7 @@ const Navbar = () => {
                                   />
                                   <div>
                                     {link.title}
-                                    <p className="text-xs text-gray-700">
+                                    <p className="text-[10px] text-gray-700">
                                       {link.description}
                                     </p>
                                   </div>
@@ -675,7 +677,7 @@ const Navbar = () => {
                                   active
                                     ? "bg-yellow-500 text-white"
                                     : "text-black",
-                                  "block px-4 py-2 text-sm"
+                                  "block px-4 py-2 text-[12px]"
                                 )}
                               >
                                 <div className="Column1 flex items-center">
@@ -685,7 +687,7 @@ const Navbar = () => {
                                   />
                                   <div>
                                     {link.title}
-                                    <p className="text-xs text-gray-700">
+                                    <p className="text-[10px] text-gray-700">
                                       {link.description}
                                     </p>
                                   </div>
@@ -699,17 +701,17 @@ const Navbar = () => {
 
                     <div className="w-1/3 p-4">
                       {/* Place your image and additional content here */}
-                      <img
+                      <Image
                         className="w-[30rem] h-[10rem] object-contain"
                         src={NavImages.link1}
                         alt=""
                       />
                       <Link href="/services">
-                        <h2 className="text-blue-600 hover:text-blue-900 cursor-pointer pt-1 text-xs">
+                        <h2 className="text-blue-600 hover:text-blue-900 cursor-pointer pt-1 text-[10px]">
                           Services ➤
                         </h2>
                       </Link>
-                      <p className="text-xs text-gray-700">
+                      <p className="text-[10px] text-gray-700">
                         Know all the services we provide.
                       </p>
                     </div>
@@ -721,7 +723,7 @@ const Navbar = () => {
             {/*Mobileapp */}
             <Menu as="div" className="relative inline-block text-left">
               <div>
-                <Menu.Button className="lg:inline-flex font-semibold antialiased hidden justify-center w-full rounded-md px-4 py-2 text-sm text-black hover:bg-yellow-500 focus:outline-none">
+                <Menu.Button className="lg:inline-flex font-semibold antialiased hidden justify-center w-full rounded-md px-4 py-2 text-[12px] text-black hover:bg-yellow-500 focus:outline-none">
                   <div className="flex items-center gap-x-1">
                     <Link
                       className="text-[12px]"
@@ -755,7 +757,7 @@ const Navbar = () => {
                                   active
                                     ? "bg-yellow-500 text-white"
                                     : "text-black",
-                                  "block px-4 py-2 text-sm"
+                                  "block px-4 py-2 text-[12px]"
                                 )}
                               >
                                 <div className="Column1 flex items-center">
@@ -765,7 +767,7 @@ const Navbar = () => {
                                   />
                                   <div>
                                     {link.title}
-                                    <p className="text-xs text-gray-700">
+                                    <p className="text-[10px] text-gray-700">
                                       {link.description}
                                     </p>
                                   </div>
@@ -787,7 +789,7 @@ const Navbar = () => {
                                   active
                                     ? "bg-yellow-500 text-white"
                                     : "text-black",
-                                  "block px-4 py-2 text-sm"
+                                  "block px-4 py-2 text-[12px]"
                                 )}
                               >
                                 <div className="Column1 flex items-center">
@@ -797,7 +799,7 @@ const Navbar = () => {
                                   />
                                   <div>
                                     {link.title}
-                                    <p className="text-xs text-gray-700">
+                                    <p className="text-[10px] text-gray-700">
                                       {link.description}
                                     </p>
                                   </div>
@@ -819,7 +821,7 @@ const Navbar = () => {
                                   active
                                     ? "bg-yellow-500 text-white"
                                     : "text-black",
-                                  "block px-4 py-2 text-sm"
+                                  "block px-4 py-2 text-[12px]"
                                 )}
                               >
                                 <div className="Column1 flex items-center">
@@ -829,7 +831,7 @@ const Navbar = () => {
                                   />
                                   <div>
                                     {link.title}
-                                    <p className="text-xs text-gray-700">
+                                    <p className="text-[10px] text-gray-700">
                                       {link.description}
                                     </p>
                                   </div>
@@ -843,17 +845,17 @@ const Navbar = () => {
 
                     <div className="w-1/4 p-4">
                       {/* Place your image and additional content here */}
-                      <img
+                      <Image
                         className="w-[30rem] h-[15rem] object-contain"
                         src={NavImages.link5}
                         alt=""
                       />
                       <Link href="/services">
-                        <h2 className="text-blue-600 hover:text-blue-900 cursor-pointer pt-1 text-xs">
+                        <h2 className="text-blue-600 hover:text-blue-900 cursor-pointer pt-1 text-[10px]">
                           Services ➤
                         </h2>
                       </Link>
-                      <p className="text-xs text-gray-700">
+                      <p className="text-[10px] text-gray-700">
                         Know all the services we provide.
                       </p>
                     </div>
@@ -865,7 +867,7 @@ const Navbar = () => {
             {/* Digital Marketing */}
             <Menu as="div" className="relative inline-block text-left">
               <div>
-                <Menu.Button className="lg:inline-flex font-semibold antialiased hidden justify-center w-full rounded-md px-4 py-2 text-sm text-black hover:bg-yellow-500 focus:outline-none">
+                <Menu.Button className="lg:inline-flex font-semibold antialiased hidden justify-center w-full rounded-md px-4 py-2 text-[12px] text-black hover:bg-yellow-500 focus:outline-none">
                   <div className="flex items-center gap-x-1">
                     <Link
                       className="text-[12px]"
@@ -900,7 +902,7 @@ const Navbar = () => {
                                   active
                                     ? "bg-yellow-500 text-white"
                                     : "text-black",
-                                  "block px-4 py-2 text-sm"
+                                  "block px-4 py-2 text-[12px]"
                                 )}
                               >
                                 <div className="Column1 flex items-center">
@@ -911,7 +913,7 @@ const Navbar = () => {
                                   />
                                   <div>
                                     {link.title}
-                                    <p className="text-xs text-gray-700">
+                                    <p className="text-[10px] text-gray-700">
                                       {link.description}
                                     </p>
                                   </div>
@@ -933,7 +935,7 @@ const Navbar = () => {
                                   active
                                     ? "bg-yellow-500 text-white"
                                     : "text-black",
-                                  "block px-4 py-2 text-sm"
+                                  "block px-4 py-2 text-[12px]"
                                 )}
                               >
                                 <div className="Column1 flex items-center">
@@ -943,7 +945,7 @@ const Navbar = () => {
                                   />
                                   <div>
                                     {link.title}
-                                    <p className="text-xs text-gray-700">
+                                    <p className="text-[10px] text-gray-700">
                                       {link.description}
                                     </p>
                                   </div>
@@ -965,7 +967,7 @@ const Navbar = () => {
                                   active
                                     ? "bg-yellow-500 text-white"
                                     : "text-black",
-                                  "block px-4 py-2 text-sm"
+                                  "block px-4 py-2 text-[12px]"
                                 )}
                               >
                                 <div className="Column1 flex items-center">
@@ -975,7 +977,7 @@ const Navbar = () => {
                                   />
                                   <div>
                                     {link.title}
-                                    <p className="text-xs text-gray-700">
+                                    <p className="text-[10px] text-gray-700">
                                       {link.description}
                                     </p>
                                   </div>
@@ -989,17 +991,17 @@ const Navbar = () => {
 
                     <div className="Column w-1/4 p-4">
                       {/* Place your image and additional content here */}
-                      <img
+                      <Image
                         className="w-[30rem] h-[15rem] object-contain"
                         src={NavImages.link2}
                         alt=""
                       />
                       <Link href="/services">
-                        <h2 className="text-blue-600 hover:text-blue-900 cursor-pointer pt-1 text-xs">
+                        <h2 className="text-blue-600 hover:text-blue-900 cursor-pointer pt-1 text-[10px]">
                           Services ➤
                         </h2>
                       </Link>
-                      <p className="text-xs text-gray-700">
+                      <p className="text-[10px] text-gray-700">
                         Know all the services we provide.
                       </p>
                     </div>
@@ -1010,9 +1012,9 @@ const Navbar = () => {
             </Menu>
 
             {/*Multimedia */}
-            <Menu as="div" className="relative inline-block text-left">
+            <Menu as="div" className=" relative inline-block text-left">
               <div>
-                <Menu.Button className="lg:inline-flex font-semibold antialiased hidden justify-center w-full rounded-md px-4 py-2 text-sm text-black hover:bg-yellow-500 focus:outline-none">
+                <Menu.Button className="lg:inline-flex font-semibold antialiased hidden justify-center w-full rounded-md px-4 py-2 text-[12px] text-black hover:bg-yellow-500 focus:outline-none">
                   <div className="flex items-center gap-x-1">
                     <Link
                       className="text-[12px]"
@@ -1036,7 +1038,7 @@ const Navbar = () => {
               >
                 <Menu.Items className="origin-top-right fixed right-0 mt-4 w-screen rounded-md shadow-lg bg-gray-300 divide-y divide-gray-400 focus:outline-none z-50">
                   <div className="flex">
-                    <div className="w-1/4 p-4">
+                    <div className="w-1/5 ">
                       {multimediaLinks.slice(0, 5).map((link) => (
                         <Menu.Item key={link.path}>
                           {({ active }) => (
@@ -1046,7 +1048,7 @@ const Navbar = () => {
                                   active
                                     ? "bg-yellow-500 text-white"
                                     : "text-black",
-                                  "block px-4 py-2 text-sm"
+                                  "block px-4 py-2 text-[12px]"
                                 )}
                               >
                                 <div className="Column1 flex items-center">
@@ -1056,7 +1058,7 @@ const Navbar = () => {
                                   />
                                   <div>
                                     {link.title}
-                                    <p className="text-xs text-gray-700">
+                                    <p className="text-[10px] text-gray-700">
                                       {link.description}
                                     </p>
                                   </div>
@@ -1068,7 +1070,7 @@ const Navbar = () => {
                       ))}
                     </div>
 
-                    <div className="w-1/4 p-4">
+                    <div className="w-1/5 ">
                       {multimediaLinks.slice(5, 10).map((link) => (
                         <Menu.Item key={link.path}>
                           {({ active }) => (
@@ -1078,7 +1080,7 @@ const Navbar = () => {
                                   active
                                     ? "bg-yellow-500 text-white"
                                     : "text-black",
-                                  "block px-4 py-2 text-sm"
+                                  "block px-4 py-2 text-[12px]"
                                 )}
                               >
                                 <div className="Column1 flex items-center">
@@ -1088,7 +1090,7 @@ const Navbar = () => {
                                   />
                                   <div>
                                     {link.title}
-                                    <p className="text-xs text-gray-700">
+                                    <p className="text-[10px] text-gray-700">
                                       {link.description}
                                     </p>
                                   </div>
@@ -1100,7 +1102,7 @@ const Navbar = () => {
                       ))}
                     </div>
 
-                    <div className="w-1/4 p-4">
+                    <div className="w-1/5 ">
                       {multimediaLinks.slice(10, 15).map((link) => (
                         <Menu.Item key={link.path}>
                           {({ active }) => (
@@ -1110,7 +1112,7 @@ const Navbar = () => {
                                   active
                                     ? "bg-yellow-500 text-white"
                                     : "text-black",
-                                  "block px-4 py-2 text-sm"
+                                  "block px-4 py-2 text-[12px]"
                                 )}
                               >
                                 <div className="Column1 flex items-center">
@@ -1120,7 +1122,7 @@ const Navbar = () => {
                                   />
                                   <div>
                                     {link.title}
-                                    <p className="text-xs text-gray-700">
+                                    <p className="text-[10px] text-gray-700">
                                       {link.description}
                                     </p>
                                   </div>
@@ -1132,7 +1134,7 @@ const Navbar = () => {
                       ))}
                     </div>
 
-                    <div className="w-1/4 p-4">
+                    <div className="w-1/5">
                       {multimediaLinks.slice(15, 20).map((link) => (
                         <Menu.Item key={link.path}>
                           {({ active }) => (
@@ -1142,7 +1144,7 @@ const Navbar = () => {
                                   active
                                     ? "bg-yellow-500 text-white"
                                     : "text-black",
-                                  "block px-4 py-2 text-sm"
+                                  "block px-4 py-2 text-[12px]"
                                 )}
                               >
                                 <div className="Column1 flex items-center">
@@ -1152,7 +1154,7 @@ const Navbar = () => {
                                   />
                                   <div>
                                     {link.title}
-                                    <p className="text-xs text-gray-700">
+                                    <p className="text-[10px] text-gray-700">
                                       {link.description}
                                     </p>
                                   </div>
@@ -1163,6 +1165,23 @@ const Navbar = () => {
                         </Menu.Item>
                       ))}
                     </div>
+
+                    <div className="Column w-1/5">
+                      {/* Place your image and additional content here */}
+                      <Image
+                        className="w-[30rem] h-[15rem] object-contain"
+                        src={NavImages.link6}
+                        alt=""
+                      />
+                      <Link href="/services">
+                        <h2 className="text-blue-600 hover:text-blue-900 cursor-pointer pt-1 text-[10px]">
+                          Services ➤
+                        </h2>
+                      </Link>
+                      <p className="text-[10px] text-gray-700">
+                        Know all the services we provide.
+                      </p>
+                    </div>
                   </div>
                 </Menu.Items>
               </Transition>
@@ -1171,7 +1190,7 @@ const Navbar = () => {
             {/* Branding*/}
             <Menu as="div" className="relative inline-block text-left">
               <div>
-                <Menu.Button className="lg:inline-flex font-semibold antialiased hidden justify-center w-full rounded-md px-4 py-2 text-sm text-black hover:bg-yellow-500 focus:outline-none">
+                <Menu.Button className="lg:inline-flex font-semibold antialiased hidden justify-center w-full rounded-md px-4 py-2 text-[12px] text-black hover:bg-yellow-500 focus:outline-none">
                   <div className="flex items-center gap-x-1">
                     <Link
                       className="text-[12px]"
@@ -1206,7 +1225,7 @@ const Navbar = () => {
                                   active
                                     ? "bg-yellow-500 text-white"
                                     : "text-black",
-                                  "block px-4 py-2 text-sm"
+                                  "block px-4 py-2 text-[12px]"
                                 )}
                               >
                                 <div className="Column1 flex items-center">
@@ -1217,7 +1236,7 @@ const Navbar = () => {
                                   />
                                   <div>
                                     {link.title}
-                                    <p className="text-xs text-gray-700">
+                                    <p className="text-[10px] text-gray-700">
                                       {link.description}
                                     </p>
                                   </div>
@@ -1239,7 +1258,7 @@ const Navbar = () => {
                                   active
                                     ? "bg-yellow-500 text-white"
                                     : "text-black",
-                                  "block px-4 py-2 text-sm"
+                                  "block px-4 py-2 text-[12px]"
                                 )}
                               >
                                 <div className="Column1 flex items-center">
@@ -1249,7 +1268,7 @@ const Navbar = () => {
                                   />
                                   <div>
                                     {link.title}
-                                    <p className="text-xs text-gray-700">
+                                    <p className="text-[10px] text-gray-700">
                                       {link.description}
                                     </p>
                                   </div>
@@ -1271,7 +1290,7 @@ const Navbar = () => {
                                   active
                                     ? "bg-yellow-500 text-white"
                                     : "text-black",
-                                  "block px-4 py-2 text-sm"
+                                  "block px-4 py-2 text-[12px]"
                                 )}
                               >
                                 <div className="Column1 flex items-center">
@@ -1281,7 +1300,7 @@ const Navbar = () => {
                                   />
                                   <div>
                                     {link.title}
-                                    <p className="text-xs text-gray-700">
+                                    <p className="text-[10px] text-gray-700">
                                       {link.description}
                                     </p>
                                   </div>
@@ -1295,17 +1314,17 @@ const Navbar = () => {
 
                     <div className="Column w-1/4 p-4">
                       {/* Place your image and additional content here */}
-                      <img
+                      <Image
                         className="w-[30rem] h-[15rem] object-contain"
                         src={NavImages.link3}
                         alt=""
                       />
                       <Link href="/services">
-                        <h2 className="text-blue-600 hover:text-blue-900 cursor-pointer pt-1 text-xs">
+                        <h2 className="text-blue-600 hover:text-blue-900 cursor-pointer pt-1 text-[10px]">
                           Services ➤
                         </h2>
                       </Link>
-                      <p className="text-xs text-gray-700">
+                      <p className="text-[10px] text-gray-700">
                         Know all the services we provide.
                       </p>
                     </div>
@@ -1318,7 +1337,7 @@ const Navbar = () => {
             {/*Advertising */}
             <Menu as="div" className="relative inline-block text-left">
               <div>
-                <Menu.Button className="lg:inline-flex font-semibold antialiased hidden justify-center w-full rounded-md px-4 py-2 text-sm text-black hover:bg-yellow-500 focus:outline-none">
+                <Menu.Button className="lg:inline-flex font-semibold antialiased hidden justify-center w-full rounded-md px-4 py-2 text-[12px] text-black hover:bg-yellow-500 focus:outline-none">
                   <div className="flex items-center gap-x-1">
                     <Link
                       className="text-[12px]"
@@ -1352,7 +1371,7 @@ const Navbar = () => {
                                   active
                                     ? "bg-yellow-500 text-white"
                                     : "text-black",
-                                  "block px-4 py-2 text-sm"
+                                  "block px-4 py-2 text-[12px]"
                                 )}
                               >
                                 <div className="Column1 flex items-center">
@@ -1362,7 +1381,7 @@ const Navbar = () => {
                                   />
                                   <div>
                                     {link.title}
-                                    <p className="text-xs text-gray-700">
+                                    <p className="text-[10px] text-gray-700">
                                       {link.description}
                                     </p>
                                   </div>
@@ -1384,7 +1403,7 @@ const Navbar = () => {
                                   active
                                     ? "bg-yellow-500 text-white"
                                     : "text-black",
-                                  "block px-4 py-2 text-sm"
+                                  "block px-4 py-2 text-[12px]"
                                 )}
                               >
                                 <div className="Column1 flex items-center">
@@ -1394,7 +1413,7 @@ const Navbar = () => {
                                   />
                                   <div>
                                     {link.title}
-                                    <p className="text-xs text-gray-700">
+                                    <p className="text-[10px] text-gray-700">
                                       {link.description}
                                     </p>
                                   </div>
@@ -1416,7 +1435,7 @@ const Navbar = () => {
                                   active
                                     ? "bg-yellow-500 text-white"
                                     : "text-black",
-                                  "block px-4 py-2 text-sm"
+                                  "block px-4 py-2 text-[12px]"
                                 )}
                               >
                                 <div className="Column1 flex items-center">
@@ -1426,7 +1445,7 @@ const Navbar = () => {
                                   />
                                   <div>
                                     {link.title}
-                                    <p className="text-xs text-gray-700">
+                                    <p className="text-[10px] text-gray-700">
                                       {link.description}
                                     </p>
                                   </div>
@@ -1440,17 +1459,17 @@ const Navbar = () => {
 
                     <div className="w-1/4 p-4">
                       {/* Place your image and additional content here */}
-                      <img
+                      <Image
                         className="w-[30rem] h-[15rem] object-contain"
                         src={NavImages.link4}
                         alt=""
                       />
                       <Link href="/services">
-                        <h2 className="text-blue-600 hover:text-blue-900 cursor-pointer pt-1 text-xs">
+                        <h2 className="text-blue-600 hover:text-blue-900 cursor-pointer pt-1 text-[10px]">
                           Services ➤
                         </h2>
                       </Link>
-                      <p className="text-xs text-gray-700">
+                      <p className="text-[10px] text-gray-700">
                         Know all the services we provide.
                       </p>
                     </div>
@@ -1464,8 +1483,8 @@ const Navbar = () => {
               {/*Mobileapp */}
               <Menu as="div" className="relative inline-block text-left">
                 <div>
-                  <Menu.Button className="lg:inline-flex font-semibold antialiased hidden justify-center w-full rounded-md px-4 py-2 text-sm text-black hover:bg-yellow-500 focus:outline-none">
-                    <div className="flex items-center gap-x-1">☰</div>
+                  <Menu.Button className="lg:inline-flex font-semibold antialiased hidden justify-center w-full rounded-md px-4 py-2 text-[14px] text-black hover:bg-yellow-500 focus:outline-none">
+                    <TiThMenu />
                   </Menu.Button>
                 </div>
 
@@ -1490,7 +1509,7 @@ const Navbar = () => {
                                     active
                                       ? "bg-yellow-500 text-white"
                                       : "text-black",
-                                    "block px-4 py-2 text-sm"
+                                    "block px-4 py-2 text-[12px]"
                                   )}
                                 >
                                   <div className="Column1 flex items-center">
@@ -1500,7 +1519,7 @@ const Navbar = () => {
                                     />
                                     <div>
                                       {link.title}
-                                      <p className="text-xs text-gray-700">
+                                      <p className="text-[10px] text-gray-700">
                                         {link.description}
                                       </p>
                                     </div>
@@ -1522,7 +1541,7 @@ const Navbar = () => {
                                     active
                                       ? "bg-yellow-500 text-white"
                                       : "text-black",
-                                    "block px-4 py-2 text-sm"
+                                    "block px-4 py-2 text-[12px]"
                                   )}
                                 >
                                   <div className="Column1 flex items-center">
@@ -1532,7 +1551,7 @@ const Navbar = () => {
                                     />
                                     <div>
                                       {link.title}
-                                      <p className="text-xs text-gray-700">
+                                      <p className="text-[10px] text-gray-700">
                                         {link.description}
                                       </p>
                                     </div>
@@ -1554,7 +1573,7 @@ const Navbar = () => {
                                     active
                                       ? "bg-yellow-500 text-white"
                                       : "text-black",
-                                    "block px-4 py-2 text-sm"
+                                    "block px-4 py-2 text-[12px]"
                                   )}
                                 >
                                   <div className="Column1 flex items-center">
@@ -1564,7 +1583,7 @@ const Navbar = () => {
                                     />
                                     <div>
                                       {link.title}
-                                      <p className="text-xs text-gray-700">
+                                      <p className="text-[10px] text-gray-700">
                                         {link.description}
                                       </p>
                                     </div>
@@ -1580,6 +1599,9 @@ const Navbar = () => {
                 </Transition>
               </Menu>
             </li>
+
+
+
 
             {/*mobile menu */}
             <li className="p-4 lg:hidden z-50">
@@ -1606,7 +1628,7 @@ const Navbar = () => {
                               active
                                 ? "bg-yellow-500 text-white"
                                 : "text-black",
-                              "block px-4 py-2 text-sm flex items-center"
+                              "block px-4 py-2 text-[12px] flex items-center"
                             )}
                           >
                             <FontAwesomeIcon
@@ -1627,7 +1649,7 @@ const Navbar = () => {
                               active
                                 ? "bg-yellow-500 text-white"
                                 : "text-black",
-                              "block px-4 py-2 text-sm flex items-center"
+                              "block px-4 py-2 text-[12px] flex items-center"
                             )}
                           >
                             <FontAwesomeIcon icon={faLaptop} className="mr-2" />
@@ -1645,7 +1667,7 @@ const Navbar = () => {
                               active
                                 ? "bg-yellow-500 text-white"
                                 : "text-black",
-                              "block px-4 py-2 text-sm flex items-center"
+                              "block px-4 py-2 text-[12px] flex items-center"
                             )}
                           >
                             <FontAwesomeIcon icon={faMobile} className="mr-2" />
@@ -1663,7 +1685,7 @@ const Navbar = () => {
                               active
                                 ? "bg-yellow-500 text-white"
                                 : "text-black",
-                              "block px-4 py-2 text-sm flex items-center"
+                              "block px-4 py-2 text-[12px] flex items-center"
                             )}
                           >
                             <FontAwesomeIcon
@@ -1684,7 +1706,7 @@ const Navbar = () => {
                               active
                                 ? "bg-yellow-500 text-white"
                                 : "text-black",
-                              "block px-4 py-2 text-sm flex items-center"
+                              "block px-4 py-2 text-[12px] flex items-center"
                             )}
                           >
                             <FontAwesomeIcon
@@ -1705,7 +1727,7 @@ const Navbar = () => {
                               active
                                 ? "bg-yellow-500 text-white"
                                 : "text-black",
-                              "block px-4 py-2 text-sm flex items-center"
+                              "block px-4 py-2 text-[12px] flex items-center"
                             )}
                           >
                             <FontAwesomeIcon
@@ -1726,7 +1748,7 @@ const Navbar = () => {
                               active
                                 ? "bg-yellow-500 text-white"
                                 : "text-black",
-                              "block px-4 py-2 text-sm flex items-center"
+                              "block px-4 py-2 text-[12px] flex items-center"
                             )}
                           >
                             <FontAwesomeIcon icon={faAd} className="mr-2" />
@@ -1744,7 +1766,7 @@ const Navbar = () => {
                               active
                                 ? "bg-yellow-500 text-white"
                                 : "text-black",
-                              "block px-4 py-2 text-sm flex items-center"
+                              "block px-4 py-2 text-[12px] flex items-center"
                             )}
                           >
                             <FontAwesomeIcon icon={faBlog} className="mr-2" />
@@ -1762,7 +1784,7 @@ const Navbar = () => {
                               active
                                 ? "bg-yellow-500 text-white"
                                 : "text-black",
-                              "block px-4 py-2 text-sm flex items-center"
+                              "block px-4 py-2 text-[12px] flex items-center"
                             )}
                           >
                             <FontAwesomeIcon
@@ -1783,7 +1805,7 @@ const Navbar = () => {
                               active
                                 ? "bg-yellow-500 text-white"
                                 : "text-black",
-                              "block px-4 py-2 text-sm flex items-center"
+                              "block px-4 py-2 text-[12px] flex items-center"
                             )}
                           >
                             <FontAwesomeIcon icon={faPhone} className="mr-2" />
