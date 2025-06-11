@@ -584,7 +584,7 @@ const Navbar = () => {
   ];
 
   return (
-    <section className="sticky top-0 z-50 bg-white/90 drop-shadow-lg ">
+    <section className="fixed w-full top-0 z-50 bg-white/90 drop-shadow-lg ">
       <div className="flex px-2 gap-2 justify-between bg-black text-white text-[10px]">
         <div className="flex items-center">
           <FontAwesomeIcon icon={faEnvelope} className="mr-1" />
@@ -599,10 +599,10 @@ const Navbar = () => {
       <div className=" sm:px-2 w-full h-17 flex justify-between items-center text-black ">
         <Link href="/">
           <Image
-            className="pl-2 h-auto w-44 lg:w-52"
+            className="pl-2 h-auto w-36 lg:w-42"
             src={NavbarLogo}
             alt="csd_logo"
-            width="52"
+            width="42"
             height="auto"
           />
         </Link>
@@ -1599,9 +1599,6 @@ const Navbar = () => {
                 </Transition>
               </Menu>
             </li>
-
-
-
 
             {/*mobile menu */}
             <li className="p-4 lg:hidden z-50">
