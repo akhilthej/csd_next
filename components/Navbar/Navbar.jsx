@@ -576,19 +576,25 @@ const Navbar = () => {
 
   const moreLinks = [
     {
-      path: "/mobile-app-design",
+      path: "/services",
+      title: "Services",
+      description: "Creative and user-friendly app design.",
+      icon: faBlog,
+    },
+    {
+      path: "/blogs",
       title: "Blogs",
       description: "Creative and user-friendly app design.",
       icon: faBlog,
     },
     {
-      path: "/ios-application-development",
+      path: "/aboutus",
       title: "About us",
       description: "Developing apps for iOS devices.",
       icon: faInfoCircle,
     },
     {
-      path: "/android-app-development",
+      path: "/contactus",
       title: "Contact",
       description: "Building apps for Android platforms.",
       icon: faPhone,
@@ -596,7 +602,7 @@ const Navbar = () => {
   ];
 
   return (
-    <section className="fixed w-full top-0 z-50 bg-white/90 drop-shadow-lg ">
+    <section className="sticky w-full top-0 z-50 bg-white/90 drop-shadow-lg ">
       <div className="flex px-2 gap-2 justify-between bg-black text-white text-[10px]">
         <div className="flex items-center">
           <FontAwesomeIcon icon={faEnvelope} className="mr-1" />
@@ -630,7 +636,7 @@ const Navbar = () => {
                 <div className="flex items-center gap-x-1">
                   <Link
                     className="text-[12px]"
-                    href="/services/best-web-developement-company"
+                    href="/services/web-development-company"
                   >
                     Web Development
                   </Link>
@@ -713,7 +719,7 @@ const Navbar = () => {
                 <div className="flex items-center gap-x-1">
                   <Link
                     className="text-[12px]"
-                    href="/services/best-web-developement-company"
+                    href="/services/mobile-app-development-company"
                   >
                     Mobileapp
                   </Link>
@@ -817,7 +823,7 @@ const Navbar = () => {
                 <div className="flex items-center gap-x-1">
                   <Link
                     className="text-[12px]"
-                    href="/services/best-web-developement-company"
+                    href="/services/digital-marketing-company"
                   >
                     Digital Marketing
                   </Link>
@@ -921,7 +927,7 @@ const Navbar = () => {
                 <div className="flex items-center gap-x-1">
                   <Link
                     className="text-[12px]"
-                    href="/services/best-web-developement-company"
+                    href="/services/multimedia-company"
                   >
                     Multimedia
                   </Link>
@@ -1046,7 +1052,7 @@ const Navbar = () => {
                 <div className="flex items-center gap-x-1">
                   <Link
                     className="text-[12px]"
-                    href="/services/best-web-developement-company"
+                    href="/services/branding-comapny"
                   >
                     Branding
                   </Link>
@@ -1150,7 +1156,7 @@ const Navbar = () => {
                 <div className="flex items-center gap-x-1">
                   <Link
                     className="text-[12px]"
-                    href="/services/best-web-developement-company"
+                    href="/services/advertising-company"
                   >
                     Advertising
                   </Link>
@@ -1319,6 +1325,26 @@ const Navbar = () => {
                         </Link>
                       ))}
                     </div>
+                    <div className="w-1/3 p-4">
+                      {moreLinks.slice(3, 4).map((link) => (
+                        <Link href={link.path} key={link.path}>
+                          <div className="block px-4 py-2 text-[12px] text-black hover:bg-yellow-500 hover:text-white">
+                            <div className="flex items-center">
+                              <FontAwesomeIcon
+                                className="p-2 fa-2xl"
+                                icon={link.icon}
+                              />
+                              <div>
+                                {link.title}
+                                <p className="text-[10px] text-gray-700">
+                                  {link.description}
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
                   </div>
                 </div>
               )}
@@ -1364,7 +1390,7 @@ const Navbar = () => {
 
                     <Menu.Item>
                       {({ active }) => (
-                        <Link href="/services/best-web-developement-company">
+                        <Link href="/services/web-development-company">
                           <div
                             className={classNames(
                               active
@@ -1382,7 +1408,7 @@ const Navbar = () => {
 
                     <Menu.Item>
                       {({ active }) => (
-                        <Link href="/services/best-mobile-app-development-company">
+                        <Link href="/services/mobile-app-development-company">
                           <div
                             className={classNames(
                               active
@@ -1400,7 +1426,7 @@ const Navbar = () => {
 
                     <Menu.Item>
                       {({ active }) => (
-                        <Link href="/services/best-graphic-designing-company">
+                        <Link href="/services/multimedia-company">
                           <div
                             className={classNames(
                               active
@@ -1421,7 +1447,7 @@ const Navbar = () => {
 
                     <Menu.Item>
                       {({ active }) => (
-                        <Link href="/services/best-digital-marketing-company-in-vizag">
+                        <Link href="/services/digital-marketing-company">
                           <div
                             className={classNames(
                               active
@@ -1442,7 +1468,7 @@ const Navbar = () => {
 
                     <Menu.Item>
                       {({ active }) => (
-                        <Link href="/services/best-brand-services-company">
+                        <Link href="/services/branding-comapny">
                           <div
                             className={classNames(
                               active
@@ -1463,7 +1489,7 @@ const Navbar = () => {
 
                     <Menu.Item>
                       {({ active }) => (
-                        <Link href="/services/best-advertising-company">
+                        <Link href="/services/advertising-company">
                           <div
                             className={classNames(
                               active
@@ -1481,7 +1507,7 @@ const Navbar = () => {
 
                     <Menu.Item>
                       {({ active }) => (
-                        <Link href="/blog">
+                        <Link href="/blogs">
                           <div
                             className={classNames(
                               active
