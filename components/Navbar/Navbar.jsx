@@ -89,6 +89,7 @@ const Navbar = () => {
   const [isBrandingOpen, setisBrandingOpen] = useState(false);
   const [isAdvertisingOpen, setisAdvertisingOpen] = useState(false);
   const [isMoreOpen, setisMoreOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   const handleMouseEnter = () => {
     setisWebDevelopmentOpen(true);
@@ -597,6 +598,59 @@ const Navbar = () => {
       path: "/contactus",
       title: "Contact",
       description: "Building apps for Android platforms.",
+      icon: faPhone,
+    },
+  ];
+
+  const mobilemenu = [
+    {
+      path: "/services",
+      title: "Services",
+      icon: faBuilding,
+    },
+    {
+      path: "/services/web-development-company",
+      title: "Web Development",
+      icon: faLaptop,
+    },
+    {
+      path: "/services/mobile-app-development-company",
+      title: "Mobile App Development",
+      icon: faMobile,
+    },
+    {
+      path: "/services/multimedia-company",
+      title: "MultiMedia",
+      icon: faPalette,
+    },
+    {
+      path: "/services/digital-marketing-company",
+      title: "Digital Marketing",
+      icon: faBullhorn,
+    },
+    {
+      path: "/services/branding-comapny",
+      title: "Branding",
+      icon: faHandHoldingUsd,
+    },
+    {
+      path: "/services/advertising-company",
+      title: "Advertising",
+      icon: faAd,
+    },
+    {
+      path: "/blogs",
+      title: "Blogs",
+      icon: faBlog,
+    },
+    {
+      path: "/aboutus",
+      title: "About us",
+      icon: faInfoCircle,
+    },
+    {
+      path: "/contactus",
+      title: "Contact",
       icon: faPhone,
     },
   ];
@@ -1351,219 +1405,29 @@ const Navbar = () => {
             </li>
 
             {/*mobile menu */}
-            <li className="p-4 lg:hidden z-50">
-              <Menu as="div" className="relative inline-block text-left ">
-                <div>
-                  <Menu.Button className="text-3xl">☰</Menu.Button>
+            <li className="p-4 lg:hidden z-50 relative">
+              <button
+                className="text-3xl"
+                onClick={() => setIsOpen((prev) => !prev)}
+              >
+                ☰
+              </button>
+              {isOpen && (
+                <div className="origin-top-right absolute right-0 mt-4 w-48 h-auto sm:rounded-md shadow-lg bg-gray-300 divide-y divide-gray-400 z-50">
+                  {mobilemenu.map((link) => (
+                    <Link
+                      href={link.path}
+                      key={link.path}
+                      onClick={() => setIsOpen(false)}
+                    >
+                      <div className="block px-4 py-2 text-[12px] text-black flex items-center hover:bg-yellow-500 hover:text-white">
+                        <FontAwesomeIcon icon={link.icon} className="mr-2" />
+                        {link.title}
+                      </div>
+                    </Link>
+                  ))}
                 </div>
-
-                <Transition
-                  as={Fragment}
-                  enter="transition ease-out duration-100"
-                  enterFrom="transform opacity-0 scale-95"
-                  enterTo="transform opacity-100 scale-100"
-                  leave="transition ease-in duration-75"
-                  leaveFrom="transform opacity-100 scale-100"
-                  leaveTo="transform opacity-0 scale-95"
-                >
-                  <Menu.Items className="origin-top-right absolute right-0 mt-4 w-48 h-auto sm:rounded-md shadow-lg bg-gray-300 ring-black ring-opacity-5 divide-y divide-gray-400 z-50">
-                    <Menu.Item>
-                      {({ active }) => (
-                        <Link href="/services">
-                          <div
-                            className={classNames(
-                              active
-                                ? "bg-yellow-500 text-white"
-                                : "text-black",
-                              "block px-4 py-2 text-[12px] flex items-center"
-                            )}
-                          >
-                            <FontAwesomeIcon
-                              icon={faBuilding}
-                              className="mr-2"
-                            />
-                            Services
-                          </div>
-                        </Link>
-                      )}
-                    </Menu.Item>
-
-                    <Menu.Item>
-                      {({ active }) => (
-                        <Link href="/services/web-development-company">
-                          <div
-                            className={classNames(
-                              active
-                                ? "bg-yellow-500 text-white"
-                                : "text-black",
-                              "block px-4 py-2 text-[12px] flex items-center"
-                            )}
-                          >
-                            <FontAwesomeIcon icon={faLaptop} className="mr-2" />
-                            Web Development
-                          </div>
-                        </Link>
-                      )}
-                    </Menu.Item>
-
-                    <Menu.Item>
-                      {({ active }) => (
-                        <Link href="/services/mobile-app-development-company">
-                          <div
-                            className={classNames(
-                              active
-                                ? "bg-yellow-500 text-white"
-                                : "text-black",
-                              "block px-4 py-2 text-[12px] flex items-center"
-                            )}
-                          >
-                            <FontAwesomeIcon icon={faMobile} className="mr-2" />
-                            Mobile App Development
-                          </div>
-                        </Link>
-                      )}
-                    </Menu.Item>
-
-                    <Menu.Item>
-                      {({ active }) => (
-                        <Link href="/services/multimedia-company">
-                          <div
-                            className={classNames(
-                              active
-                                ? "bg-yellow-500 text-white"
-                                : "text-black",
-                              "block px-4 py-2 text-[12px] flex items-center"
-                            )}
-                          >
-                            <FontAwesomeIcon
-                              icon={faPalette}
-                              className="mr-2"
-                            />
-                            MultiMedia
-                          </div>
-                        </Link>
-                      )}
-                    </Menu.Item>
-
-                    <Menu.Item>
-                      {({ active }) => (
-                        <Link href="/services/digital-marketing-company">
-                          <div
-                            className={classNames(
-                              active
-                                ? "bg-yellow-500 text-white"
-                                : "text-black",
-                              "block px-4 py-2 text-[12px] flex items-center"
-                            )}
-                          >
-                            <FontAwesomeIcon
-                              icon={faBullhorn}
-                              className="mr-2"
-                            />
-                            Digital Marketing
-                          </div>
-                        </Link>
-                      )}
-                    </Menu.Item>
-
-                    <Menu.Item>
-                      {({ active }) => (
-                        <Link href="/services/branding-comapny">
-                          <div
-                            className={classNames(
-                              active
-                                ? "bg-yellow-500 text-white"
-                                : "text-black",
-                              "block px-4 py-2 text-[12px] flex items-center"
-                            )}
-                          >
-                            <FontAwesomeIcon
-                              icon={faHandHoldingUsd}
-                              className="mr-2"
-                            />
-                            Branding
-                          </div>
-                        </Link>
-                      )}
-                    </Menu.Item>
-
-                    <Menu.Item>
-                      {({ active }) => (
-                        <Link href="/services/advertising-company">
-                          <div
-                            className={classNames(
-                              active
-                                ? "bg-yellow-500 text-white"
-                                : "text-black",
-                              "block px-4 py-2 text-[12px] flex items-center"
-                            )}
-                          >
-                            <FontAwesomeIcon icon={faAd} className="mr-2" />
-                            Advertising
-                          </div>
-                        </Link>
-                      )}
-                    </Menu.Item>
-
-                    <Menu.Item>
-                      {({ active }) => (
-                        <Link href="/blogs">
-                          <div
-                            className={classNames(
-                              active
-                                ? "bg-yellow-500 text-white"
-                                : "text-black",
-                              "block px-4 py-2 text-[12px] flex items-center"
-                            )}
-                          >
-                            <FontAwesomeIcon icon={faBlog} className="mr-2" />
-                            Blogs
-                          </div>
-                        </Link>
-                      )}
-                    </Menu.Item>
-
-                    <Menu.Item>
-                      {({ active }) => (
-                        <Link href="/aboutus">
-                          <div
-                            className={classNames(
-                              active
-                                ? "bg-yellow-500 text-white"
-                                : "text-black",
-                              "block px-4 py-2 text-[12px] flex items-center"
-                            )}
-                          >
-                            <FontAwesomeIcon
-                              icon={faInfoCircle}
-                              className="mr-2"
-                            />
-                            About us
-                          </div>
-                        </Link>
-                      )}
-                    </Menu.Item>
-
-                    <Menu.Item>
-                      {({ active }) => (
-                        <Link href="/contactus">
-                          <div
-                            className={classNames(
-                              active
-                                ? "bg-yellow-500 text-white"
-                                : "text-black",
-                              "block px-4 py-2 text-[12px] flex items-center"
-                            )}
-                          >
-                            <FontAwesomeIcon icon={faPhone} className="mr-2" />
-                            Contact
-                          </div>
-                        </Link>
-                      )}
-                    </Menu.Item>
-                  </Menu.Items>
-                </Transition>
-              </Menu>
+              )}
             </li>
           </ul>
         </div>
