@@ -82,16 +82,28 @@ function classNames(...classes) {
 }
 
 const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isWebDevelopmentOpen, setisWebDevelopmentOpen] = useState(false);
+  const [isMobileAppOpen, setIsMobileAppOpen] = useState(false);
+  const [isDigitalMarketingOpen, setisDigitalMarketingOpen] = useState(false);
+  const [isMultiMediaOpen, setisMultiMediaOpen] = useState(false);
+  const [isBrandingOpen, setisBrandingOpen] = useState(false);
+  const [isAdvertisingOpen, setisAdvertisingOpen] = useState(false);
+  const [isMoreOpen, setisMoreOpen] = useState(false);
+
+  const handleMouseEnter = () => {
+    setisWebDevelopmentOpen(true);
+  };
+  const handleMouseLeave = () => {
+    setisWebDevelopmentOpen(false);
+  };
+
   useEffect(() => {
-    if (isMenuOpen) {
+    if (isWebDevelopmentOpen) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "visible";
     }
-  }, [isMenuOpen]);
-
-  const currentYear = new Date().getFullYear();
+  }, [isWebDevelopmentOpen]);
 
   const NavImages = {
     link1: Webdevelopmenticon,
@@ -609,102 +621,73 @@ const Navbar = () => {
         <div className=" justify-end ">
           <ul className="flex items-center">
             {/* Web Development */}
-            <Menu as="div" className="relative inline-block text-left">
-              <div>
-                <Menu.Button className="lg:inline-flex font-semibold antialiased hidden justify-center w-full rounded-md px-4 py-2 text-[12px] text-black hover:bg-yellow-500 focus:outline-none">
-                  <div className="flex items-center gap-x-1">
-                    <Link
-                      className="text-[12px]"
-                      href="/services/best-web-developement-company"
-                    >
-                      Web Development
-                    </Link>
-                    <FaChevronDown className="text-[10px] mt-[1px]" />
-                  </div>
-                </Menu.Button>
+            <div
+              className="relative inline-block text-left"
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+            >
+              <div className="lg:inline-flex font-semibold antialiased hidden justify-center w-full rounded-md px-4 py-2 text-[12px] text-black hover:bg-yellow-500 cursor-pointer">
+                <div className="flex items-center gap-x-1">
+                  <Link
+                    className="text-[12px]"
+                    href="/services/best-web-developement-company"
+                  >
+                    Web Development
+                  </Link>
+                  <FaChevronDown className="text-[10px] mt-[1px]" />
+                </div>
               </div>
 
-              <Transition
-                as={Fragment}
-                enter="transition ease-out duration-100"
-                enterFrom="transform opacity-0 scale-95"
-                enterTo="transform opacity-100 scale-100"
-                leave="transition ease-in duration-75"
-                leaveFrom="transform opacity-100 scale-100"
-                leaveTo="transform opacity-0 scale-95"
-              >
-                <Menu.Items className="origin-top-right fixed right-0 mt-4 w-screen rounded-md shadow-lg bg-gray-300 divide-y divide-gray-400 focus:outline-none z-50">
+              {isWebDevelopmentOpen && (
+                <div className="origin-top-right fixed right-0 mt-4 w-screen rounded-md shadow-lg bg-gray-300 divide-y divide-gray-400 z-50">
                   <div className="flex">
                     <div className="w-1/3 p-4">
                       {webDevelopmentLinks.slice(0, 2).map((link) => (
-                        <Menu.Item key={link.path}>
-                          {({ active }) => (
-                            <Link href={link.path}>
-                              <div
-                                className={classNames(
-                                  active
-                                    ? "bg-yellow-500 text-white"
-                                    : "text-black",
-                                  "block px-4 py-2 text-[12px]"
-                                )}
-                              >
-                                <div className="Column1 flex items-center">
-                                  <FontAwesomeIcon
-                                    className="p-2 fa-2xl"
-                                    icon={link.icon}
-                                  />
-                                  <div>
-                                    {link.title}
-                                    <p className="text-[10px] text-gray-700">
-                                      {link.description}
-                                    </p>
-                                  </div>
-                                </div>
+                        <Link href={link.path} key={link.path}>
+                          <div className="block px-4 py-2 text-[12px] text-black hover:bg-yellow-500 hover:text-white">
+                            <div className="flex items-center">
+                              <FontAwesomeIcon
+                                className="p-2 fa-2xl"
+                                icon={link.icon}
+                              />
+                              <div>
+                                {link.title}
+                                <p className="text-[10px] text-gray-700">
+                                  {link.description}
+                                </p>
                               </div>
-                            </Link>
-                          )}
-                        </Menu.Item>
+                            </div>
+                          </div>
+                        </Link>
                       ))}
                     </div>
 
                     <div className="w-1/3 p-4">
                       {webDevelopmentLinks.slice(2, 4).map((link) => (
-                        <Menu.Item key={link.path}>
-                          {({ active }) => (
-                            <Link href={link.path}>
-                              <div
-                                className={classNames(
-                                  active
-                                    ? "bg-yellow-500 text-white"
-                                    : "text-black",
-                                  "block px-4 py-2 text-[12px]"
-                                )}
-                              >
-                                <div className="Column1 flex items-center">
-                                  <FontAwesomeIcon
-                                    className="p-2 fa-2xl"
-                                    icon={link.icon}
-                                  />
-                                  <div>
-                                    {link.title}
-                                    <p className="text-[10px] text-gray-700">
-                                      {link.description}
-                                    </p>
-                                  </div>
-                                </div>
+                        <Link href={link.path} key={link.path}>
+                          <div className="block px-4 py-2 text-[12px] text-black hover:bg-yellow-500 hover:text-white">
+                            <div className="flex items-center">
+                              <FontAwesomeIcon
+                                className="p-2 fa-2xl"
+                                icon={link.icon}
+                              />
+                              <div>
+                                {link.title}
+                                <p className="text-[10px] text-gray-700">
+                                  {link.description}
+                                </p>
                               </div>
-                            </Link>
-                          )}
-                        </Menu.Item>
+                            </div>
+                          </div>
+                        </Link>
                       ))}
                     </div>
 
                     <div className="w-1/3 p-4">
-                      {/* Place your image and additional content here */}
                       <Image
                         className="w-[30rem] h-[10rem] object-contain"
                         src={NavImages.link1}
-                        alt=""
+                        alt="Web Development"
                       />
                       <Link href="/services">
                         <h2 className="text-blue-600 hover:text-blue-900 cursor-pointer pt-1 text-[10px]">
@@ -716,139 +699,99 @@ const Navbar = () => {
                       </p>
                     </div>
                   </div>
-                </Menu.Items>
-              </Transition>
-            </Menu>
+                </div>
+              )}
+            </div>
 
             {/*Mobileapp */}
-            <Menu as="div" className="relative inline-block text-left">
-              <div>
-                <Menu.Button className="lg:inline-flex font-semibold antialiased hidden justify-center w-full rounded-md px-4 py-2 text-[12px] text-black hover:bg-yellow-500 focus:outline-none">
-                  <div className="flex items-center gap-x-1">
-                    <Link
-                      className="text-[12px]"
-                      href="/services/best-web-developement-company"
-                    >
-                      Mobileapp
-                    </Link>
-                    <FaChevronDown className="text-[10px] mt-[1px]" />
-                  </div>
-                </Menu.Button>
+            <div
+              className="relative inline-block text-left"
+              onMouseEnter={() => setIsMobileAppOpen(true)}
+              onMouseLeave={() => setIsMobileAppOpen(false)}
+            >
+              <div className="lg:inline-flex font-semibold antialiased hidden justify-center w-full rounded-md px-4 py-2 text-[12px] text-black hover:bg-yellow-500 cursor-pointer">
+                <div className="flex items-center gap-x-1">
+                  <Link
+                    className="text-[12px]"
+                    href="/services/best-web-developement-company"
+                  >
+                    Mobileapp
+                  </Link>
+                  <FaChevronDown className="text-[10px] mt-[1px]" />
+                </div>
               </div>
 
-              <Transition
-                as={Fragment}
-                enter="transition ease-out duration-100"
-                enterFrom="transform opacity-0 scale-95"
-                enterTo="transform opacity-100 scale-100"
-                leave="transition ease-in duration-75"
-                leaveFrom="transform opacity-100 scale-100"
-                leaveTo="transform opacity-0 scale-95"
-              >
-                <Menu.Items className="origin-top-right fixed right-0 mt-4 w-screen rounded-md shadow-lg bg-gray-300 divide-y divide-gray-400 focus:outline-none z-50">
+              {isMobileAppOpen && (
+                <div className="origin-top-right fixed right-0 mt-4 w-screen rounded-md shadow-lg bg-gray-300 divide-y divide-gray-400 z-50">
                   <div className="flex">
                     <div className="w-1/4 p-4">
                       {mobileappLinks.slice(0, 5).map((link) => (
-                        <Menu.Item key={link.path}>
-                          {({ active }) => (
-                            <Link href={link.path}>
-                              <div
-                                className={classNames(
-                                  active
-                                    ? "bg-yellow-500 text-white"
-                                    : "text-black",
-                                  "block px-4 py-2 text-[12px]"
-                                )}
-                              >
-                                <div className="Column1 flex items-center">
-                                  <FontAwesomeIcon
-                                    className="p-2 fa-2xl"
-                                    icon={link.icon}
-                                  />
-                                  <div>
-                                    {link.title}
-                                    <p className="text-[10px] text-gray-700">
-                                      {link.description}
-                                    </p>
-                                  </div>
-                                </div>
+                        <Link href={link.path} key={link.path}>
+                          <div className="block px-4 py-2 text-[12px] text-black hover:bg-yellow-500 hover:text-white">
+                            <div className="flex items-center">
+                              <FontAwesomeIcon
+                                className="p-2 fa-2xl"
+                                icon={link.icon}
+                              />
+                              <div>
+                                {link.title}
+                                <p className="text-[10px] text-gray-700">
+                                  {link.description}
+                                </p>
                               </div>
-                            </Link>
-                          )}
-                        </Menu.Item>
+                            </div>
+                          </div>
+                        </Link>
                       ))}
                     </div>
 
                     <div className="w-1/4 p-4">
                       {mobileappLinks.slice(5, 10).map((link) => (
-                        <Menu.Item key={link.path}>
-                          {({ active }) => (
-                            <Link href={link.path}>
-                              <div
-                                className={classNames(
-                                  active
-                                    ? "bg-yellow-500 text-white"
-                                    : "text-black",
-                                  "block px-4 py-2 text-[12px]"
-                                )}
-                              >
-                                <div className="Column1 flex items-center">
-                                  <FontAwesomeIcon
-                                    className="p-2 fa-2xl"
-                                    icon={link.icon}
-                                  />
-                                  <div>
-                                    {link.title}
-                                    <p className="text-[10px] text-gray-700">
-                                      {link.description}
-                                    </p>
-                                  </div>
-                                </div>
+                        <Link href={link.path} key={link.path}>
+                          <div className="block px-4 py-2 text-[12px] text-black hover:bg-yellow-500 hover:text-white">
+                            <div className="flex items-center">
+                              <FontAwesomeIcon
+                                className="p-2 fa-2xl"
+                                icon={link.icon}
+                              />
+                              <div>
+                                {link.title}
+                                <p className="text-[10px] text-gray-700">
+                                  {link.description}
+                                </p>
                               </div>
-                            </Link>
-                          )}
-                        </Menu.Item>
+                            </div>
+                          </div>
+                        </Link>
                       ))}
                     </div>
 
                     <div className="w-1/4 p-4">
                       {mobileappLinks.slice(10, 15).map((link) => (
-                        <Menu.Item key={link.path}>
-                          {({ active }) => (
-                            <Link href={link.path}>
-                              <div
-                                className={classNames(
-                                  active
-                                    ? "bg-yellow-500 text-white"
-                                    : "text-black",
-                                  "block px-4 py-2 text-[12px]"
-                                )}
-                              >
-                                <div className="Column1 flex items-center">
-                                  <FontAwesomeIcon
-                                    className="p-2 fa-2xl"
-                                    icon={link.icon}
-                                  />
-                                  <div>
-                                    {link.title}
-                                    <p className="text-[10px] text-gray-700">
-                                      {link.description}
-                                    </p>
-                                  </div>
-                                </div>
+                        <Link href={link.path} key={link.path}>
+                          <div className="block px-4 py-2 text-[12px] text-black hover:bg-yellow-500 hover:text-white">
+                            <div className="flex items-center">
+                              <FontAwesomeIcon
+                                className="p-2 fa-2xl"
+                                icon={link.icon}
+                              />
+                              <div>
+                                {link.title}
+                                <p className="text-[10px] text-gray-700">
+                                  {link.description}
+                                </p>
                               </div>
-                            </Link>
-                          )}
-                        </Menu.Item>
+                            </div>
+                          </div>
+                        </Link>
                       ))}
                     </div>
 
                     <div className="w-1/4 p-4">
-                      {/* Place your image and additional content here */}
                       <Image
                         className="w-[30rem] h-[15rem] object-contain"
                         src={NavImages.link5}
-                        alt=""
+                        alt="Mobile App Development"
                       />
                       <Link href="/services">
                         <h2 className="text-blue-600 hover:text-blue-900 cursor-pointer pt-1 text-[10px]">
@@ -860,141 +803,99 @@ const Navbar = () => {
                       </p>
                     </div>
                   </div>
-                </Menu.Items>
-              </Transition>
-            </Menu>
+                </div>
+              )}
+            </div>
 
             {/* Digital Marketing */}
-            <Menu as="div" className="relative inline-block text-left">
-              <div>
-                <Menu.Button className="lg:inline-flex font-semibold antialiased hidden justify-center w-full rounded-md px-4 py-2 text-[12px] text-black hover:bg-yellow-500 focus:outline-none">
-                  <div className="flex items-center gap-x-1">
-                    <Link
-                      className="text-[12px]"
-                      href="/services/best-web-developement-company"
-                    >
-                      Digital Marketing
-                    </Link>
-                    <FaChevronDown className="text-[10px] mt-[1px]" />
-                  </div>
-                </Menu.Button>
+            <div
+              className="relative inline-block text-left"
+              onMouseEnter={() => setisDigitalMarketingOpen(true)}
+              onMouseLeave={() => setisDigitalMarketingOpen(false)}
+            >
+              <div className="lg:inline-flex font-semibold antialiased hidden justify-center w-full rounded-md px-4 py-2 text-[12px] text-black hover:bg-yellow-500 cursor-pointer">
+                <div className="flex items-center gap-x-1">
+                  <Link
+                    className="text-[12px]"
+                    href="/services/best-web-developement-company"
+                  >
+                    Digital Marketing
+                  </Link>
+                  <FaChevronDown className="text-[10px] mt-[1px]" />
+                </div>
               </div>
 
-              <Transition
-                as={Fragment}
-                enter="transition ease-out duration-100"
-                enterFrom="transform opacity-0 scale-95"
-                enterTo="transform opacity-100 scale-100"
-                leave="transition ease-in duration-75"
-                leaveFrom="transform opacity-100 scale-100"
-                leaveTo="transform opacity-0 scale-95"
-              >
-                <Menu.Items className="origin-top-right fixed right-0 mt-4 w-screen rounded-md shadow-lg bg-gray-300 divide-y divide-gray-400 focus:outline-none z-50">
+              {isDigitalMarketingOpen && (
+                <div className="origin-top-right fixed right-0 mt-4 w-screen rounded-md shadow-lg bg-gray-300 divide-y divide-gray-400 z-50">
                   <div className="flex">
-                    {/* Create 4 columns */}
-                    <div className="Column w-1/4 p-4">
+                    <div className="w-1/4 p-4">
                       {digitalMarketingLinks.slice(0, 5).map((link) => (
-                        <Menu.Item key={link.path}>
-                          {({ active }) => (
-                            <Link href={link.path}>
-                              <div
-                                className={classNames(
-                                  active
-                                    ? "bg-yellow-500 text-white"
-                                    : "text-black",
-                                  "block px-4 py-2 text-[12px]"
-                                )}
-                              >
-                                <div className="Column1 flex items-center">
-                                  {/* Replace with your respective icons */}
-                                  <FontAwesomeIcon
-                                    className="p-2 fa-2xl"
-                                    icon={link.icon}
-                                  />
-                                  <div>
-                                    {link.title}
-                                    <p className="text-[10px] text-gray-700">
-                                      {link.description}
-                                    </p>
-                                  </div>
-                                </div>
+                        <Link href={link.path} key={link.path}>
+                          <div className="block px-4 py-2 text-[12px] text-black hover:bg-yellow-500 hover:text-white">
+                            <div className="flex items-center">
+                              <FontAwesomeIcon
+                                className="p-2 fa-2xl"
+                                icon={link.icon}
+                              />
+                              <div>
+                                {link.title}
+                                <p className="text-[10px] text-gray-700">
+                                  {link.description}
+                                </p>
                               </div>
-                            </Link>
-                          )}
-                        </Menu.Item>
+                            </div>
+                          </div>
+                        </Link>
                       ))}
                     </div>
 
-                    <div className="Column w-1/4 p-4">
+                    <div className="w-1/4 p-4">
                       {digitalMarketingLinks.slice(5, 10).map((link) => (
-                        <Menu.Item key={link.path}>
-                          {({ active }) => (
-                            <Link href={link.path}>
-                              <div
-                                className={classNames(
-                                  active
-                                    ? "bg-yellow-500 text-white"
-                                    : "text-black",
-                                  "block px-4 py-2 text-[12px]"
-                                )}
-                              >
-                                <div className="Column1 flex items-center">
-                                  <FontAwesomeIcon
-                                    className="p-2 fa-2xl"
-                                    icon={link.icon}
-                                  />
-                                  <div>
-                                    {link.title}
-                                    <p className="text-[10px] text-gray-700">
-                                      {link.description}
-                                    </p>
-                                  </div>
-                                </div>
+                        <Link href={link.path} key={link.path}>
+                          <div className="block px-4 py-2 text-[12px] text-black hover:bg-yellow-500 hover:text-white">
+                            <div className="flex items-center">
+                              <FontAwesomeIcon
+                                className="p-2 fa-2xl"
+                                icon={link.icon}
+                              />
+                              <div>
+                                {link.title}
+                                <p className="text-[10px] text-gray-700">
+                                  {link.description}
+                                </p>
                               </div>
-                            </Link>
-                          )}
-                        </Menu.Item>
+                            </div>
+                          </div>
+                        </Link>
                       ))}
                     </div>
 
-                    <div className="Column w-1/4 p-4">
+                    <div className="w-1/4 p-4">
                       {digitalMarketingLinks.slice(10, 15).map((link) => (
-                        <Menu.Item key={link.path}>
-                          {({ active }) => (
-                            <Link href={link.path}>
-                              <div
-                                className={classNames(
-                                  active
-                                    ? "bg-yellow-500 text-white"
-                                    : "text-black",
-                                  "block px-4 py-2 text-[12px]"
-                                )}
-                              >
-                                <div className="Column1 flex items-center">
-                                  <FontAwesomeIcon
-                                    className="p-2 fa-2xl"
-                                    icon={link.icon}
-                                  />
-                                  <div>
-                                    {link.title}
-                                    <p className="text-[10px] text-gray-700">
-                                      {link.description}
-                                    </p>
-                                  </div>
-                                </div>
+                        <Link href={link.path} key={link.path}>
+                          <div className="block px-4 py-2 text-[12px] text-black hover:bg-yellow-500 hover:text-white">
+                            <div className="flex items-center">
+                              <FontAwesomeIcon
+                                className="p-2 fa-2xl"
+                                icon={link.icon}
+                              />
+                              <div>
+                                {link.title}
+                                <p className="text-[10px] text-gray-700">
+                                  {link.description}
+                                </p>
                               </div>
-                            </Link>
-                          )}
-                        </Menu.Item>
+                            </div>
+                          </div>
+                        </Link>
                       ))}
                     </div>
 
-                    <div className="Column w-1/4 p-4">
-                      {/* Place your image and additional content here */}
+                    <div className="w-1/4 p-4">
                       <Image
                         className="w-[30rem] h-[15rem] object-contain"
                         src={NavImages.link2}
-                        alt=""
+                        alt="Digital Marketing Services"
                       />
                       <Link href="/services">
                         <h2 className="text-blue-600 hover:text-blue-900 cursor-pointer pt-1 text-[10px]">
@@ -1006,172 +907,120 @@ const Navbar = () => {
                       </p>
                     </div>
                   </div>
-                  {/* Add the remaining columns as needed */}
-                </Menu.Items>
-              </Transition>
-            </Menu>
+                </div>
+              )}
+            </div>
 
             {/*Multimedia */}
-            <Menu as="div" className=" relative inline-block text-left">
-              <div>
-                <Menu.Button className="lg:inline-flex font-semibold antialiased hidden justify-center w-full rounded-md px-4 py-2 text-[12px] text-black hover:bg-yellow-500 focus:outline-none">
-                  <div className="flex items-center gap-x-1">
-                    <Link
-                      className="text-[12px]"
-                      href="/services/best-web-developement-company"
-                    >
-                      Multimedia
-                    </Link>
-                    <FaChevronDown className="text-[10px] mt-[1px]" />
-                  </div>
-                </Menu.Button>
+            <div
+              className="relative inline-block text-left"
+              onMouseEnter={() => setisMultiMediaOpen(true)}
+              onMouseLeave={() => setisMultiMediaOpen(false)}
+            >
+              <div className="lg:inline-flex font-semibold antialiased hidden justify-center w-full rounded-md px-4 py-2 text-[12px] text-black hover:bg-yellow-500 cursor-pointer">
+                <div className="flex items-center gap-x-1">
+                  <Link
+                    className="text-[12px]"
+                    href="/services/best-web-developement-company"
+                  >
+                    Multimedia
+                  </Link>
+                  <FaChevronDown className="text-[10px] mt-[1px]" />
+                </div>
               </div>
 
-              <Transition
-                as={Fragment}
-                enter="transition ease-out duration-100"
-                enterFrom="transform opacity-0 scale-95"
-                enterTo="transform opacity-100 scale-100"
-                leave="transition ease-in duration-75"
-                leaveFrom="transform opacity-100 scale-100"
-                leaveTo="transform opacity-0 scale-95"
-              >
-                <Menu.Items className="origin-top-right fixed right-0 mt-4 w-screen rounded-md shadow-lg bg-gray-300 divide-y divide-gray-400 focus:outline-none z-50">
+              {isMultiMediaOpen && (
+                <div className="origin-top-right fixed right-0 mt-4 w-screen rounded-md shadow-lg bg-gray-300 divide-y divide-gray-400 z-50">
                   <div className="flex">
-                    <div className="w-1/5 ">
+                    <div className="w-1/5 p-4">
                       {multimediaLinks.slice(0, 5).map((link) => (
-                        <Menu.Item key={link.path}>
-                          {({ active }) => (
-                            <Link href={link.path}>
-                              <div
-                                className={classNames(
-                                  active
-                                    ? "bg-yellow-500 text-white"
-                                    : "text-black",
-                                  "block px-4 py-2 text-[12px]"
-                                )}
-                              >
-                                <div className="Column1 flex items-center">
-                                  <FontAwesomeIcon
-                                    className="p-2 fa-2xl"
-                                    icon={link.icon}
-                                  />
-                                  <div>
-                                    {link.title}
-                                    <p className="text-[10px] text-gray-700">
-                                      {link.description}
-                                    </p>
-                                  </div>
-                                </div>
+                        <Link href={link.path} key={link.path}>
+                          <div className="block px-4 py-2 text-[12px] text-black hover:bg-yellow-500 hover:text-white">
+                            <div className="flex items-center">
+                              <FontAwesomeIcon
+                                className="p-2 fa-2xl"
+                                icon={link.icon}
+                              />
+                              <div>
+                                {link.title}
+                                <p className="text-[10px] text-gray-700">
+                                  {link.description}
+                                </p>
                               </div>
-                            </Link>
-                          )}
-                        </Menu.Item>
+                            </div>
+                          </div>
+                        </Link>
                       ))}
                     </div>
 
-                    <div className="w-1/5 ">
+                    <div className="w-1/5 p-4">
                       {multimediaLinks.slice(5, 10).map((link) => (
-                        <Menu.Item key={link.path}>
-                          {({ active }) => (
-                            <Link href={link.path}>
-                              <div
-                                className={classNames(
-                                  active
-                                    ? "bg-yellow-500 text-white"
-                                    : "text-black",
-                                  "block px-4 py-2 text-[12px]"
-                                )}
-                              >
-                                <div className="Column1 flex items-center">
-                                  <FontAwesomeIcon
-                                    className="p-2 fa-2xl"
-                                    icon={link.icon}
-                                  />
-                                  <div>
-                                    {link.title}
-                                    <p className="text-[10px] text-gray-700">
-                                      {link.description}
-                                    </p>
-                                  </div>
-                                </div>
+                        <Link href={link.path} key={link.path}>
+                          <div className="block px-4 py-2 text-[12px] text-black hover:bg-yellow-500 hover:text-white">
+                            <div className="flex items-center">
+                              <FontAwesomeIcon
+                                className="p-2 fa-2xl"
+                                icon={link.icon}
+                              />
+                              <div>
+                                {link.title}
+                                <p className="text-[10px] text-gray-700">
+                                  {link.description}
+                                </p>
                               </div>
-                            </Link>
-                          )}
-                        </Menu.Item>
+                            </div>
+                          </div>
+                        </Link>
                       ))}
                     </div>
 
-                    <div className="w-1/5 ">
+                    <div className="w-1/5 p-4">
                       {multimediaLinks.slice(10, 15).map((link) => (
-                        <Menu.Item key={link.path}>
-                          {({ active }) => (
-                            <Link href={link.path}>
-                              <div
-                                className={classNames(
-                                  active
-                                    ? "bg-yellow-500 text-white"
-                                    : "text-black",
-                                  "block px-4 py-2 text-[12px]"
-                                )}
-                              >
-                                <div className="Column1 flex items-center">
-                                  <FontAwesomeIcon
-                                    className="p-2 fa-2xl"
-                                    icon={link.icon}
-                                  />
-                                  <div>
-                                    {link.title}
-                                    <p className="text-[10px] text-gray-700">
-                                      {link.description}
-                                    </p>
-                                  </div>
-                                </div>
+                        <Link href={link.path} key={link.path}>
+                          <div className="block px-4 py-2 text-[12px] text-black hover:bg-yellow-500 hover:text-white">
+                            <div className="flex items-center">
+                              <FontAwesomeIcon
+                                className="p-2 fa-2xl"
+                                icon={link.icon}
+                              />
+                              <div>
+                                {link.title}
+                                <p className="text-[10px] text-gray-700">
+                                  {link.description}
+                                </p>
                               </div>
-                            </Link>
-                          )}
-                        </Menu.Item>
+                            </div>
+                          </div>
+                        </Link>
                       ))}
                     </div>
 
-                    <div className="w-1/5">
+                    <div className="w-1/5 p-4">
                       {multimediaLinks.slice(15, 20).map((link) => (
-                        <Menu.Item key={link.path}>
-                          {({ active }) => (
-                            <Link href={link.path}>
-                              <div
-                                className={classNames(
-                                  active
-                                    ? "bg-yellow-500 text-white"
-                                    : "text-black",
-                                  "block px-4 py-2 text-[12px]"
-                                )}
-                              >
-                                <div className="Column1 flex items-center">
-                                  <FontAwesomeIcon
-                                    className="p-2 fa-2xl"
-                                    icon={link.icon}
-                                  />
-                                  <div>
-                                    {link.title}
-                                    <p className="text-[10px] text-gray-700">
-                                      {link.description}
-                                    </p>
-                                  </div>
-                                </div>
+                        <Link href={link.path} key={link.path}>
+                          <div className="block px-4 py-2 text-[12px] text-black hover:bg-yellow-500 hover:text-white">
+                            <div className="flex items-center">
+                              <FontAwesomeIcon
+                                className="p-2 fa-2xl"
+                                icon={link.icon}
+                              />
+                              <div>
+                                {link.title}
+                                <p className="text-[10px] text-gray-700">
+                                  {link.description}
+                                </p>
                               </div>
-                            </Link>
-                          )}
-                        </Menu.Item>
+                            </div>
+                          </div>
+                        </Link>
                       ))}
                     </div>
 
-                    <div className="Column w-1/5">
-                      {/* Place your image and additional content here */}
+                    <div className="w-1/5 p-4">
                       <Image
                         className="w-[30rem] h-[15rem] object-contain"
                         src={NavImages.link6}
-                        alt=""
+                        alt="Multimedia Services"
                       />
                       <Link href="/services">
                         <h2 className="text-blue-600 hover:text-blue-900 cursor-pointer pt-1 text-[10px]">
@@ -1183,141 +1032,99 @@ const Navbar = () => {
                       </p>
                     </div>
                   </div>
-                </Menu.Items>
-              </Transition>
-            </Menu>
+                </div>
+              )}
+            </div>
 
             {/* Branding*/}
-            <Menu as="div" className="relative inline-block text-left">
-              <div>
-                <Menu.Button className="lg:inline-flex font-semibold antialiased hidden justify-center w-full rounded-md px-4 py-2 text-[12px] text-black hover:bg-yellow-500 focus:outline-none">
-                  <div className="flex items-center gap-x-1">
-                    <Link
-                      className="text-[12px]"
-                      href="/services/best-web-developement-company"
-                    >
-                      Branding
-                    </Link>
-                    <FaChevronDown className="text-[10px] mt-[1px]" />
-                  </div>
-                </Menu.Button>
+            <div
+              className="relative inline-block text-left"
+              onMouseEnter={() => setisBrandingOpen(true)}
+              onMouseLeave={() => setisBrandingOpen(false)}
+            >
+              <div className="lg:inline-flex font-semibold antialiased hidden justify-center w-full rounded-md px-4 py-2 text-[12px] text-black hover:bg-yellow-500 cursor-pointer">
+                <div className="flex items-center gap-x-1">
+                  <Link
+                    className="text-[12px]"
+                    href="/services/best-web-developement-company"
+                  >
+                    Branding
+                  </Link>
+                  <FaChevronDown className="text-[10px] mt-[1px]" />
+                </div>
               </div>
 
-              <Transition
-                as={Fragment}
-                enter="transition ease-out duration-100"
-                enterFrom="transform opacity-0 scale-95"
-                enterTo="transform opacity-100 scale-100"
-                leave="transition ease-in duration-75"
-                leaveFrom="transform opacity-100 scale-100"
-                leaveTo="transform opacity-0 scale-95"
-              >
-                <Menu.Items className="origin-top-right fixed right-0 mt-4 w-screen rounded-md shadow-lg bg-gray-300 divide-y divide-gray-400 focus:outline-none z-50">
+              {isBrandingOpen && (
+                <div className="origin-top-right fixed right-0 mt-4 w-screen rounded-md shadow-lg bg-gray-300 divide-y divide-gray-400 z-50">
                   <div className="flex">
-                    {/* Create 4 columns */}
-                    <div className="Column w-1/4 p-4">
+                    <div className="w-1/4 p-4">
                       {brandingLinks.slice(0, 5).map((link) => (
-                        <Menu.Item key={link.path}>
-                          {({ active }) => (
-                            <Link href={link.path}>
-                              <div
-                                className={classNames(
-                                  active
-                                    ? "bg-yellow-500 text-white"
-                                    : "text-black",
-                                  "block px-4 py-2 text-[12px]"
-                                )}
-                              >
-                                <div className="Column1 flex items-center">
-                                  {/* Replace with your respective icons */}
-                                  <FontAwesomeIcon
-                                    className="p-2 fa-2xl"
-                                    icon={link.icon}
-                                  />
-                                  <div>
-                                    {link.title}
-                                    <p className="text-[10px] text-gray-700">
-                                      {link.description}
-                                    </p>
-                                  </div>
-                                </div>
+                        <Link href={link.path} key={link.path}>
+                          <div className="block px-4 py-2 text-[12px] text-black hover:bg-yellow-500 hover:text-white">
+                            <div className="flex items-center">
+                              <FontAwesomeIcon
+                                className="p-2 fa-2xl"
+                                icon={link.icon}
+                              />
+                              <div>
+                                {link.title}
+                                <p className="text-[10px] text-gray-700">
+                                  {link.description}
+                                </p>
                               </div>
-                            </Link>
-                          )}
-                        </Menu.Item>
+                            </div>
+                          </div>
+                        </Link>
                       ))}
                     </div>
 
-                    <div className="Column w-1/4 p-4">
+                    <div className="w-1/4 p-4">
                       {brandingLinks.slice(5, 10).map((link) => (
-                        <Menu.Item key={link.path}>
-                          {({ active }) => (
-                            <Link href={link.path}>
-                              <div
-                                className={classNames(
-                                  active
-                                    ? "bg-yellow-500 text-white"
-                                    : "text-black",
-                                  "block px-4 py-2 text-[12px]"
-                                )}
-                              >
-                                <div className="Column1 flex items-center">
-                                  <FontAwesomeIcon
-                                    className="p-2 fa-2xl"
-                                    icon={link.icon}
-                                  />
-                                  <div>
-                                    {link.title}
-                                    <p className="text-[10px] text-gray-700">
-                                      {link.description}
-                                    </p>
-                                  </div>
-                                </div>
+                        <Link href={link.path} key={link.path}>
+                          <div className="block px-4 py-2 text-[12px] text-black hover:bg-yellow-500 hover:text-white">
+                            <div className="flex items-center">
+                              <FontAwesomeIcon
+                                className="p-2 fa-2xl"
+                                icon={link.icon}
+                              />
+                              <div>
+                                {link.title}
+                                <p className="text-[10px] text-gray-700">
+                                  {link.description}
+                                </p>
                               </div>
-                            </Link>
-                          )}
-                        </Menu.Item>
+                            </div>
+                          </div>
+                        </Link>
                       ))}
                     </div>
 
-                    <div className="Column w-1/4 p-4">
+                    <div className="w-1/4 p-4">
                       {brandingLinks.slice(10, 15).map((link) => (
-                        <Menu.Item key={link.path}>
-                          {({ active }) => (
-                            <Link href={link.path}>
-                              <div
-                                className={classNames(
-                                  active
-                                    ? "bg-yellow-500 text-white"
-                                    : "text-black",
-                                  "block px-4 py-2 text-[12px]"
-                                )}
-                              >
-                                <div className="Column1 flex items-center">
-                                  <FontAwesomeIcon
-                                    className="p-2 fa-2xl"
-                                    icon={link.icon}
-                                  />
-                                  <div>
-                                    {link.title}
-                                    <p className="text-[10px] text-gray-700">
-                                      {link.description}
-                                    </p>
-                                  </div>
-                                </div>
+                        <Link href={link.path} key={link.path}>
+                          <div className="block px-4 py-2 text-[12px] text-black hover:bg-yellow-500 hover:text-white">
+                            <div className="flex items-center">
+                              <FontAwesomeIcon
+                                className="p-2 fa-2xl"
+                                icon={link.icon}
+                              />
+                              <div>
+                                {link.title}
+                                <p className="text-[10px] text-gray-700">
+                                  {link.description}
+                                </p>
                               </div>
-                            </Link>
-                          )}
-                        </Menu.Item>
+                            </div>
+                          </div>
+                        </Link>
                       ))}
                     </div>
 
-                    <div className="Column w-1/4 p-4">
-                      {/* Place your image and additional content here */}
+                    <div className="w-1/4 p-4">
                       <Image
                         className="w-[30rem] h-[15rem] object-contain"
                         src={NavImages.link3}
-                        alt=""
+                        alt="Branding Services"
                       />
                       <Link href="/services">
                         <h2 className="text-blue-600 hover:text-blue-900 cursor-pointer pt-1 text-[10px]">
@@ -1329,140 +1136,99 @@ const Navbar = () => {
                       </p>
                     </div>
                   </div>
-                  {/* Add the remaining columns as needed */}
-                </Menu.Items>
-              </Transition>
-            </Menu>
+                </div>
+              )}
+            </div>
 
             {/*Advertising */}
-            <Menu as="div" className="relative inline-block text-left">
-              <div>
-                <Menu.Button className="lg:inline-flex font-semibold antialiased hidden justify-center w-full rounded-md px-4 py-2 text-[12px] text-black hover:bg-yellow-500 focus:outline-none">
-                  <div className="flex items-center gap-x-1">
-                    <Link
-                      className="text-[12px]"
-                      href="/services/best-web-developement-company"
-                    >
-                      Advertising
-                    </Link>
-                    <FaChevronDown className="text-[10px] mt-[1px]" />
-                  </div>
-                </Menu.Button>
+            <div
+              className="relative inline-block text-left"
+              onMouseEnter={() => setisAdvertisingOpen(true)}
+              onMouseLeave={() => setisAdvertisingOpen(false)}
+            >
+              <div className="lg:inline-flex font-semibold antialiased hidden justify-center w-full rounded-md px-4 py-2 text-[12px] text-black hover:bg-yellow-500 cursor-pointer">
+                <div className="flex items-center gap-x-1">
+                  <Link
+                    className="text-[12px]"
+                    href="/services/best-web-developement-company"
+                  >
+                    Advertising
+                  </Link>
+                  <FaChevronDown className="text-[10px] mt-[1px]" />
+                </div>
               </div>
 
-              <Transition
-                as={Fragment}
-                enter="transition ease-out duration-100"
-                enterFrom="transform opacity-0 scale-95"
-                enterTo="transform opacity-100 scale-100"
-                leave="transition ease-in duration-75"
-                leaveFrom="transform opacity-100 scale-100"
-                leaveTo="transform opacity-0 scale-95"
-              >
-                <Menu.Items className="origin-top-right fixed right-0 mt-4 w-screen rounded-md shadow-lg bg-gray-300 divide-y divide-gray-400 focus:outline-none z-50">
+              {isAdvertisingOpen && (
+                <div className="origin-top-right fixed right-0 mt-4 w-screen rounded-md shadow-lg bg-gray-300 divide-y divide-gray-400 z-50">
                   <div className="flex">
                     <div className="w-1/4 p-4">
                       {advertisingLinks.slice(0, 5).map((link) => (
-                        <Menu.Item key={link.path}>
-                          {({ active }) => (
-                            <Link href={link.path}>
-                              <div
-                                className={classNames(
-                                  active
-                                    ? "bg-yellow-500 text-white"
-                                    : "text-black",
-                                  "block px-4 py-2 text-[12px]"
-                                )}
-                              >
-                                <div className="Column1 flex items-center">
-                                  <FontAwesomeIcon
-                                    className="p-2 fa-2xl"
-                                    icon={link.icon}
-                                  />
-                                  <div>
-                                    {link.title}
-                                    <p className="text-[10px] text-gray-700">
-                                      {link.description}
-                                    </p>
-                                  </div>
-                                </div>
+                        <Link href={link.path} key={link.path}>
+                          <div className="block px-4 py-2 text-[12px] text-black hover:bg-yellow-500 hover:text-white">
+                            <div className="flex items-center">
+                              <FontAwesomeIcon
+                                className="p-2 fa-2xl"
+                                icon={link.icon}
+                              />
+                              <div>
+                                {link.title}
+                                <p className="text-[10px] text-gray-700">
+                                  {link.description}
+                                </p>
                               </div>
-                            </Link>
-                          )}
-                        </Menu.Item>
+                            </div>
+                          </div>
+                        </Link>
                       ))}
                     </div>
 
                     <div className="w-1/4 p-4">
                       {advertisingLinks.slice(5, 10).map((link) => (
-                        <Menu.Item key={link.path}>
-                          {({ active }) => (
-                            <Link href={link.path}>
-                              <div
-                                className={classNames(
-                                  active
-                                    ? "bg-yellow-500 text-white"
-                                    : "text-black",
-                                  "block px-4 py-2 text-[12px]"
-                                )}
-                              >
-                                <div className="Column1 flex items-center">
-                                  <FontAwesomeIcon
-                                    className="p-2 fa-2xl"
-                                    icon={link.icon}
-                                  />
-                                  <div>
-                                    {link.title}
-                                    <p className="text-[10px] text-gray-700">
-                                      {link.description}
-                                    </p>
-                                  </div>
-                                </div>
+                        <Link href={link.path} key={link.path}>
+                          <div className="block px-4 py-2 text-[12px] text-black hover:bg-yellow-500 hover:text-white">
+                            <div className="flex items-center">
+                              <FontAwesomeIcon
+                                className="p-2 fa-2xl"
+                                icon={link.icon}
+                              />
+                              <div>
+                                {link.title}
+                                <p className="text-[10px] text-gray-700">
+                                  {link.description}
+                                </p>
                               </div>
-                            </Link>
-                          )}
-                        </Menu.Item>
+                            </div>
+                          </div>
+                        </Link>
                       ))}
                     </div>
 
                     <div className="w-1/4 p-4">
                       {advertisingLinks.slice(10, 15).map((link) => (
-                        <Menu.Item key={link.path}>
-                          {({ active }) => (
-                            <Link href={link.path}>
-                              <div
-                                className={classNames(
-                                  active
-                                    ? "bg-yellow-500 text-white"
-                                    : "text-black",
-                                  "block px-4 py-2 text-[12px]"
-                                )}
-                              >
-                                <div className="Column1 flex items-center">
-                                  <FontAwesomeIcon
-                                    className="p-2 fa-2xl"
-                                    icon={link.icon}
-                                  />
-                                  <div>
-                                    {link.title}
-                                    <p className="text-[10px] text-gray-700">
-                                      {link.description}
-                                    </p>
-                                  </div>
-                                </div>
+                        <Link href={link.path} key={link.path}>
+                          <div className="block px-4 py-2 text-[12px] text-black hover:bg-yellow-500 hover:text-white">
+                            <div className="flex items-center">
+                              <FontAwesomeIcon
+                                className="p-2 fa-2xl"
+                                icon={link.icon}
+                              />
+                              <div>
+                                {link.title}
+                                <p className="text-[10px] text-gray-700">
+                                  {link.description}
+                                </p>
                               </div>
-                            </Link>
-                          )}
-                        </Menu.Item>
+                            </div>
+                          </div>
+                        </Link>
                       ))}
                     </div>
 
                     <div className="w-1/4 p-4">
-                      {/* Place your image and additional content here */}
                       <Image
                         className="w-[30rem] h-[15rem] object-contain"
                         src={NavImages.link4}
-                        alt=""
+                        alt="Advertising Services"
                       />
                       <Link href="/services">
                         <h2 className="text-blue-600 hover:text-blue-900 cursor-pointer pt-1 text-[10px]">
@@ -1474,130 +1240,88 @@ const Navbar = () => {
                       </p>
                     </div>
                   </div>
-                </Menu.Items>
-              </Transition>
-            </Menu>
+                </div>
+              )}
+            </div>
 
             {/*handburger menu */}
-            <li className="p-4 hidden lg:block">
-              {/*Mobileapp */}
-              <Menu as="div" className="relative inline-block text-left">
-                <div>
-                  <Menu.Button className="lg:inline-flex font-semibold antialiased hidden justify-center w-full rounded-md px-4 py-2 text-[14px] text-black hover:bg-yellow-500 focus:outline-none">
-                    <TiThMenu />
-                  </Menu.Button>
-                </div>
+            <li
+              className="p-4 hidden lg:block relative"
+              onMouseEnter={() => setisMoreOpen(true)}
+              onMouseLeave={() => setisMoreOpen(false)}
+            >
+              <div className="lg:inline-flex font-semibold antialiased hidden justify-center w-full rounded-md px-4 py-2 text-[14px] text-black hover:bg-yellow-500 cursor-pointer">
+                <TiThMenu />
+              </div>
 
-                <Transition
-                  as={Fragment}
-                  enter="transition ease-out duration-100"
-                  enterFrom="transform opacity-0 scale-95"
-                  enterTo="transform opacity-100 scale-100"
-                  leave="transition ease-in duration-75"
-                  leaveFrom="transform opacity-100 scale-100"
-                  leaveTo="transform opacity-0 scale-95"
-                >
-                  <Menu.Items className="origin-top-right fixed right-0 mt-4 w-screen rounded-md shadow-lg bg-gray-300 divide-y divide-gray-400 focus:outline-none z-50">
-                    <div className="flex">
-                      <div className="w-1/3 p-4">
-                        {moreLinks.slice(0, 1).map((link) => (
-                          <Menu.Item key={link.path}>
-                            {({ active }) => (
-                              <Link href={link.path}>
-                                <div
-                                  className={classNames(
-                                    active
-                                      ? "bg-yellow-500 text-white"
-                                      : "text-black",
-                                    "block px-4 py-2 text-[12px]"
-                                  )}
-                                >
-                                  <div className="Column1 flex items-center">
-                                    <FontAwesomeIcon
-                                      className="p-2 fa-2xl"
-                                      icon={link.icon}
-                                    />
-                                    <div>
-                                      {link.title}
-                                      <p className="text-[10px] text-gray-700">
-                                        {link.description}
-                                      </p>
-                                    </div>
-                                  </div>
-                                </div>
-                              </Link>
-                            )}
-                          </Menu.Item>
-                        ))}
-                      </div>
-
-                      <div className="w-1/3 p-4">
-                        {moreLinks.slice(1, 2).map((link) => (
-                          <Menu.Item key={link.path}>
-                            {({ active }) => (
-                              <Link href={link.path}>
-                                <div
-                                  className={classNames(
-                                    active
-                                      ? "bg-yellow-500 text-white"
-                                      : "text-black",
-                                    "block px-4 py-2 text-[12px]"
-                                  )}
-                                >
-                                  <div className="Column1 flex items-center">
-                                    <FontAwesomeIcon
-                                      className="p-2 fa-2xl"
-                                      icon={link.icon}
-                                    />
-                                    <div>
-                                      {link.title}
-                                      <p className="text-[10px] text-gray-700">
-                                        {link.description}
-                                      </p>
-                                    </div>
-                                  </div>
-                                </div>
-                              </Link>
-                            )}
-                          </Menu.Item>
-                        ))}
-                      </div>
-
-                      <div className="w-1/3 p-4">
-                        {moreLinks.slice(2, 3).map((link) => (
-                          <Menu.Item key={link.path}>
-                            {({ active }) => (
-                              <Link href={link.path}>
-                                <div
-                                  className={classNames(
-                                    active
-                                      ? "bg-yellow-500 text-white"
-                                      : "text-black",
-                                    "block px-4 py-2 text-[12px]"
-                                  )}
-                                >
-                                  <div className="Column1 flex items-center">
-                                    <FontAwesomeIcon
-                                      className="p-2 fa-2xl"
-                                      icon={link.icon}
-                                    />
-                                    <div>
-                                      {link.title}
-                                      <p className="text-[10px] text-gray-700">
-                                        {link.description}
-                                      </p>
-                                    </div>
-                                  </div>
-                                </div>
-                              </Link>
-                            )}
-                          </Menu.Item>
-                        ))}
-                      </div>
+              {isMoreOpen && (
+                <div className="origin-top-right fixed right-0 mt-4 w-screen rounded-md shadow-lg bg-gray-300 divide-y divide-gray-400 z-50">
+                  <div className="flex">
+                    <div className="w-1/3 p-4">
+                      {moreLinks.slice(0, 1).map((link) => (
+                        <Link href={link.path} key={link.path}>
+                          <div className="block px-4 py-2 text-[12px] text-black hover:bg-yellow-500 hover:text-white">
+                            <div className="flex items-center">
+                              <FontAwesomeIcon
+                                className="p-2 fa-2xl"
+                                icon={link.icon}
+                              />
+                              <div>
+                                {link.title}
+                                <p className="text-[10px] text-gray-700">
+                                  {link.description}
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </Link>
+                      ))}
                     </div>
-                  </Menu.Items>
-                </Transition>
-              </Menu>
+
+                    <div className="w-1/3 p-4">
+                      {moreLinks.slice(1, 2).map((link) => (
+                        <Link href={link.path} key={link.path}>
+                          <div className="block px-4 py-2 text-[12px] text-black hover:bg-yellow-500 hover:text-white">
+                            <div className="flex items-center">
+                              <FontAwesomeIcon
+                                className="p-2 fa-2xl"
+                                icon={link.icon}
+                              />
+                              <div>
+                                {link.title}
+                                <p className="text-[10px] text-gray-700">
+                                  {link.description}
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
+
+                    <div className="w-1/3 p-4">
+                      {moreLinks.slice(2, 3).map((link) => (
+                        <Link href={link.path} key={link.path}>
+                          <div className="block px-4 py-2 text-[12px] text-black hover:bg-yellow-500 hover:text-white">
+                            <div className="flex items-center">
+                              <FontAwesomeIcon
+                                className="p-2 fa-2xl"
+                                icon={link.icon}
+                              />
+                              <div>
+                                {link.title}
+                                <p className="text-[10px] text-gray-700">
+                                  {link.description}
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              )}
             </li>
 
             {/*mobile menu */}

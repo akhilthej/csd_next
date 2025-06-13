@@ -10,11 +10,14 @@ import FixedPrice from "./icons/FixedPrice.svg"
   import TimeManage from "./icons/TimeManage.svg"
  import HiringModel from "./icons/HiringModel.svg"
 
+ import goodfirms from "./icons/Goodfirms_Logo.jpg"
+  import googlereview from "./icons/googlereview.png"
+
 export { DigitalmarketingIcon,Advertisingicon,Graphicdesignicon,Webdevelopmenticon,Mobileappicon,Brandingicon,
 FixedPrice,
   OntimeDelivery,
   TimeManage,
-  HiringModel,
+  HiringModel,goodfirms,googlereview,
     
 
  };

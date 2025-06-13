@@ -1,8 +1,7 @@
 import React from "react";
 import Link from "next/link";
 
-import goodfirms from "../../public/images";
-import googlereview from "../../public/images";
+import {goodfirms,googlereview} from "../../public/icons";
 
 import footer_csd from "./csdv2Logo.svg";
 
@@ -21,6 +20,11 @@ const Footer = () => {
           <div className="max-w-screen-xl px-4 py-16 mx-auto sm:px-9 lg:px-8">
             <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
               <div>
+                <div className="text-white mb-2">
+                  <h4 className="text-[26px] font-bold">Need Help?</h4>
+                  <p>+91 81434 07758</p>
+                  <p className="text-[12px]">We are avaible 24/7.</p>
+                </div>
                 <Link href="/">
                   <Image
                     src={footer_csd}
@@ -53,7 +57,7 @@ const Footer = () => {
                   </Link>
                 </div>
               </div>
-              <div className="grid grid-cols-1 gap-8 lg:col-span-2 sm:grid-cols-2 lg:grid-cols-4">
+              <div className="grid grid-cols-2 gap-8 lg:col-span-2 lg:grid-cols-4">
                 <div>
                   <p className="font-medium text-white">Company</p>
                   <nav className="flex flex-col mt-4 space-y-2 text-[12px] text-gray-500">
@@ -107,7 +111,7 @@ const Footer = () => {
             </div>
 
             <div className="flex items-center justify-center">
-              <a
+              <div
                 className="p-2"
                 href="https://www.goodfirms.co/company/cyber-space-digital"
               >
@@ -118,8 +122,11 @@ const Footer = () => {
                   width="120"
                   height="50"
                 />
-              </a>
-              <a className="p-2" href="https://g.page/r/Cci0AD_-b2q3EAI/review">
+              </div>
+              <div
+                className="p-2"
+                href="https://g.page/r/Cci0AD_-b2q3EAI/review"
+              >
                 <Image
                   className="h-10 hover:animate-pulse max-w-full"
                   src={googlereview}
@@ -127,7 +134,7 @@ const Footer = () => {
                   width="120"
                   height="50"
                 />
-              </a>
+              </div>
             </div>
 
             <div className="h-px my-8 border-0 bg-gray-700" />
