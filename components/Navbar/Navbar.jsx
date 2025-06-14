@@ -1,8 +1,7 @@
 "use client";
-import { Fragment, useState, useEffect } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import { FaChevronDown } from "react-icons/fa";
-import { Menu, Transition } from "@headlessui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { TiThMenu } from "react-icons/ti";
 import {
@@ -82,29 +81,44 @@ function classNames(...classes) {
 }
 
 const Navbar = () => {
-  const [isWebDevelopmentOpen, setisWebDevelopmentOpen] = useState(false);
-  const [isMobileAppOpen, setIsMobileAppOpen] = useState(false);
-  const [isDigitalMarketingOpen, setisDigitalMarketingOpen] = useState(false);
-  const [isMultiMediaOpen, setisMultiMediaOpen] = useState(false);
-  const [isBrandingOpen, setisBrandingOpen] = useState(false);
-  const [isAdvertisingOpen, setisAdvertisingOpen] = useState(false);
-  const [isMoreOpen, setisMoreOpen] = useState(false);
-  const [isOpen, setIsOpen] = useState(false);
+  const [openMenus, setOpenMenus] = useState({
+    webDevelopment: false,
+    mobileApp: false,
+    digitalMarketing: false,
+    multimedia: false,
+    branding: false,
+    advertising: false,
+    more: false,
+    mobileMenu: false,
+  });
+  let closeTimeout;
 
-  const handleMouseEnter = () => {
-    setisWebDevelopmentOpen(true);
+  const isAnyMenuOpen = Object.values(openMenus).some((isOpen) => isOpen);
+  document.body.style.overflow = isAnyMenuOpen ? "hidden" : "visible";
+  const closeAllMenus = () => {
+    setOpenMenus({
+      webDevelopment: false,
+      mobileApp: false,
+      digitalMarketing: false,
+      multimedia: false,
+      branding: false,
+      advertising: false,
+      more: false,
+      mobileMenu: false,
+    });
   };
-  const handleMouseLeave = () => {
-    setisWebDevelopmentOpen(false);
-  };
-
-  useEffect(() => {
-    if (isWebDevelopmentOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "visible";
+  const handleMouseEnter = (menu) => {
+    if (closeTimeout) {
+      clearTimeout(closeTimeout);
     }
-  }, [isWebDevelopmentOpen]);
+    closeAllMenus();
+    setOpenMenus((prev) => ({ ...prev, [menu]: true }));
+  };
+  const handleMouseLeave = (menu) => {
+    closeTimeout = setTimeout(() => {
+      setOpenMenus((prev) => ({ ...prev, [menu]: false }));
+    }, 500); // delay in ms
+  };
 
   const NavImages = {
     link1: Webdevelopmenticon,
@@ -683,8 +697,8 @@ const Navbar = () => {
             {/* Web Development */}
             <div
               className="relative inline-block text-left"
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
+              onMouseEnter={() => handleMouseEnter("webDevelopment")}
+              onMouseLeave={() => handleMouseLeave("webDevelopment")}
             >
               <div className="lg:inline-flex font-semibold antialiased hidden justify-center w-full rounded-md px-4 py-2 text-[12px] text-black hover:bg-yellow-500 cursor-pointer">
                 <div className="flex items-center gap-x-1">
@@ -698,8 +712,8 @@ const Navbar = () => {
                 </div>
               </div>
 
-              {isWebDevelopmentOpen && (
-                <div className="origin-top-right fixed right-0 mt-4 w-screen rounded-md shadow-lg bg-gray-300 divide-y divide-gray-400 z-50">
+              {openMenus.webDevelopment && (
+                <div className="origin-top-right fixed right-0 mt-2 w-screen rounded-md shadow-lg bg-gray-300 divide-y divide-gray-400 z-50">
                   <div className="flex">
                     <div className="w-1/3 p-4">
                       {webDevelopmentLinks.slice(0, 2).map((link) => (
@@ -766,8 +780,8 @@ const Navbar = () => {
             {/*Mobileapp */}
             <div
               className="relative inline-block text-left"
-              onMouseEnter={() => setIsMobileAppOpen(true)}
-              onMouseLeave={() => setIsMobileAppOpen(false)}
+              onMouseEnter={() => handleMouseEnter("mobileApp")}
+              onMouseLeave={() => handleMouseLeave("mobileApp")}
             >
               <div className="lg:inline-flex font-semibold antialiased hidden justify-center w-full rounded-md px-4 py-2 text-[12px] text-black hover:bg-yellow-500 cursor-pointer">
                 <div className="flex items-center gap-x-1">
@@ -781,8 +795,8 @@ const Navbar = () => {
                 </div>
               </div>
 
-              {isMobileAppOpen && (
-                <div className="origin-top-right fixed right-0 mt-4 w-screen rounded-md shadow-lg bg-gray-300 divide-y divide-gray-400 z-50">
+              {openMenus.mobileApp && (
+                <div className="origin-top-right fixed right-0 mt-2 w-screen rounded-md shadow-lg bg-gray-300 divide-y divide-gray-400 z-50">
                   <div className="flex">
                     <div className="w-1/4 p-4">
                       {mobileappLinks.slice(0, 5).map((link) => (
@@ -870,8 +884,8 @@ const Navbar = () => {
             {/* Digital Marketing */}
             <div
               className="relative inline-block text-left"
-              onMouseEnter={() => setisDigitalMarketingOpen(true)}
-              onMouseLeave={() => setisDigitalMarketingOpen(false)}
+              onMouseEnter={() => handleMouseEnter("digitalMarketing")}
+              onMouseLeave={() => handleMouseLeave("digitalMarketing")}
             >
               <div className="lg:inline-flex font-semibold antialiased hidden justify-center w-full rounded-md px-4 py-2 text-[12px] text-black hover:bg-yellow-500 cursor-pointer">
                 <div className="flex items-center gap-x-1">
@@ -885,8 +899,8 @@ const Navbar = () => {
                 </div>
               </div>
 
-              {isDigitalMarketingOpen && (
-                <div className="origin-top-right fixed right-0 mt-4 w-screen rounded-md shadow-lg bg-gray-300 divide-y divide-gray-400 z-50">
+              {openMenus.digitalMarketing && (
+                <div className="origin-top-right fixed right-0 mt-2 w-screen rounded-md shadow-lg bg-gray-300 divide-y divide-gray-400 z-50">
                   <div className="flex">
                     <div className="w-1/4 p-4">
                       {digitalMarketingLinks.slice(0, 5).map((link) => (
@@ -974,8 +988,8 @@ const Navbar = () => {
             {/*Multimedia */}
             <div
               className="relative inline-block text-left"
-              onMouseEnter={() => setisMultiMediaOpen(true)}
-              onMouseLeave={() => setisMultiMediaOpen(false)}
+              onMouseEnter={() => handleMouseEnter("multimedia")}
+              onMouseLeave={() => handleMouseLeave("multimedia")}
             >
               <div className="lg:inline-flex font-semibold antialiased hidden justify-center w-full rounded-md px-4 py-2 text-[12px] text-black hover:bg-yellow-500 cursor-pointer">
                 <div className="flex items-center gap-x-1">
@@ -989,8 +1003,8 @@ const Navbar = () => {
                 </div>
               </div>
 
-              {isMultiMediaOpen && (
-                <div className="origin-top-right fixed right-0 mt-4 w-screen rounded-md shadow-lg bg-gray-300 divide-y divide-gray-400 z-50">
+              {openMenus.multimedia && (
+                <div className="origin-top-right fixed right-0 mt-2 w-screen rounded-md shadow-lg bg-gray-300 divide-y divide-gray-400 z-50">
                   <div className="flex">
                     <div className="w-1/5 p-4">
                       {multimediaLinks.slice(0, 5).map((link) => (
@@ -1099,8 +1113,8 @@ const Navbar = () => {
             {/* Branding*/}
             <div
               className="relative inline-block text-left"
-              onMouseEnter={() => setisBrandingOpen(true)}
-              onMouseLeave={() => setisBrandingOpen(false)}
+              onMouseEnter={() => handleMouseEnter("branding")}
+              onMouseLeave={() => handleMouseLeave("branding")}
             >
               <div className="lg:inline-flex font-semibold antialiased hidden justify-center w-full rounded-md px-4 py-2 text-[12px] text-black hover:bg-yellow-500 cursor-pointer">
                 <div className="flex items-center gap-x-1">
@@ -1114,8 +1128,8 @@ const Navbar = () => {
                 </div>
               </div>
 
-              {isBrandingOpen && (
-                <div className="origin-top-right fixed right-0 mt-4 w-screen rounded-md shadow-lg bg-gray-300 divide-y divide-gray-400 z-50">
+              {openMenus.branding && (
+                <div className="origin-top-right fixed right-0 mt-2 w-screen rounded-md shadow-lg bg-gray-300 divide-y divide-gray-400 z-50">
                   <div className="flex">
                     <div className="w-1/4 p-4">
                       {brandingLinks.slice(0, 5).map((link) => (
@@ -1203,8 +1217,8 @@ const Navbar = () => {
             {/*Advertising */}
             <div
               className="relative inline-block text-left"
-              onMouseEnter={() => setisAdvertisingOpen(true)}
-              onMouseLeave={() => setisAdvertisingOpen(false)}
+              onMouseEnter={() => handleMouseEnter("advertising")}
+              onMouseLeave={() => handleMouseLeave("advertising")}
             >
               <div className="lg:inline-flex font-semibold antialiased hidden justify-center w-full rounded-md px-4 py-2 text-[12px] text-black hover:bg-yellow-500 cursor-pointer">
                 <div className="flex items-center gap-x-1">
@@ -1218,8 +1232,8 @@ const Navbar = () => {
                 </div>
               </div>
 
-              {isAdvertisingOpen && (
-                <div className="origin-top-right fixed right-0 mt-4 w-screen rounded-md shadow-lg bg-gray-300 divide-y divide-gray-400 z-50">
+              {openMenus.advertising && (
+                <div className="origin-top-right fixed right-0 mt-2 w-screen rounded-md shadow-lg bg-gray-300 divide-y divide-gray-400 z-50">
                   <div className="flex">
                     <div className="w-1/4 p-4">
                       {advertisingLinks.slice(0, 5).map((link) => (
@@ -1307,15 +1321,15 @@ const Navbar = () => {
             {/*handburger menu */}
             <li
               className="p-4 hidden lg:block relative"
-              onMouseEnter={() => setisMoreOpen(true)}
-              onMouseLeave={() => setisMoreOpen(false)}
+              onMouseEnter={() => handleMouseEnter("more")}
+              onMouseLeave={() => handleMouseLeave("more")}
             >
               <div className="lg:inline-flex font-semibold antialiased hidden justify-center w-full rounded-md px-4 py-2 text-[14px] text-black hover:bg-yellow-500 cursor-pointer">
                 <TiThMenu />
               </div>
 
-              {isMoreOpen && (
-                <div className="origin-top-right fixed right-0 mt-4 w-screen rounded-md shadow-lg bg-gray-300 divide-y divide-gray-400 z-50">
+              {openMenus.more && (
+                <div className="origin-top-right fixed right-0 mt-2 w-screen rounded-md shadow-lg bg-gray-300 divide-y divide-gray-400 z-50">
                   <div className="flex">
                     <div className="w-1/3 p-4">
                       {moreLinks.slice(0, 1).map((link) => (
@@ -1412,7 +1426,7 @@ const Navbar = () => {
               >
                 ☰
               </button>
-              {isOpen && (
+              {openMenus.mobileMenu && (
                 <div className="origin-top-right absolute right-0 mt-4 w-48 h-auto sm:rounded-md shadow-lg bg-gray-300 divide-y divide-gray-400 z-50">
                   {mobilemenu.map((link) => (
                     <Link
