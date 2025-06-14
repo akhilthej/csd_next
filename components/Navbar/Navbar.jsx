@@ -1,9 +1,13 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-import { FaChevronDown } from "react-icons/fa";
+import { HiDevicePhoneMobile, HiPaintBrush } from "react-icons/hi2";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { TiThMenu } from "react-icons/ti";
+import { TbSocial } from "react-icons/tb";
+import { SiWebmoney } from "react-icons/si";
+import { PiPaintBucketFill } from "react-icons/pi";
+import { MdOutlineAdsClick } from "react-icons/md";
 import {
   DigitalmarketingIcon,
   Advertisingicon,
@@ -93,8 +97,6 @@ const Navbar = () => {
   });
   let closeTimeout;
 
-  const isAnyMenuOpen = Object.values(openMenus).some((isOpen) => isOpen);
-  document.body.style.overflow = isAnyMenuOpen ? "hidden" : "visible";
   const closeAllMenus = () => {
     setOpenMenus({
       webDevelopment: false,
@@ -670,25 +672,25 @@ const Navbar = () => {
   ];
 
   return (
-    <section className="sticky w-full top-0 z-50 bg-white/90 drop-shadow-lg ">
-      <div className="flex px-2 gap-2 justify-between bg-black text-white text-[10px]">
+    <section className="fixed w-full top-0 z-50 bg-white/90 drop-shadow-lg ">
+      <div className="flex p-2 justify-between bg-black text-white text-[12px]">
         <div className="flex items-center">
-          <FontAwesomeIcon icon={faEnvelope} className="mr-1" />
+          <FontAwesomeIcon icon={faEnvelope} className="mr-1 text-[10px]" />
           mail@cyberspacedigital.in
         </div>
         <div className="flex items-center">
-          <FontAwesomeIcon icon={faPhone} className="mr-1" />
-          +91-8143407758
+          <FontAwesomeIcon icon={faPhone} className="mr-1 text-[10px]" />
+          +918143407758
         </div>
       </div>
 
       <div className=" sm:px-2 w-full h-17 flex justify-between items-center text-black ">
         <Link href="/">
           <Image
-            className="pl-2 h-auto w-36 lg:w-42"
+            className="pl-2 h-auto w-36 lg:w-44"
             src={NavbarLogo}
             alt="csd_logo"
-            width="42"
+            width="52"
             height="auto"
           />
         </Link>
@@ -706,9 +708,9 @@ const Navbar = () => {
                     className="text-[12px]"
                     href="/services/web-development-company"
                   >
+                    <SiWebmoney className="text-[24px] mx-auto mb-1" />
                     Web Development
                   </Link>
-                  <FaChevronDown className="text-[10px] mt-[1px]" />
                 </div>
               </div>
 
@@ -789,9 +791,9 @@ const Navbar = () => {
                     className="text-[12px]"
                     href="/services/mobile-app-development-company"
                   >
+                    <HiDevicePhoneMobile className="text-[24px] mx-auto mb-1" />
                     Mobileapp
                   </Link>
-                  <FaChevronDown className="text-[10px] mt-[1px]" />
                 </div>
               </div>
 
@@ -893,9 +895,10 @@ const Navbar = () => {
                     className="text-[12px]"
                     href="/services/digital-marketing-company"
                   >
+                    {" "}
+                    <TbSocial className="text-[24px] mx-auto mb-1" />
                     Digital Marketing
                   </Link>
-                  <FaChevronDown className="text-[10px] mt-[1px]" />
                 </div>
               </div>
 
@@ -997,9 +1000,9 @@ const Navbar = () => {
                     className="text-[12px]"
                     href="/services/multimedia-company"
                   >
+                    <HiPaintBrush className="text-[24px] mx-auto mb-1" />
                     Multimedia
                   </Link>
-                  <FaChevronDown className="text-[10px] mt-[1px]" />
                 </div>
               </div>
 
@@ -1122,9 +1125,9 @@ const Navbar = () => {
                     className="text-[12px]"
                     href="/services/branding-comapny"
                   >
+                    <PiPaintBucketFill className="text-[24px] mx-auto mb-1" />
                     Branding
                   </Link>
-                  <FaChevronDown className="text-[10px] mt-[1px]" />
                 </div>
               </div>
 
@@ -1226,9 +1229,9 @@ const Navbar = () => {
                     className="text-[12px]"
                     href="/services/advertising-company"
                   >
+                    <MdOutlineAdsClick className="text-[24px] mx-auto mb-1" />
                     Advertising
                   </Link>
-                  <FaChevronDown className="text-[10px] mt-[1px]" />
                 </div>
               </div>
 
@@ -1325,7 +1328,7 @@ const Navbar = () => {
               onMouseLeave={() => handleMouseLeave("more")}
             >
               <div className="lg:inline-flex font-semibold antialiased hidden justify-center w-full rounded-md px-4 py-2 text-[14px] text-black hover:bg-yellow-500 cursor-pointer">
-                <TiThMenu />
+                <TiThMenu className="text-[24px] mx-auto mb-1" />
               </div>
 
               {openMenus.more && (

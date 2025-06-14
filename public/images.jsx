@@ -5,7 +5,9 @@ import GraphicDesignImage from "./images/GraphicDesignImage.svg";
 import MobileAppDevImage from "./images/MobileAppDevImage.svg";
 import WebDevelopmentImage from "./images/WebDevelopmentImage.svg";
 
-import HomeCommunityCover from "./images/HomeCommunityCover.webp"
+import HomeCommunityCover from "./images/HomeCommunityCover.webp";
+import ContactUsCover from "./images/Contact_us.png";
+import ourproducts_contact from "./images/ourproducts_contact.jpg";
 
 export {
   DigitalMarketingImage,
@@ -13,5 +15,8 @@ export {
   BrandingImage,
   GraphicDesignImage,
   MobileAppDevImage,
-  WebDevelopmentImage,HomeCommunityCover
+  WebDevelopmentImage,
+  HomeCommunityCover,
+  ContactUsCover,
+  ourproducts_contact,
 };

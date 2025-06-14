@@ -1,12 +1,13 @@
 import Link from "next/link";
 import React from "react";
 import Services from "../../components/ServicesComponent";
-import { HomeCommunityCover,  } from "../../public/images";
+import { HomeCommunityCover } from "../../public/images";
 import {
   FixedPrice,
   TimeManage,
   OntimeDelivery,
-  HiringModel,goodfirms,
+  HiringModel,
+  goodfirms,
 } from "../../public/icons";
 import Image from "next/image";
 import {
@@ -140,38 +141,35 @@ const HomeTitle = () => {
       </section>
 
       {/*section -6*/}
-      <div className="relative mt-10 pt-10 sm:pt-0 mb-10">
-        <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 items-center md:gap-20">
-          <div className="content">
-            <div className="flex items-center gap-3">
-              <hr className="w-10 bg-orange-500 border " />
-              <span className="md:text-[18px] font-medium text-gray-800 ">
-                About
-              </span>
+      <div className="py-16 bg-white">
+        <div className="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
+          <div className="space-y-6 md:space-y-0 md:flex md:gap-6 lg:items-center lg:gap-12">
+            <div className="md:7/12 lg:w-6/12">
+              <h2 className="text-2xl text-gray-900 font-bold md:text-4xl">
+                Our Work Process
+              </h2>
+              <p className="mt-6 text-gray-600">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum
+                omnis voluptatem accusantium nemo perspiciatis delectus atque
+                autem! Voluptatum tenetur beatae unde aperiam, repellat expedita
+                consequatur! Officiis id consequatur atque doloremque!
+              </p>
+              <p className="mt-4 text-gray-600">
+                {" "}
+                Nobis minus voluptatibus pariatur dignissimos libero quaerat
+                iure expedita at? Asperiores nemo possimus nesciunt dicta veniam
+                aspernatur quam mollitia.
+              </p>
             </div>
-            <p className="text-[40px] lg:text-[45px] xl:text-[55px] font-bold leading-tight mt-5 sm:mt-0 ">
-              Cyber Space Digital
-            </p>
-            <p className="mt-5 md:text-md ">
-              I'm creative designer based in Bangladesh, and I'm very passionate
-              and dedicated to my <br className="hidden md:block" /> work.Your
-              Satisfaction is my success
-            </p>
-            <div className="flex gap-4 mt-10">
-              <button className="font-medium text-[16px] flex items-center px-5 py-3 md:py-4 md:px-8 rounded-xl capitalize bg-gradient-to-r from-orange-300 to-orange-500 hover:from-pink-500 hover:to-yellow-500  relative gap-2 transition duration-300 hover:scale-105 text-white shadow-glass ">
-                Get In Touch
-                <span className="animate-ping absolute right-0 top-0 w-3 h-3  rounded-full bg-gradient-to-r from-orange -400 to-orange-700 "></span>
-              </button>
+            <div className="md:5/12 lg:w-5/12">
+              <Image
+                src={goodfirms}
+                alt="image"
+                loading="lazy"
+                width=""
+                height=""
+              />
             </div>
-          </div>
-          <div className="relative sm:mt-0 mt-10 px-6 sm:px-0">
-            <Image
-              className="h-10 hover:animate-pulse max-w-full"
-              src={goodfirms}
-              alt="googlereview_icon"
-              width="120"
-              height="50"
-            />
           </div>
         </div>
       </div>
