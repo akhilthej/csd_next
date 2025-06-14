@@ -407,9 +407,9 @@ const HomeTitle = () => {
         </div>
       </section>
 
-      {/* "Documentation" section */}
-      <section className="text-center mx-auto my-8">
-        <h2 className="cursor-default pb-2 font-extrabold text-transparent text-2xl md:text-5xl lg:text-6xl bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-600 mt-3  tracking-tight ">
+      {/* "need more help" section */}
+      <section className="text-center mx-auto py-8 bg-primary">
+        <h2 className="cursor-default pb-2 font-extrabold text-transparent text-2xl md:text-5xl lg:text-6xl bg-clip-text bg-white mt-3  tracking-tight ">
           Need Help ?
         </h2>
         <p className="cursor-default text-sm font-medium text-black mt-5 mb-10">
@@ -418,16 +418,16 @@ const HomeTitle = () => {
         </p>
 
         <div className="flex items-center justify-center gap-4 flex-wrap">
-          <a href="/contactus">
-            <button className="text-xs sm:text-sm transform rounded bg-yellow-500 border border-slate-200 px-20 py-2 font-medium text-black transition-colors hover:bg-slate-50 ">
+          <Link href="/contactus">
+            <button className="text-xs sm:text-sm transform rounded bg-white border  px-20 py-2 font-medium text-black transition-colors hover:bg-slate-50 ">
               FAQ
             </button>
-          </a>
-          <a href="/contactus">
-            <button className="text-xs sm:text-sm transform rounded border border-slate-200 px-14 py-2 font-medium text-black transition-colors hover:bg-slate-50 hover:text-black">
+          </Link>
+          <Link href="/contactus">
+            <button className="text-xs sm:text-sm transform rounded border bg-white px-14 py-2 font-medium text-black transition-colors hover:bg-slate-50 hover:text-black">
               Contact us
             </button>
-          </a>
+          </Link>
         </div>
       </section>
     </div>

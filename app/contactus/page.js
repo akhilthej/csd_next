@@ -81,7 +81,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="mb-6">
+    <div>
       <Head>
         <title>Contact us - Cyber Space Digital</title>
         <meta
@@ -92,17 +92,15 @@ const ContactForm = () => {
       </Head>
 
       {/* Title Card */}
-      <section className="py-10 sm:py-40 relative">
-        <div className="absolute inset-0">
-          <Image
-            src={ContactUsCover}
-            alt="Contact Us Cover"
-            layout="fill"
-            objectFit="cover"
-            className="z-0"
-          />
-        </div>
-        <div className="flex flex-col items-center md:flex-row justify-center relative z-10">
+      <section
+        className="py-10 sm:py-40"
+        style={{
+          backgroundImage: `url("${ContactUsCover.src}")`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="flex flex-col items-center md:flex-row justify-center">
           <div className="md:w-1/2 md:pr-10"></div>
           <div className="md:w-1/2 px-5">
             <div className="text-right md:text-left">
@@ -144,8 +142,8 @@ const ContactForm = () => {
         </div>
       </section>
 
-      <div className="grid sm:grid-cols-2 items-center gap-16 p-8 mx-auto max-w-4xl bg-white shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-md text-[#333] font-[sans-serif]">
-        <div>
+      <div className="my-6 grid sm:grid-cols-2 items-center gap-16 p-8 mx-auto max-w-4xl bg-white shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-md text-[#333] font-[sans-serif]">
+        <div >
           <h1 className="text-3xl font-extrabold">Let's Talk</h1>
           <p className="text-sm text-gray-400 mt-3">
             Have some big idea or brand to develop and need help? Then reach
@@ -285,35 +283,35 @@ const ContactForm = () => {
         </div>
       </section>
 
-    <section
-  className="py-10 sm:py-40 relative"
-  style={{
-    backgroundImage: `url(${ourproducts_contact.src})`, // Use .src if using next/image
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-  }}
->
-  {/* Black gradient overlay */}
-  <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent z-0"></div>
+      {/* Our Products */}
+      <section
+        className="py-10 sm:py-40 relative"
+        style={{
+          backgroundImage: `url("${ourproducts_contact.src}")`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        {/* Black gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent z-0"></div>
 
-  <div className="flex flex-col md:flex-row items-start justify-center relative z-10">
-    {/* Left Column with Content */}
-    <div className="w-full md:w-1/2 px-5">
-      <div className="text-left">
-        <h3 className="cursor-default text-2xl pb-5 md:text-6xl fade-in-down font-extrabold text-white tracking-tight">
-          Our Products
-        </h3>
-        <p className="cursor-default text-white sm:text-sm text-xs">
-          Products we have developed.
-        </p>
-      </div>
-    </div>
+        <div className="flex flex-col md:flex-row items-start justify-center relative z-10">
+          {/* Left Column with Content */}
+          <div className="w-full md:w-1/2 px-5">
+            <div className="text-left">
+              <h3 className="cursor-default text-2xl pb-5 md:text-6xl fade-in-down font-extrabold text-white tracking-tight">
+                Our Products
+              </h3>
+              <p className="cursor-default text-white sm:text-sm text-xs">
+                Products we have developed.
+              </p>
+            </div>
+          </div>
 
-    {/* Right Column Placeholder */}
-    <div className="hidden md:block md:w-1/2 md:pr-10"></div>
-  </div>
-</section>
-
+          {/* Right Column Placeholder */}
+          <div className="hidden md:block md:w-1/2 md:pr-10"></div>
+        </div>
+      </section>
     </div>
   );
 };

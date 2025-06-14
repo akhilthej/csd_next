@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 
-import {goodfirms,googlereview} from "../../public/icons";
+import { goodfirms, googlereview } from "../../public/icons";
 
 import footer_csd from "./csdv2Logo.svg";
 
@@ -21,14 +21,15 @@ const Footer = () => {
             <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
               <div>
                 <div className="text-white mb-2">
-                  <h4 className="text-[26px] font-bold">Need Help?</h4>
-                  <p>+91 81434 07758</p>
-                  <p className="text-[12px]">We are avaible 24/7.</p>
+                  <div className="leading-tight tracking-tighter">
+                    <h4 className="text-[46px] font-bold">Need Help?</h4>
+                    <p className="text-[26px] ">+91 81434 07758</p>
+                    <p className="text-[16px]">we are available 24/7.</p>
+                  </div>
                 </div>
                 <Link href="/">
                   <Image
                     src={footer_csd}
-                    className="mr-5 h-10 sm:h-10"
                     alt="footer_csd"
                     width="200"
                     height="200"
