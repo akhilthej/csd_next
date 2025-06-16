@@ -25,60 +25,7 @@ const ContactForm = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
 
-    const discordWebhookUrl = process.env.NEXT_PUBLIC_DIS_API;
-
-    if (!discordWebhookUrl) {
-      console.error("Discord webhook URL is not defined.");
-      alert("Error: Discord webhook URL is not configured.");
-      return;
-    }
-
-    const isValidEmail = (email) => /\S+@\S+\.\S+/.test(email);
-    const isValidPhone = (phone) => /^\+?\d{10,15}$/.test(phone);
-
-    if (!isValidEmail(formData.email)) {
-      alert("Please enter a valid email address.");
-      return;
-    }
-
-    if (!isValidPhone(formData.phone)) {
-      alert("Please enter a valid phone number.");
-      return;
-    }
-
-    const message = {
-      content: `Contact Form Submission\n\nName: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nMessage: ${formData.message}`,
-    };
-
-    try {
-      const response = await fetch(discordWebhookUrl, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(message),
-      });
-
-      if (response.ok) {
-        alert("Form submitted successfully!");
-        setFormData({ name: "", email: "", phone: "", message: "" });
-      } else {
-        const errorData = await response.json();
-        alert(
-          `Error: ${
-            errorData.message ||
-            "Error submitting the form. Please try again later."
-          }`
-        );
-      }
-    } catch (error) {
-      console.error("Error:", error);
-      alert("An unexpected error occurred. Please try again later.");
-    }
-  };
 
   return (
     <div>
@@ -101,7 +48,6 @@ const ContactForm = () => {
         }}
       >
         <div className="flex flex-col items-center md:flex-row justify-center">
-          <div className="md:w-1/2 md:pr-10"></div>
           <div className="md:w-1/2 px-5">
             <div className="text-right md:text-left">
               <h3 className="cursor-default text-2xl pb-5 md:text-6xl fade-in-down font-extrabold text-center text-white tracking-tight">
@@ -109,29 +55,30 @@ const ContactForm = () => {
                 <br />
                 we’d love to hear from you.
               </h3>
-              <p className="cursor-default text-white sm:text-sm text-xs text-center sm:ml-0">
+              <p className="cursor-default text-white sm:text-sm text-xs text-center">
                 You can contact us through mail or you can get in touch at our
                 digital office.
               </p>
-              {/* Button Row */}
               <div className="mt-5 flex flex-row flex-wrap sm:flex-nowrap justify-center gap-2 sm:gap-4 overflow-x-auto">
                 <a
                   href="mailto:mail@cyberspacedigital.in"
-                  className="flex items-center gap-2 whitespace-nowrap rounded-md bg-white px-4 py-2 text-sm sm:text-base font-medium text-black transition-colors hover:bg-black hover:text-white"
+                  className="flex items-center gap-2 rounded-md bg-white px-4 py-2 text-sm sm:text-base font-medium text-black hover:bg-black hover:text-white"
                 >
                   <FaEnvelope />
                   Email
                 </a>
                 <a
                   href="tel:+91-814-340-7758"
-                  className="flex items-center gap-2 whitespace-nowrap rounded-md bg-white px-4 py-2 text-sm sm:text-base font-medium text-black transition-colors hover:bg-black hover:text-white"
+                  className="flex items-center gap-2 rounded-md bg-white px-4 py-2 text-sm sm:text-base font-medium text-black hover:bg-black hover:text-white"
                 >
                   <FaPhone />
                   Phone
                 </a>
                 <a
                   href="https://api.whatsapp.com/send?phone=918143407758&text=Welcome%20to%20Cyberspacedigital"
-                  className="flex items-center gap-2 whitespace-nowrap rounded-md bg-white px-4 py-2 text-sm sm:text-base font-medium text-black transition-colors hover:bg-black hover:text-white"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 rounded-md bg-white px-4 py-2 text-sm sm:text-base font-medium text-black hover:bg-black hover:text-white"
                 >
                   <FaWhatsapp />
                   WhatsApp
@@ -143,7 +90,7 @@ const ContactForm = () => {
       </section>
 
       <div className="my-6 grid sm:grid-cols-2 items-center gap-16 p-8 mx-auto max-w-4xl bg-white shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-md text-[#333] font-[sans-serif]">
-        <div >
+        <div>
           <h1 className="text-3xl font-extrabold">Let's Talk</h1>
           <p className="text-sm text-gray-400 mt-3">
             Have some big idea or brand to develop and need help? Then reach
@@ -153,11 +100,10 @@ const ContactForm = () => {
             <h2 className="text-lg font-extrabold">Email</h2>
             <ul className="mt-3">
               <li className="flex items-center">
-                <div className="bg-[#e6e6e6cf] h-10 w-10 rounded-full flex items-center justify-center shrink-0">
+                <div className="bg-[#e6e6e6cf] h-10 w-10 rounded-full flex items-center justify-center">
                   <HiOutlineMail className="text-yellow-500 text-[20px]" />
                 </div>
                 <a
-                  target="blank"
                   href="mailto:mail@cyberspacedigital.in"
                   className="text-yellow-500 text-sm ml-3"
                 >
@@ -170,26 +116,32 @@ const ContactForm = () => {
           <div className="mt-12">
             <h2 className="text-lg font-extrabold">Socials</h2>
             <ul className="flex mt-3 space-x-4">
-              <li className="bg-[#e6e6e6cf] h-10 w-10 rounded-full flex items-center justify-center shrink-0">
+              <li className="bg-[#e6e6e6cf] h-10 w-10 rounded-full flex items-center justify-center">
                 <a
-                  href="javascript:void(0)"
+                  href="#"
                   className="text-yellow-500 text-[20px]"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <FaFacebookF />
                 </a>
               </li>
-              <li className="bg-[#e6e6e6cf] h-10 w-10 rounded-full flex items-center justify-center shrink-0">
+              <li className="bg-[#e6e6e6cf] h-10 w-10 rounded-full flex items-center justify-center">
                 <a
-                  href="javascript:void(0)"
+                  href="#"
                   className="text-yellow-500 text-[20px]"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <FaLinkedinIn />
                 </a>
               </li>
-              <li className="bg-[#e6e6e6cf] h-10 w-10 rounded-full flex items-center justify-center shrink-0">
+              <li className="bg-[#e6e6e6cf] h-10 w-10 rounded-full flex items-center justify-center">
                 <a
-                  href="javascript:void(0)"
+                  href="#"
                   className="text-yellow-500 text-[20px]"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <FaInstagram />
                 </a>
@@ -197,7 +149,11 @@ const ContactForm = () => {
             </ul>
           </div>
         </div>
-        <form onSubmit={handleSubmit} className="ml-auto space-y-4">
+        <form 
+  action="https://cyberspacedigital.in/csd_next/ContactSubmissions.php" 
+  method="POST"
+  className="space-y-4"
+>
           <input
             type="text"
             name="name"
@@ -294,7 +250,6 @@ const ContactForm = () => {
       >
         {/* Black gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent z-0"></div>
-
         <div className="flex flex-col md:flex-row items-start justify-center relative z-10">
           {/* Left Column with Content */}
           <div className="w-full md:w-1/2 px-5">
@@ -310,7 +265,7 @@ const ContactForm = () => {
 
           {/* Right Column Placeholder */}
           <div className="hidden md:block md:w-1/2 md:pr-10"></div>
-        </div>
+        </div>{" "}
       </section>
     </div>
   );

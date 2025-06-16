@@ -1,34 +1,53 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
 
-export default function Dashboard() {
+import { useSession, signOut } from "next-auth/react";
+import Image from "next/image";
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
+import { HomeCommunityCover } from "../../../public/images";
+
+export default function DashboardPage() {
+  const { data: session, status } = useSession();
   const router = useRouter();
-  const [user, setUser] = useState(null);
 
   useEffect(() => {
-    const storedUser = JSON.parse(localStorage.getItem("user"));
-    if (!storedUser || !storedUser.loggedIn) {
-      router.push("/login");
-    } else {
-      setUser(storedUser);
+    if (status === "unauthenticated") {
+      router.push("/auth/login");
     }
-  }, [router]);
+  }, [status, router]);
 
-  if (!user) {
-    return <p className="text-center mt-10">Checking authentication...</p>;
+  if (status === "loading") {
+    return (
+      <div className="flex justify-center items-center h-screen">
+        <p className="text-lg font-semibold text-blue-600">Loading...</p>
+      </div>
+    );
   }
 
   return (
-    <div className="max-w-xl mx-auto p-6 bg-white rounded-xl shadow-md mt-10">
-      <h2 className="text-2xl font-bold mb-4 text-blue-600">Welcome, {user.email}</h2>
-      <p className="mb-4">This is your secure dashboard.</p>
+    <div className="max-w-lg mx-auto mt-10 bg-white rounded-xl shadow-lg p-6 text-center">
+      <div className="flex justify-center mb-4">
+        <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-blue-500 shadow-md">
+          <Image
+            src={HomeCommunityCover}
+            alt="Profile"
+            width={128}
+            height={128}
+            className="object-cover w-full h-full"
+            loading="lazy"
+          />
+        </div>
+      </div>
+
+      <h2 className="text-2xl font-bold text-blue-600 mb-1">
+        Welcome, {session?.user?.name}
+      </h2>
+      <p className="text-gray-600 mb-2">{session?.user?.email}</p>
+      <p className="text-gray-500">Phone: {session?.user?.phone_number}</p>
+
       <button
-        className="bg-red-500 text-white p-2 rounded"
-        onClick={() => {
-          localStorage.removeItem("user");
-          router.push("/login");
-        }}
+        onClick={() => signOut({ callbackUrl: "/" })}
+        className="mt-4 bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-6 rounded-lg transition"
       >
         Logout
       </button>
