@@ -23,10 +23,10 @@ import Varun from "./images/ourproducts_contact.jpg";
 import Srikar from "./images/ourproducts_contact.jpg";
 
 import AboutCover from "./images/aboutcover.webp";
-
+import ServicesCoverImage from "./images/ServicesCoverImage.png"
 
 export {
-  DigitalMarketingImage,AboutCover,
+  DigitalMarketingImage,AboutCover,ServicesCoverImage,
   AdvertisingImage,
   BrandingImage,
   GraphicDesignImage,
