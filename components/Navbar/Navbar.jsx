@@ -674,8 +674,8 @@ const Navbar = () => {
   ];
 
   return (
-    <section className="sticky w-full top-0 z-50 bg-white/30 drop-shadow-lg ">
-      <div className="flex p-2 justify-between bg-black text-white text-[12px]">
+    <section className="sticky w-full top-0 z-50 bg-white/70 drop-shadow-lg ">
+     {/* <div className="flex p-2 justify-between bg-black text-white text-[12px]">
         <div className="flex items-center">
           <FontAwesomeIcon icon={faEnvelope} className="mr-1 text-[10px]" />
           mail@cyberspacedigital.in
@@ -684,9 +684,9 @@ const Navbar = () => {
           <FontAwesomeIcon icon={faPhone} className="mr-1 text-[10px]" />
           +918143407758
         </div>
-      </div>
+      </div>*/}
 
-      <div className="sm:px-2 w-full h-17 flex justify-between items-center text-black bg-white/10 backdrop-blur-lg">
+      <div className=" sm:px-2 w-full h-17 flex justify-between items-center text-black">
         <Link href="/">
           <Image
             className="pl-2 h-auto w-36 lg:w-44"
@@ -1424,20 +1424,33 @@ const Navbar = () => {
             </li>
 
             {/*mobile menu */}
-            <li className="p-4 lg:hidden z-50 relative">
+            <li className="p-2 lg:hidden z-50 relative">
               <button
                 className="text-3xl"
-                onClick={() => setIsOpen((prev) => !prev)}
+                onClick={() => {
+                  setIsOpen((prev) => !prev);
+                  setOpenMenus((prev) => ({
+                    ...prev,
+                    mobileMenu: !prev.mobileMenu,
+                  })); // Toggle mobileMenu state
+                }}
               >
-                ☰
+               <TiThMenu className="text-[24px] mx-auto mb-1" />
+             
               </button>
-              {openMenus.mobileMenu && (
-                <div className="origin-top-right absolute right-0 mt-4 w-48 h-auto sm:rounded-md shadow-lg bg-gray-300 divide-y divide-gray-400 z-50">
+              {isOpen && ( // Use isOpen to conditionally render the mobile menu
+                <div className="origin-top-right absolute right-0 mt-2 w-48 h-auto sm:rounded-md shadow-lg bg-gray-300 divide-y divide-gray-400 z-50">
                   {mobilemenu.map((link) => (
                     <Link
                       href={link.path}
                       key={link.path}
-                      onClick={() => setIsOpen(false)}
+                      onClick={() => {
+                        setIsOpen(false); // Close the menu when a link is clicked
+                        setOpenMenus((prev) => ({
+                          ...prev,
+                          mobileMenu: false,
+                        })); // Ensure mobileMenu state is also closed
+                      }}
                     >
                       <div className="block px-4 py-2 text-[12px] text-black flex items-center hover:bg-yellow-500 hover:text-white">
                         <FontAwesomeIcon icon={link.icon} className="mr-2" />

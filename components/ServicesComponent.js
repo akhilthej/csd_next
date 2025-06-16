@@ -71,11 +71,11 @@ const ServicesComponent = () => {
       <p className="text-[24px] text-center sm:text-[34px] font-bold leading-8 text-black cursor-default">
         Our Areas of Specialization
       </p>
-       <div className=" w-screen h-px bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0 my-2" />
-       <p className="text-sm text-black text-center cursor-default">
-             We build your ideas into reality.
-            </p>
-       
+      <div className=" w-screen h-px bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0 my-2" />
+      <p className="text-sm text-black text-center cursor-default">
+        We build your ideas into reality.
+      </p>
+
       <div className="grid grid-cols-1 md:grid-cols-12 h-full">
         {/* Left Image Section */}
         <div className="col-span-1 md:col-span-6 flex justify-center items-center relative p-4">
@@ -97,23 +97,25 @@ const ServicesComponent = () => {
         </div>
 
         {/* Right Button Section */}
-        <div className="col-span-1 md:col-span-2 flex md:flex-col items-center justify-center p-2 sm:p-4 space-y-4">
-          {Object.keys(images).map((category) => (
-            <button
-              key={category}
-              onClick={() => handleButtonClick(category)}
-              className="p-2 text-black rounded w-36 md:w-40 text-[12px] flex flex-col items-center"
-            >
-              <Image
-                src={icons[category]}
-                alt={category}
-                className="w-16 h-auto mb-1 "
-                width={50}
-                height={50}
-              />
-              <span className="text-center">{category}</span>
-            </button>
-          ))}
+        <div className="col-span-1 md:col-span-2 p-2 sm:p-4">
+          <div className="flex md:flex-col flex-row items-center md:items-start md:space-x-0 md:space-y-4 overflow-x-auto w-full">
+            {Object.keys(images).map((category) => (
+              <button
+                key={category}
+                onClick={() => handleButtonClick(category)}
+                className="p-2 text-black rounded w-36 md:w-40 text-[12px] flex flex-col items-center flex-shrink-0"
+              >
+                <Image
+                  src={icons[category]}
+                  alt={category}
+                  className="w-16 h-auto mb-1"
+                  width={50}
+                  height={50}
+                />
+                <span className="text-center">{category}</span>
+              </button>
+            ))}
+          </div>
         </div>
       </div>
     </div>

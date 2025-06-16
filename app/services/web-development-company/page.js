@@ -25,8 +25,7 @@ const webdevelopmentcompany = () => {
           className="py-10 sm:py-40"
           style={{
             backgroundImage: `url("${WebDevelopmentCompany.coverImage.src}")`,
-            backgroundSize:
-              WebDevelopmentCompany.coverImage.style.backgroundSize,
+            backgroundSize: WebDevelopmentCompany.coverImage.style.backgroundSize,
             backgroundPosition:
               WebDevelopmentCompany.coverImage.style.backgroundPosition,
           }}
