@@ -4,6 +4,12 @@ import BrandingImage from "./images/BrandingImage.svg";
 import GraphicDesignImage from "./images/GraphicDesignImage.svg";
 import MobileAppDevImage from "./images/MobileAppDevImage.svg";
 import WebDevelopmentImage from "./images/WebDevelopmentImage.svg";
+import WebDesigningCoverImage from "./images/WebDesigningCoverImage.png"
+import GraphicDesigningCoverImage from "./images/GraphicDesigningCoverImage.png"
+import AdvertisitngCoverImage from "./images/AdvertisitngCoverImage.png"
+import BrandingCoverImage from "./images/BrandingCoverImage.png"
+import DigitalMarketingCoverImage from "./images/DigitalMarketingCoverImage.png"
+import MobileappCoverImage from "./images/MobileappCoverImage.png"
 
 import HomeCommunityCover from "./images/HomeCommunityCover.webp";
 import ContactUsCover from "./images/Contact_us.png";
@@ -27,9 +33,9 @@ import ServicesCoverImage from "./images/ServicesCoverImage.png"
 
 export {
   DigitalMarketingImage,AboutCover,ServicesCoverImage,
-  AdvertisingImage,
-  BrandingImage,
-  GraphicDesignImage,
+  AdvertisingImage,WebDesigningCoverImage,GraphicDesigningCoverImage,
+  BrandingImage,AdvertisitngCoverImage,BrandingCoverImage,
+  GraphicDesignImage,DigitalMarketingCoverImage,MobileappCoverImage,
   MobileAppDevImage,
   WebDevelopmentImage,
   HomeCommunityCover,

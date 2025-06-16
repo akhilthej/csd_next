@@ -95,6 +95,8 @@ const Navbar = () => {
     more: false,
     mobileMenu: false,
   });
+  const [isOpen, setIsOpen] = useState(false); // Add this line
+
   let closeTimeout;
 
   const closeAllMenus = () => {
@@ -133,7 +135,7 @@ const Navbar = () => {
 
   const webDevelopmentLinks = [
     {
-      path: "/services/web-developement-company/build-business-website",
+      path: "/services/web-development-company/build-business-website",
       title: "Business Websites",
       description:
         "Our business website solutions are designed to drive growth, enhance visibility, and boost profitability in the digital landscape.",
@@ -672,7 +674,7 @@ const Navbar = () => {
   ];
 
   return (
-    <section className="fixed w-full top-0 z-50 bg-white/90 drop-shadow-lg ">
+    <section className="sticky w-full top-0 z-50 bg-white/30 drop-shadow-lg ">
       <div className="flex p-2 justify-between bg-black text-white text-[12px]">
         <div className="flex items-center">
           <FontAwesomeIcon icon={faEnvelope} className="mr-1 text-[10px]" />
@@ -684,7 +686,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      <div className=" sm:px-2 w-full h-17 flex justify-between items-center text-black ">
+      <div className="sm:px-2 w-full h-17 flex justify-between items-center text-black bg-white/10 backdrop-blur-lg">
         <Link href="/">
           <Image
             className="pl-2 h-auto w-36 lg:w-44"

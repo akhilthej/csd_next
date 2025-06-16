@@ -208,7 +208,6 @@ const HomeTitle = () => {
       </div>
 
       {/*section -8*/}
-
       <section className="text-center mx-auto mb-12 lg:px-20">
         <h2 className="pb-2 font-extrabold text-transparent text-2xl md:text-5xl lg:text-6xl bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-600 mt-3">
           Induestries we Serve, Globally
