@@ -618,6 +618,12 @@ const Navbar = () => {
       description: "Building apps for Android platforms.",
       icon: faPhone,
     },
+    {
+      path: "auth/login",
+      title: "Login/Signup",
+      description: "If your a customer or exisitng user please login.",
+      icon: faBlog,
+    },
   ];
 
   const mobilemenu = [
@@ -1337,49 +1343,27 @@ const Navbar = () => {
                 <div className="origin-top-right fixed right-0 mt-2 w-screen rounded-md shadow-lg bg-gray-300 divide-y divide-gray-400 z-50">
                   <div className="flex">
                     <div className="w-1/3 p-4">
-                      {moreLinks.slice(0, 1).map((link) => (
-                        <Link href={link.path} key={link.path}>
-                          <div className="block px-4 py-2 text-[12px] text-black hover:bg-yellow-500 hover:text-white">
-                            <div className="flex items-center">
-                              <FontAwesomeIcon
-                                className="p-2 fa-2xl"
-                                icon={link.icon}
-                              />
-                              <div>
-                                {link.title}
-                                <p className="text-[10px] text-gray-700">
-                                  {link.description}
-                                </p>
-                              </div>
-                            </div>
-                          </div>
-                        </Link>
-                      ))}
+                      <Image
+                        className="w-[30rem] h-[15rem] object-contain"
+                        src={NavImages.link4}
+                        alt="Advertising Services"
+                      />
+                      <Link href="/services">
+                        <h2 className="text-blue-600 hover:text-blue-900 cursor-pointer pt-1 text-[10px]">
+                          Services ➤
+                        </h2>
+                      </Link>
+                      <p className="text-[10px] text-gray-700">
+                        Know all the services we provide.
+                      </p>
                     </div>
 
                     <div className="w-1/3 p-4">
-                      {moreLinks.slice(1, 2).map((link) => (
-                        <Link href={link.path} key={link.path}>
-                          <div className="block px-4 py-2 text-[12px] text-black hover:bg-yellow-500 hover:text-white">
-                            <div className="flex items-center">
-                              <FontAwesomeIcon
-                                className="p-2 fa-2xl"
-                                icon={link.icon}
-                              />
-                              <div>
-                                {link.title}
-                                <p className="text-[10px] text-gray-700">
-                                  {link.description}
-                                </p>
-                              </div>
-                            </div>
-                          </div>
-                        </Link>
-                      ))}
+                     
                     </div>
 
                     <div className="w-1/3 p-4">
-                      {moreLinks.slice(2, 3).map((link) => (
+                      {moreLinks.slice(0, 2).map((link) => (
                         <Link href={link.path} key={link.path}>
                           <div className="block px-4 py-2 text-[12px] text-black hover:bg-yellow-500 hover:text-white">
                             <div className="flex items-center">
@@ -1399,7 +1383,7 @@ const Navbar = () => {
                       ))}
                     </div>
                     <div className="w-1/3 p-4">
-                      {moreLinks.slice(3, 4).map((link) => (
+                      {moreLinks.slice(2, 5).map((link) => (
                         <Link href={link.path} key={link.path}>
                           <div className="block px-4 py-2 text-[12px] text-black hover:bg-yellow-500 hover:text-white">
                             <div className="flex items-center">

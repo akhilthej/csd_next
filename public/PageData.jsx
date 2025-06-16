@@ -10,7 +10,7 @@ export const WebDevelopmentCompany = {
     src: WebDesigningCoverImage.src, // Update this path to the actual image path
     style: {
       backgroundSize: "cover",
-      backgroundPosition: "top",
+      backgroundPosition: "center",
     },
   },
 
@@ -61,7 +61,7 @@ export const MobileAppDevelopment = {
     src: MobileappCoverImage.src, // Update this path to the actual image path
     style: {
       backgroundSize: "cover",
-      backgroundPosition: "top",
+      backgroundPosition: "center",
     },
   },
 
@@ -112,7 +112,7 @@ export const DigitalMarketingCompany = {
     src: DigitalMarketingCoverImage.src, // Update this path to the actual image path
     style: {
       backgroundSize: "cover",
-      backgroundPosition: "top",
+      backgroundPosition: "center",
     },
   },
 
@@ -163,7 +163,7 @@ export const MultiMediaCompany = {
     src: GraphicDesigningCoverImage.src, // Update this path to the actual image path
     style: {
       backgroundSize: "cover",
-      backgroundPosition: "top",
+      backgroundPosition: "center",
     },
   },
 
@@ -214,7 +214,7 @@ export const BrandingCompany = {
     src: BrandingCoverImage.src, // Update this path to the actual image path
     style: {
       backgroundSize: "cover",
-      backgroundPosition: "top",
+      backgroundPosition: "center",
     },
   },
 
@@ -265,7 +265,7 @@ export const AdvertisingCompany = {
     src: AdvertisitngCoverImage.src, // Update this path to the actual image path
     style: {
       backgroundSize: "cover",
-      backgroundPosition: "top",
+      backgroundPosition: "center",
     },
   },
 
