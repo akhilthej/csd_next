@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 import { HomeCommunityCover } from "../../../public/images";
+import Link from "next/link";
 
 export default function DashboardPage() {
   const { data: session, status } = useSession();
@@ -44,6 +45,15 @@ export default function DashboardPage() {
       </h2>
       <p className="text-gray-600 mb-2">{session?.user?.email}</p>
       <p className="text-gray-500">Phone: {session?.user?.phone_number}</p>
+
+<Link href="/auth/contactus">
+      <div
+        
+        className="mt-4 bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-6 rounded-lg transition"
+      >
+        contactus
+      </div></Link>
+
 
       <button
         onClick={() => signOut({ callbackUrl: "/" })}
