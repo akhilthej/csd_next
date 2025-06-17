@@ -6,6 +6,8 @@ import { WebDevelopmentCompany } from "../../../public/PageData"; // Adjust the 
 import LineofEngagement from "../../../components/LineofEngagement";
 
 import { HomeCommunityCover } from "../../../public/images";
+import Image from "next/image";
+import { GlobalData } from "@/public/GlodalData";
 
 const webdevelopmentcompany = () => {
   return (
@@ -25,7 +27,8 @@ const webdevelopmentcompany = () => {
           className="py-10 sm:py-40"
           style={{
             backgroundImage: `url("${WebDevelopmentCompany.coverImage.src}")`,
-            backgroundSize: WebDevelopmentCompany.coverImage.style.backgroundSize,
+            backgroundSize:
+              WebDevelopmentCompany.coverImage.style.backgroundSize,
             backgroundPosition:
               WebDevelopmentCompany.coverImage.style.backgroundPosition,
           }}
@@ -43,13 +46,13 @@ const webdevelopmentcompany = () => {
 
                 <div className="mt-8 flex flex-wrap justify-center gap-4">
                   <Link href="/contactus">
-                    <span className="transform rounded-md bg-white px-5 py-3 font-medium text-black transition-colors hover:bg-black hover:text-white">
+                    <span className="transform rounded-md bg-white px-5 py-3 font-medium text-black transition-colors hover:bg-black sm:text-[14px] text-[12px] hover:text-white">
                       Get in Touch
                     </span>
                   </Link>
 
-                  <a href="https://api.whatsapp.com/send?phone=918143407758&text=Welcome%20to%20Cyberspacedigital">
-                    <span className="transform rounded-md bg-white px-5 py-3 font-medium text-black transition-colors hover:bg-black hover:text-white">
+                  <a href={GlobalData.company.companyWhatsapp}>
+                    <span className="transform sm:text-[14px] text-[12px] rounded-md bg-white px-5 py-3 font-medium text-black transition-colors hover:bg-black hover:text-white">
                       WhatsApp
                     </span>
                   </a>
@@ -79,7 +82,7 @@ const webdevelopmentcompany = () => {
                 </span>
               </Link>
 
-              <a href="https://api.whatsapp.com/send?phone=918143407758&text=Welcome%20to%20Cyberspacedigital">
+              <a href={GlobalData.company.companyWhatsapp}>
                 <span className="transform rounded-md bg-black px-5 py-3 font-medium text-white transition-colors hover:bg-white hover:text-black">
                   WhatsApp
                 </span>
@@ -87,19 +90,25 @@ const webdevelopmentcompany = () => {
             </div>
           </section>
           <section className="my-12 px-6">
-            <div className="grid grid-cols-4 gap-4 text-center">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
               {WebDevelopmentCompany.services.map((service, index) => {
-                const Icon = require("react-icons/fa")[service.icon];
                 return (
                   <div
                     key={index}
                     className="flex flex-col items-center justify-center p-4 border rounded-lg bg-gray-50 hover:bg-gray-100 transition"
                   >
-                    <Icon className="text-3xl text-orange-500 mb-2" />
-                    <p className="font-medium">{service.title}</p>
-                    <p className="text-[12px]">{service.description}</p>
+                    <Image
+                      src={service.icon}
+                      className="w-8 h-8 ml-auto mx-auto justify-center" // Set width and height to 30px (8 * 4 = 32px, close to 30px)
+                      alt="illustration"
+                      loading="lazy"
+                      width={30} 
+                      height={30}
+                    />
+                    <p className="font-medium sm:text-[14px] text-[12px]">{service.title}</p>
+                    <p className="sm:text-[12px] text-[10px]">{service.description}</p>
                     <Link href={service.link}>
-                      <button className="bg-primary text-[14px] font-medium px-2 py-2 mt-2 rounded-md">
+                      <button className="bg-primary sm:text-[14px] text-[10px] font-medium px-2 py-2 mt-2 rounded-md">
                         Get Quotation
                       </button>
                     </Link>
@@ -161,7 +170,7 @@ const webdevelopmentcompany = () => {
 
         {/* section -6 */}
         <section className="text-center mx-auto py-8 bg-primary">
-          <h2 className="cursor-default font-extrabold text-transparent text-2xl md:text-5xl lg:text-6xl bg-clip-text bg-white   tracking-tight ">
+          <h2 className="cursor-default font-extrabold text-transparent sm:text-[14px] text-[12px] bg-clip-text bg-white tracking-tight ">
             Get In Touch
           </h2>
           <p className="cursor-default text-sm font-medium text-black my-5 ">
