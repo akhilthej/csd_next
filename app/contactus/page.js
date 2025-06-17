@@ -1,6 +1,8 @@
 "use client";
 import Head from "next/head";
 import Image from "next/image";
+import {CONTACTUS_API} from "../../hooks/ApisUrl"
+
 import { ContactUsCover, ourproducts_contact } from "../../public/images";
 import {
   FaFacebookF,
@@ -12,6 +14,7 @@ import {
 } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import React, { useState } from "react";
+import { GlobalData } from "@/public/GlodalData";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -19,13 +22,48 @@ const ContactForm = () => {
     email: "",
     phone: "",
     message: "",
+    status: "pending",
   });
-
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  console.log(formData); // Debugging line
+  try {
+    const response = await fetch(CONTACTUS_API, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
 
+    const result = await response.json();
 
+    if (!response.ok) {
+      throw new Error(result.message);
+    }
+
+    console.log(result);
+
+    // Reset form and show success message
+    setFormData({
+      name: "",
+      email: "",
+      phone: "",
+      message: "",
+      status: "pending",
+    });
+    setSuccessMessage("Message sent successfully!");
+
+  } catch (error) {
+    console.error("Error during fetch:", error);
+    alert(error.message);
+  }
+};
+
+const [successMessage, setSuccessMessage] = useState("");
 
   return (
     <div>
@@ -75,7 +113,7 @@ const ContactForm = () => {
                   Phone
                 </a>
                 <a
-                  href="https://api.whatsapp.com/send?phone=918143407758&text=Welcome%20to%20Cyberspacedigital"
+                  href={GlobalData.company.companyWhatsapp}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 rounded-md bg-white px-4 py-2 text-sm sm:text-base font-medium text-black hover:bg-black hover:text-white"
@@ -149,11 +187,7 @@ const ContactForm = () => {
             </ul>
           </div>
         </div>
-        <form 
-  action="https://cyberspacedigital.in/csd_next/ContactSubmissions.php" 
-  method="POST"
-  className="space-y-4"
->
+        <form onSubmit={handleSubmit} className="space-y-4">
           <input
             type="text"
             name="name"
@@ -196,7 +230,11 @@ const ContactForm = () => {
           >
             Send
           </button>
+          
         </form>
+        {successMessage && (
+  <p className="text-green-600 text-sm font-medium text-center">{successMessage}</p>
+)}
       </div>
 
       {/* Quick Access */}
@@ -227,7 +265,7 @@ const ContactForm = () => {
                   Phone
                 </a>
                 <a
-                  href="https://api.whatsapp.com/send?phone=918143407758&text=Welcome%20to%20Cyberspacedigital"
+                  href={GlobalData.company.companyWhatsapp}
                   className="flex items-center gap-2 whitespace-nowrap rounded-md bg-black px-4 py-2 text-sm sm:text-base font-medium text-white transition-colors hover:bg-black hover:text-white"
                 >
                   <FaWhatsapp />
