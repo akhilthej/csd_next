@@ -10,27 +10,32 @@ export const authOptions = {
         password: { label: "Password", type: "password" },
       },
       async authorize(credentials) {
-        const res = await fetch("https://cyberspacedigital.in/csd_next/login.php", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            email: credentials.email,
-            password: credentials.password,
-          }),
-        });
+        try {
+          const res = await fetch("https://cyberspacedigital.in/csd_next/login.php", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              email: credentials.email,
+              password: credentials.password,
+            }),
+          });
 
-        const user = await res.json();
+          const user = await res.json();
 
-        if (user.success) {
-          return {
-            id: user.id,
-            email: user.email,
-            name: user.name,
-            phone_number: user.phone_number,
-          };
+          if (user.success) {
+            return {
+              id: user.id,
+              email: user.email,
+              name: user.name,
+              phone_number: user.phone_number,
+            };
+          }
+
+          return null; // Return null if authentication fails
+        } catch (error) {
+          console.error("Authorization error:", error);
+          return null; // Handle fetch error
         }
-
-        return null;
       },
     }),
   ],
@@ -50,7 +55,7 @@ export const authOptions = {
       return session;
     },
   },
-   session: {
+  session: {
     strategy: "jwt",
     maxAge: 24 * 60 * 60,  // 24 hours in seconds
   },
