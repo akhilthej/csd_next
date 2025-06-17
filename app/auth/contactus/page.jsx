@@ -17,51 +17,6 @@ const AdminContact = () => {
     fetchSubmissions();
   }, []);
 
-  // Request permission for notifications
-  useEffect(() => {
-    const requestNotificationPermission = async () => {
-      const permission = await Notification.requestPermission();
-      if (permission === 'granted') {
-        console.log('Notification permission granted.');
-      } else {
-        console.log('Notification permission denied.');
-      }
-    };
-
-    requestNotificationPermission();
-  }, []);
-
-  // Polling for new submissions
-  useEffect(() => {
-    const interval = setInterval(async () => {
-      const response = await fetch(CONTACTUS_API);
-      const data = await response.json();
-      if (data.length > submissions.length) {
-        // Send a push notification
-        sendPushNotification();
-      }
-      setSubmissions(data);
-    }, 5000); // Check every 5 seconds
-
-    return () => clearInterval(interval); // Cleanup on unmount
-  }, [submissions]);
-
-  const sendPushNotification = () => {
-    const notificationData = {
-      title: 'New Contact Form Submission',
-      body: 'You have received a new contact form submission.',
-    };
-
-    if (Notification.permission === 'granted') {
-      navigator.serviceWorker.ready.then(function(registration) {
-        registration.showNotification(notificationData.title, {
-          body: notificationData.body,
-          icon: '/icon.png', // Path to your notification icon
-        });
-      });
-    }
-  };
-
   const handleDelete = async (id) => {
     const response = await fetch(`${CONTACTUS_API}/${id}`, {
       method: 'DELETE',
