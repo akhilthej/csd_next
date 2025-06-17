@@ -92,7 +92,7 @@ const Footer = () => {
                   <nav className="flex flex-col mt-4 space-y-2 text-[12px] text-gray-500">
                     <Link href="/privacypolicy"> Privacy Policy </Link>
                     <Link href="/termsconditions">
-                      <div> Terms &amp; Conditions </div>
+                      <div> Terms & Conditions </div>
                     </Link>
 
                     <Link href="/returnpolicy">

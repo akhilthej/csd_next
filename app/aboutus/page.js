@@ -47,7 +47,7 @@ const Aboutus = () => {
             expertise, including front-end and back-end development, digital
             marketing, and project management, which allows us to provide
             comprehensive services that drive real results for our clients.
-            Whether you're a small startup or a large enterprise, we have the
+            Whether youre a small startup or a large enterprise, we have the
             skills and experience to help you achieve your goals.
           </p>
         </section>
@@ -97,7 +97,7 @@ const Aboutus = () => {
               </p>
             </div>
             <div className="w-full lg:w-8/12 lg:h-3/5">
-              <img
+              <Image
                 className="w-full h-full rounded-2xl shadow-2xl"
                 src={AboutCover.src} // Use .src for images imported from public
                 alt="A group of People"

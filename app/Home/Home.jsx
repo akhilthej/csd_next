@@ -397,7 +397,7 @@ const HomeTitle = () => {
                 </h3>
                 <p className="text-gray-500 text-sm">
                   if your project requires additional manpower and extra
-                  resources, we're ready to scale up and bring in the necessary
+                  resources, were ready to scale up and bring in the necessary
                   talent to meet your needs.
                 </p>
               </div>
