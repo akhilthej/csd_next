@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import { IoEye, IoEyeOff } from "react-icons/io5";
+import {Signup_api} from "../../../hooks/ApisUrl"
 
 export default function SignupPage() {
   const router = useRouter();
@@ -28,7 +29,7 @@ export default function SignupPage() {
     setLoading(true);
 
     try {
-      const res = await fetch("https://cyberspacedigital.in/csd_next/signup.php", {
+      const res = await fetch(Signup_api, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

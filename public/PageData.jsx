@@ -8,7 +8,7 @@ import {
   MobileappCoverImage,
 } from "./images";
 
-import {businesswebsite,crmermpannel,ecommerce,WebRevamp, } from './icons'
+import { businesswebsite, crmermpannel, ecommerce, WebRevamp } from "./icons";
 
 export const WebDevelopmentCompany = {
   coverimage: "WebDevelopmentCoverImage",
@@ -29,7 +29,7 @@ export const WebDevelopmentCompany = {
     description:
       "At Cyber Space Digital, we specialize in developing robust, secure, and scalable web applications tailored to your business goals. From startups to enterprises — we build the digital foundation for your success.",
   },
- services: [
+  services: [
     {
       icon: businesswebsite,
       title: "Business Websites",
@@ -82,28 +82,28 @@ export const MobileAppDevelopment = {
   },
   services: [
     {
-      icon: "FaShoppingCart",
+      icon: businesswebsite,
       title: "Business Websites",
       description:
         "Catalyzing Business Success: Our business website solutions are designed to drive growth, enhance visibility, and boost profitability in the digital landscape.",
       link: "/services/web-development-company/build-business-website",
     },
     {
-      icon: "FaFilm",
+      icon: ecommerce,
       title: "E-commerce Website Solutions",
       description:
         "Crafting E-Commerce Excellence: Elevate your online retail with our bespoke e-commerce solutions. Boost sales, engage customers, and thrive online.",
       link: "/services/web-development-company/build-business-website",
     },
     {
-      icon: "FaGavel",
+      icon: WebRevamp,
       title: "Web Revamp",
       description:
         "Revamp Your Online Presence: Transform and modernize your existing website with our web revamp services. Stay ahead and impress your audience.",
       link: "/services/web-development-company/build-business-website",
     },
     {
-      icon: "FaHotel",
+      icon: crmermpannel,
       title: "CRM/ERP Panels",
       description:
         "Efficient CRM/ERM Solutions: Enhance business operations with our CRM/ERM panels. Streamline processes, manage data, and boost productivity effectively.",
@@ -133,28 +133,28 @@ export const DigitalMarketingCompany = {
   },
   services: [
     {
-      icon: "FaShoppingCart",
+      icon: businesswebsite,
       title: "Business Websites",
       description:
         "Catalyzing Business Success: Our business website solutions are designed to drive growth, enhance visibility, and boost profitability in the digital landscape.",
       link: "/services/web-development-company/build-business-website",
     },
     {
-      icon: "FaFilm",
+      icon: ecommerce,
       title: "E-commerce Website Solutions",
       description:
         "Crafting E-Commerce Excellence: Elevate your online retail with our bespoke e-commerce solutions. Boost sales, engage customers, and thrive online.",
       link: "/services/web-development-company/build-business-website",
     },
     {
-      icon: "FaGavel",
+      icon: WebRevamp,
       title: "Web Revamp",
       description:
         "Revamp Your Online Presence: Transform and modernize your existing website with our web revamp services. Stay ahead and impress your audience.",
       link: "/services/web-development-company/build-business-website",
     },
     {
-      icon: "FaHotel",
+      icon: crmermpannel,
       title: "CRM/ERP Panels",
       description:
         "Efficient CRM/ERM Solutions: Enhance business operations with our CRM/ERM panels. Streamline processes, manage data, and boost productivity effectively.",
@@ -182,30 +182,30 @@ export const MultiMediaCompany = {
     description:
       "Every business requires a unique website to effectively reach its customers or clients. At Cyber Space Digital, we're here to help you discover the best choices tailored to your needs.",
   },
-  services: [
+   services: [
     {
-      icon: "FaShoppingCart",
+      icon: businesswebsite,
       title: "Business Websites",
       description:
         "Catalyzing Business Success: Our business website solutions are designed to drive growth, enhance visibility, and boost profitability in the digital landscape.",
       link: "/services/web-development-company/build-business-website",
     },
     {
-      icon: "FaFilm",
+      icon: ecommerce,
       title: "E-commerce Website Solutions",
       description:
         "Crafting E-Commerce Excellence: Elevate your online retail with our bespoke e-commerce solutions. Boost sales, engage customers, and thrive online.",
       link: "/services/web-development-company/build-business-website",
     },
     {
-      icon: "FaGavel",
+      icon: WebRevamp,
       title: "Web Revamp",
       description:
         "Revamp Your Online Presence: Transform and modernize your existing website with our web revamp services. Stay ahead and impress your audience.",
       link: "/services/web-development-company/build-business-website",
     },
     {
-      icon: "FaHotel",
+      icon: crmermpannel,
       title: "CRM/ERP Panels",
       description:
         "Efficient CRM/ERM Solutions: Enhance business operations with our CRM/ERM panels. Streamline processes, manage data, and boost productivity effectively.",
@@ -233,30 +233,30 @@ export const BrandingCompany = {
     description:
       "Every business requires a unique website to effectively reach its customers or clients. At Cyber Space Digital, we're here to help you discover the best choices tailored to your needs.",
   },
-  services: [
+   services: [
     {
-      icon: "FaShoppingCart",
+      icon: businesswebsite,
       title: "Business Websites",
       description:
         "Catalyzing Business Success: Our business website solutions are designed to drive growth, enhance visibility, and boost profitability in the digital landscape.",
       link: "/services/web-development-company/build-business-website",
     },
     {
-      icon: "FaFilm",
+      icon: ecommerce,
       title: "E-commerce Website Solutions",
       description:
         "Crafting E-Commerce Excellence: Elevate your online retail with our bespoke e-commerce solutions. Boost sales, engage customers, and thrive online.",
       link: "/services/web-development-company/build-business-website",
     },
     {
-      icon: "FaGavel",
+      icon: WebRevamp,
       title: "Web Revamp",
       description:
         "Revamp Your Online Presence: Transform and modernize your existing website with our web revamp services. Stay ahead and impress your audience.",
       link: "/services/web-development-company/build-business-website",
     },
     {
-      icon: "FaHotel",
+      icon: crmermpannel,
       title: "CRM/ERP Panels",
       description:
         "Efficient CRM/ERM Solutions: Enhance business operations with our CRM/ERM panels. Streamline processes, manage data, and boost productivity effectively.",
@@ -284,30 +284,30 @@ export const AdvertisingCompany = {
     description:
       "Every business requires a unique website to effectively reach its customers or clients. At Cyber Space Digital, we're here to help you discover the best choices tailored to your needs.",
   },
-  services: [
+   services: [
     {
-      icon: "FaShoppingCart",
+      icon: businesswebsite,
       title: "Business Websites",
       description:
         "Catalyzing Business Success: Our business website solutions are designed to drive growth, enhance visibility, and boost profitability in the digital landscape.",
       link: "/services/web-development-company/build-business-website",
     },
     {
-      icon: "FaFilm",
+      icon: ecommerce,
       title: "E-commerce Website Solutions",
       description:
         "Crafting E-Commerce Excellence: Elevate your online retail with our bespoke e-commerce solutions. Boost sales, engage customers, and thrive online.",
       link: "/services/web-development-company/build-business-website",
     },
     {
-      icon: "FaGavel",
+      icon: WebRevamp,
       title: "Web Revamp",
       description:
         "Revamp Your Online Presence: Transform and modernize your existing website with our web revamp services. Stay ahead and impress your audience.",
       link: "/services/web-development-company/build-business-website",
     },
     {
-      icon: "FaHotel",
+      icon: crmermpannel,
       title: "CRM/ERP Panels",
       description:
         "Efficient CRM/ERM Solutions: Enhance business operations with our CRM/ERM panels. Streamline processes, manage data, and boost productivity effectively.",

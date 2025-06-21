@@ -9,7 +9,7 @@ import {
   CTO,
   CTO_OriginalImage,
   COO,
-  COO_OriginalImage
+  COO_OriginalImage,
 } from "../../public/images";
 import Image from "next/image";
 import { useState } from "react";
@@ -30,7 +30,7 @@ const Aboutus = () => {
         <link rel="canonical" href="/aboutus" />
       </Head>
 
-      <main className="mt-32">
+      <main className="mt-28">
         <section>
           <h2 className="text-3xl text-center lg:text-4xl font-bold leading-9 pb-4 text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-600">
             About Us
@@ -99,9 +99,12 @@ const Aboutus = () => {
             <div className="w-full lg:w-8/12 lg:h-3/5">
               <Image
                 className="w-full h-full rounded-2xl shadow-2xl"
-                src={AboutCover.src} // Use .src for images imported from public
+                src={AboutCover.src}
                 alt="A group of People"
+                width={800}
+                height={500}
               />
+
               <p className="font-normal text-base leading-6 mt-10 text-black">
                 We have had many successes and also faced many challenges, but
                 we have learned from our mistakes and have grown as a team. Now,

@@ -1,6 +1,6 @@
 "use client";
-import { useEffect, useState } from 'react';
-import { CONTACTUS_API } from '../../../hooks/ApisUrl';
+import { useEffect, useState } from "react";
+import { CONTACTUS_API } from "../../../hooks/ApisUrl";
 
 const AdminContact = () => {
   const [submissions, setSubmissions] = useState([]);
@@ -13,32 +13,34 @@ const AdminContact = () => {
       setSubmissions(data);
       setLoading(false);
     };
-
     fetchSubmissions();
   }, []);
 
   const handleDelete = async (id) => {
-    const response = await fetch(`${CONTACTUS_API}/${id}`, {
-      method: 'DELETE',
+    const response = await fetch(`${CONTACTUS_API}?id=${id}`, {
+      method: "DELETE",
     });
     if (response.ok) {
-      setSubmissions(submissions.filter(submission => submission.id !== id));
+      setSubmissions(submissions.filter((submission) => submission.id !== id));
     }
   };
 
   const handleStatusChange = async (id, currentStatus) => {
-    const newStatus = currentStatus === 'pending' ? 'completed' : 'pending';
-    const response = await fetch(`${CONTACTUS_API}/${id}`, {
-      method: 'PUT',
+    const newStatus = currentStatus === "pending" ? "completed" : "pending";
+    const response = await fetch(CONTACTUS_API, {
+      method: "PUT",
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/x-www-form-urlencoded",
       },
-      body: JSON.stringify({ status: newStatus }),
+      body: `id=${id}&status=${newStatus}`,
     });
+
     if (response.ok) {
-      setSubmissions(submissions.map(submission => 
-        submission.id === id ? { ...submission, status: newStatus } : submission
-      ));
+      setSubmissions(
+        submissions.map((submission) =>
+          submission.id === id ? { ...submission, status: newStatus } : submission
+        )
+      );
     }
   };
 
@@ -60,23 +62,27 @@ const AdminContact = () => {
             </tr>
           </thead>
           <tbody>
-            {submissions.map(submission => (
+            {submissions.map((submission) => (
               <tr key={submission.id} className="hover:bg-gray-100">
                 <td className="py-2 px-4 border-b">{submission.name}</td>
                 <td className="py-2 px-4 border-b">{submission.email}</td>
                 <td className="py-2 px-4 border-b">{submission.phone}</td>
                 <td className="py-2 px-4 border-b">{submission.message}</td>
                 <td className="py-2 px-4 border-b">
-                  <button 
-                    onClick={() => handleStatusChange(submission.id, submission.status)} 
-                    className={`py-1 px-3 rounded ${submission.status === 'pending' ? 'bg-yellow-500 text-white' : 'bg-green-500 text-white'}`}
+                  <button
+                    onClick={() => handleStatusChange(submission.id, submission.status)}
+                    className={`py-1 px-3 rounded ${
+                      submission.status === "pending"
+                        ? "bg-yellow-500 text-white"
+                        : "bg-green-500 text-white"
+                    }`}
                   >
                     {submission.status}
                   </button>
                 </td>
                 <td className="py-2 px-4 border-b">
-                  <button 
-                    onClick={() => handleDelete(submission.id)} 
+                  <button
+                    onClick={() => handleDelete(submission.id)}
                     className="bg-red-500 text-white py-1 px-3 rounded"
                   >
                     Delete

@@ -90,20 +90,20 @@ const Footer = () => {
                 <div>
                   <p className="font-medium text-white">Legal</p>
                   <nav className="flex flex-col mt-4 space-y-2 text-[12px] text-gray-500">
-                    <Link href="/privacypolicy"> Privacy Policy </Link>
-                    <Link href="/termsconditions">
+                    <Link href="/Legal/privacy-policy"> Privacy Policy </Link>
+                    <Link href="/Legal/terms-and-conditions">
                       <div> Terms & Conditions </div>
                     </Link>
 
-                    <Link href="/returnpolicy">
+                    <Link href="/Legal/return-policy">
                       <div> Cancellation & Refund Policy </div>
                     </Link>
 
-                    <Link href="/disclaimer">
+                    <Link href="/Legal/disclaimer">
                       <div> Disclaimer </div>
                     </Link>
 
-                    <Link href="/shippingdelivery">
+                    <Link href="/Legal/shipping-and-delivery">
                       <div> Shipping & Delivery </div>
                     </Link>
                   </nav>
@@ -149,9 +149,9 @@ const Footer = () => {
               <br />A Development & Designer Community ( #CSD )
             </p>
             <div className="flex pt-4 justify-center text-white text-[12px] space-x-4">
-              <a href="/privacypolicy">Privacy Policy</a>
-              <a href="/termsconditions">Terms & Conditions</a>
-              <a href="/disclaomer">Disclaimer</a>
+              <a href="/Legal/privacy-policy">Privacy Policy</a>
+              <a href="/Legal/terms-and-conditions">Terms & Conditions</a>
+              <a href="/Legal/disclaimer">Disclaimer</a>
               <a href="/site-map">Site Map</a>
             </div>
           </div>

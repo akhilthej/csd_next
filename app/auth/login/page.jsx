@@ -1,83 +1,80 @@
 "use client";
-import React, { useState } from "react";
-import { signIn } from "next-auth/react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
-import { IoEye, IoEyeOff } from "react-icons/io5";
+import { useAuth } from "@/app/context/AuthContext";
+import { Login_api } from "../../../hooks/ApisUrl";
 
 export default function LoginPage() {
   const router = useRouter();
-  const [formData, setFormData] = useState({ email: "", password: "" });
-  const [showPassword, setShowPassword] = useState(false);
-  const [loading, setLoading] = useState(false);
-  const [message, setMessage] = useState("");
+  const { user, login } = useAuth();
 
-  const handleSubmit = async (e) => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false); // ✅ added
+
+  useEffect(() => {
+    if (user) router.push("/auth/dashboard");
+  }, [user, router]);
+
+  const handleLogin = async (e) => {
     e.preventDefault();
-    setLoading(true);
-    setMessage("");
+    setError("");
+    setLoading(true); // ✅ start loading
 
-    const res = await signIn("credentials", {
-      redirect: false,
-      email: formData.email,
-      password: formData.password,
-    });
+    try {
+      const res = await fetch(Login_api, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, password }),
+      });
 
-    setLoading(false);
-    if (res.ok) {
-      router.push("/auth/dashboard");
-    } else {
-      setMessage("Invalid email or password");
+      const data = await res.json();
+      setLoading(false); // ✅ stop loading
+
+      if (data.success) {
+        login(data.user);
+      } else {
+        setError(data.message || "Login failed");
+      }
+    } catch (err) {
+      console.error(err);
+      setError("Something went wrong");
+      setLoading(false); // ✅ stop loading even on error
     }
   };
 
   return (
-    <div className="max-w-md mx-auto mt-10 p-6 bg-white rounded-xl shadow-lg">
-      <h2 className="text-3xl font-bold text-center text-blue-600 mb-6">Login</h2>
-      <form onSubmit={handleSubmit} className="space-y-4">
+    <div className="p-4 max-w-sm mx-auto">
+      <h1 className="text-xl font-bold mb-4">Login</h1>
+      <form onSubmit={handleLogin} className="space-y-3">
         <input
           type="email"
-          name="email"
-          placeholder="Email Address"
+          placeholder="Email"
+          className="w-full border px-3 py-2"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
           required
-          className="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-400"
-          value={formData.email}
-          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
         />
-        <div className="relative">
-          <input
-            type={showPassword ? "text" : "password"}
-            name="password"
-            placeholder="Password"
-            required
-            className="w-full border border-gray-300 rounded-lg p-3 pr-10 focus:outline-none focus:ring-2 focus:ring-blue-400"
-            value={formData.password}
-            onChange={(e) => setFormData({ ...formData, password: e.target.value })}
-          />
-          <span
-            className="absolute top-3 right-3 text-gray-500 cursor-pointer"
-            onClick={() => setShowPassword(!showPassword)}
-          >
-            {showPassword ? <IoEyeOff size={20} /> : <IoEye size={20} />}
-          </span>
-        </div>
+        <input
+          type="password"
+          placeholder="Password"
+          className="w-full border px-3 py-2"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          required
+        />
+        {error && <p className="text-red-600">{error}</p>}
         <button
           type="submit"
           disabled={loading}
-          className="w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold p-3 rounded-lg transition"
+          className={`w-full px-4 py-2 text-white font-semibold rounded ${
+            loading ? "bg-gray-400 cursor-not-allowed" : "bg-blue-500 hover:bg-blue-600"
+          }`}
         >
-          {loading ? "Logging in..." : "Login"}
+          {loading ? "Loading..." : "Login"}
         </button>
       </form>
-      {message && <p className="text-center text-red-500 mt-3">{message}</p>}
-      <p className="text-center mt-4 text-sm">
-        New user?{" "}
-        <button
-          onClick={() => router.push("/auth/signup")}
-          className="text-blue-500 hover:underline"
-        >
-          Sign up here
-        </button>
-      </p>
     </div>
   );
 }

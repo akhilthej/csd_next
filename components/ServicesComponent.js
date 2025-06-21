@@ -67,7 +67,7 @@ const ServicesComponent = () => {
   };
 
   return (
-    <div className=" overflow-hidden py-5">
+    <div className=" overflow-hidden py-5 pt-20">
       <p className="text-[24px] text-center sm:text-[34px] font-bold leading-8 text-black cursor-default">
         Our Areas of Specialization
       </p>

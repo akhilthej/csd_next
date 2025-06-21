@@ -1,23 +1,20 @@
 "use client";
-
-import { useSession, signOut } from "next-auth/react";
-import Image from "next/image";
-import { useRouter } from "next/navigation";
 import { useEffect } from "react";
+import { useRouter } from "next/navigation";
+import { useAuth } from "@/app/context/AuthContext";
+import Image from "next/image";
 import { HomeCommunityCover } from "../../../public/images";
 import Link from "next/link";
 
 export default function DashboardPage() {
-  const { data: session, status } = useSession();
+  const { user, logout } = useAuth();
   const router = useRouter();
 
   useEffect(() => {
-    if (status === "unauthenticated") {
-      router.push("/auth/login");
-    }
-  }, [status, router]);
+    if (!user) router.push("/auth/login");
+  }, [user, router]);
 
-  if (status === "loading") {
+  if (!user) {
     return (
       <div className="flex justify-center items-center h-screen">
         <p className="text-lg font-semibold text-blue-600">Loading...</p>
@@ -40,23 +37,18 @@ export default function DashboardPage() {
         </div>
       </div>
 
-      <h2 className="text-2xl font-bold text-blue-600 mb-1">
-        Welcome, {session?.user?.name}
-      </h2>
-      <p className="text-gray-600 mb-2">{session?.user?.email}</p>
-      <p className="text-gray-500">Phone: {session?.user?.phone_number}</p>
+      <h2 className="text-2xl font-bold text-blue-600 mb-1">Welcome, {user.name}</h2>
+      <p className="text-gray-600 mb-2">{user.email}</p>
+      <p className="text-gray-500">Phone: {user.phone_number}</p>
 
-<Link href="/auth/contactus">
-      <div
-        
-        className="mt-4 bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-6 rounded-lg transition"
-      >
-        contactus
-      </div></Link>
-
+      <Link href="/auth/contactus">
+        <div className="mt-4 bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-6 rounded-lg transition">
+          Contact Us
+        </div>
+      </Link>
 
       <button
-        onClick={() => signOut({ callbackUrl: "/" })}
+        onClick={logout}
         className="mt-4 bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-6 rounded-lg transition"
       >
         Logout
