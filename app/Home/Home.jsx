@@ -20,7 +20,7 @@ import {
   FaBuilding,
   FaGraduationCap,
 } from "react-icons/fa";
-import ImageSlider from "@/components/ImageSlider";
+import ProductsComponent from "@/components/ProductsComponent";
 
 const HomeTitle = () => {
   return (
@@ -33,14 +33,14 @@ const HomeTitle = () => {
           loop
           muted
           playsInline
-          className="absolute top-0 left-0 w-full h-full object-cover z-0 rounded-b-[100px]"
+          className="absolute top-0 left-0 w-full h-full object-cover z-0 rounded-b-[500px]"
         >
           <source src="/HomeHero.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
 
         {/* Overlay for darker text visibility */}
-        <div className="absolute top-0 left-0 w-full h-full bg-black/30 z-10 rounded-b-[100px]" />
+        <div className="absolute top-0 left-0 w-full h-full bg-black/30 z-10 rounded-b-[500px]" />
 
         {/* Foreground Content */}
         <div className="relative z-20 flex items-center justify-center min-h-screen px-2">
@@ -178,6 +178,7 @@ const HomeTitle = () => {
       </div>
 
       {/*section -7*/}
+      <ProductsComponent/>
  
 
       {/*section -8*/}

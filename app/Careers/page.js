@@ -1,5 +1,6 @@
+"use client"
 import React, { useState } from "react";
-import { APPLY_JOB } from "../../hooks/Apis";
+import { APPLY_JOB } from "../../hooks/ApisUrl";
 
 const JobApplication = () => {
   const [formData, setFormData] = useState({

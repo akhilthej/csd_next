@@ -613,6 +613,12 @@ const Navbar = () => {
       icon: faInfoCircle,
     },
     {
+      path: "/Careers",
+      title: "Careers",
+      description: "Looking for a Job?",
+      icon: faInfoCircle,
+    },
+    {
       path: "/contactus",
       title: "Contact",
       description: "Building apps for Android platforms.",
