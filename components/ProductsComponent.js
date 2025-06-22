@@ -45,18 +45,22 @@ const ProductsComponent = () => {
       "Graphic design is the art of visual communication that combines images and text.",
   };
 
+  const currentImage = images[selected];
+
   return (
     <div className="relative w-full h-[80vh] overflow-hidden">
       {/* Background Cover Image */}
-      <Image
-        src={images[selected]}
-        alt={selected}
-        fill
-        className={`object-cover w-full h-full absolute top-0 left-0 z-0 transition-opacity duration-500 ${
-          fade ? "opacity-0" : "opacity-100"
-        }`}
-        priority
-      />
+      {currentImage && (
+        <Image
+          src={currentImage}
+          alt={selected}
+          fill
+          className={`object-cover w-full h-full absolute top-0 left-0 z-0 transition-opacity duration-500 ${
+            fade ? "opacity-0" : "opacity-100"
+          }`}
+          priority
+        />
+      )}
 
       {/* Overlay content */}
       <div className="relative z-10 grid grid-cols-1 md:grid-cols-12 h-full">

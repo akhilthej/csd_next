@@ -8,7 +8,24 @@ import {
   MobileappCoverImage,
 } from "./images";
 
-import { businesswebsite, crmermpannel, ecommerce, WebRevamp } from "./icons";
+import { businesswebsite, crmermpannel, ecommerce, WebRevamp,
+
+  AndroidAppDevelopment,AppMaintenanceSupport,AppMonetizationStrategy,AppPrototyping,AppSecurity,AppStoreOptimization,AppTestingQuality,
+  CrossPlatformAppDevelopment,EcommerceAppDev,iOSAppDevelopment,MobileApp,
+
+  affiliatemarketing,SearchEngineOptimization,ContentMarketing,SocialMediaMarketing,EmailMarketing,PayPerClickAdvertising,AnalyticsandDataAnalysis,
+ConversionRateOptimization,MobileMarketing,VideoMarketing,LocalSEOandMarketing,EcommerceMarketing,MarketingAutomation,RemarketingandRetargeting,InfluencerMarketing,
+
+BrandAwarness,BrandExp,BrandGuide,BrandID,BrandLogo,BrandMessage,BrandName,BrandPosition,BrandResearch,BrandStory,BrandTracking,Rebranding,VisualID,
+
+  BannerDesign,BrandIdentityDesign,BrochureDesign,BusinessCard,eBookandPrintBook,IllustationServices,InfographicDesign,logodesign,
+MotionGraphics,PackagingDesign,PhotoEditing,PosterandFlyerDesign,PrintDesign,RenderingandVisualizationBannerDesign,SignageandBillboardDesign,
+SocialMediaGraphics,TShirtandMerchandiseDesign,UserExperienceDesign,UserInterfaceDesign,WebDesign,
+
+DisplayAdvertising,InGameAdvertising,NativeAdvertising,OutdoorAdvertising,PrintAdvertising,ProgrammaticAdvertising,RadioAdvertising,
+TheatreAdvertising,TVAdvertising,VideoAdvertising,
+
+ } from "./icons";
 
 export const WebDevelopmentCompany = {
   coverimage: "WebDevelopmentCoverImage",
@@ -82,76 +99,76 @@ export const MobileAppDevelopment = {
   },
   services: [
     {
-      icon: businesswebsite,
+      icon: MobileApp,
       title: "Mobile App",
       description:
         "Catalyzing Business Success: Our business website solutions are designed to drive growth, enhance visibility, and boost profitability in the digital landscape.",
       link: "/services/web-development-company/build-business-website",
     },
     {
-      icon: ecommerce,
-      title: "iOS-App Development",
+      icon: AndroidAppDevelopment,
+      title: "Android App Development",
       description:
         "Crafting E-Commerce Excellence: Elevate your online retail with our bespoke e-commerce solutions. Boost sales, engage customers, and thrive online.",
       link: "/services/web-development-company/build-business-website",
     },
     {
-      icon: WebRevamp,
+      icon: iOSAppDevelopment,
       title: "iOS-App Development",
       description:
         "Revamp Your Online Presence: Transform and modernize your existing website with our web revamp services. Stay ahead and impress your audience.",
       link: "/services/web-development-company/build-business-website",
     },
     {
-      icon: crmermpannel,
+      icon: CrossPlatformAppDevelopment,
       title: "CrossPlatformAppDevelopment",
       description:
         "Efficient CRM/ERM Solutions: Enhance business operations with our CRM/ERM panels. Streamline processes, manage data, and boost productivity effectively.",
       link: "/services/web-development-company/build-business-website",
     }, {
-      icon: businesswebsite,
+      icon: AppPrototyping,
       title: "App Prototyping",
       description:
         "Catalyzing Business Success: Our business website solutions are designed to drive growth, enhance visibility, and boost profitability in the digital landscape.",
       link: "/services/web-development-company/build-business-website",
     },
     {
-      icon: ecommerce,
+      icon: AppTestingQuality,
       title: "App Testing & Quality Assurance",
       description:
         "Crafting E-Commerce Excellence: Elevate your online retail with our bespoke e-commerce solutions. Boost sales, engage customers, and thrive online.",
       link: "/services/web-development-company/build-business-website",
     },
     {
-      icon: WebRevamp,
+      icon: AppMaintenanceSupport,
       title: "App Maintenance & Support",
       description:
         "Revamp Your Online Presence: Transform and modernize your existing website with our web revamp services. Stay ahead and impress your audience.",
       link: "/services/web-development-company/build-business-website",
     },
     {
-      icon: crmermpannel,
+      icon: AppSecurity,
       title: "App Security",
       description:
         "Efficient CRM/ERM Solutions: Enhance business operations with our CRM/ERM panels. Streamline processes, manage data, and boost productivity effectively.",
       link: "/services/web-development-company/build-business-website",
     },
     {
-      icon: crmermpannel,
+      icon: AppMonetizationStrategy,
       title: "App Monetization Strategy",
       description:
         "Efficient CRM/ERM Solutions: Enhance business operations with our CRM/ERM panels. Streamline processes, manage data, and boost productivity effectively.",
       link: "/services/web-development-company/build-business-website",
     },
     {
-      icon: crmermpannel,
+      icon: AppStoreOptimization,
       title: "App Store Optimization",
       description:
         "Efficient CRM/ERM Solutions: Enhance business operations with our CRM/ERM panels. Streamline processes, manage data, and boost productivity effectively.",
       link: "/services/web-development-company/build-business-website",
     },
     {
-      icon: crmermpannel,
+      icon: EcommerceAppDev,
       title: "Ecommerce App Development",
       description:
         "Efficient CRM/ERM Solutions: Enhance business operations with our CRM/ERM panels. Streamline processes, manage data, and boost productivity effectively.",
@@ -181,105 +198,105 @@ export const DigitalMarketingCompany = {
   },
   services: [
     {
-      icon: businesswebsite,
+      icon: SearchEngineOptimization,
       title: "Search Engine Optimization",
       description:
         "Catalyzing Business Success: Our business website solutions are designed to drive growth, enhance visibility, and boost profitability in the digital landscape.",
       link: "/services/web-development-company/build-business-website",
     },
     {
-      icon: ecommerce,
+      icon: ContentMarketing,
       title: "Content Marketing",
       description:
         "Crafting E-Commerce Excellence: Elevate your online retail with our bespoke e-commerce solutions. Boost sales, engage customers, and thrive online.",
       link: "/services/web-development-company/build-business-website",
     },
     {
-      icon: WebRevamp,
+      icon: SocialMediaMarketing,
       title: "Social Media Marketing",
       description:
         "Revamp Your Online Presence: Transform and modernize your existing website with our web revamp services. Stay ahead and impress your audience.",
       link: "/services/web-development-company/build-business-website",
     },
     {
-      icon: crmermpannel,
+      icon: EmailMarketing,
       title: "Email Marketing",
       description:
         "Efficient CRM/ERM Solutions: Enhance business operations with our CRM/ERM panels. Streamline processes, manage data, and boost productivity effectively.",
       link: "/services/web-development-company/build-business-website",
     },
     {
-      icon: businesswebsite,
+      icon: PayPerClickAdvertising,
       title: "Pay-Per Click Advertising",
       description:
         "Catalyzing Business Success: Our business website solutions are designed to drive growth, enhance visibility, and boost profitability in the digital landscape.",
       link: "/services/web-development-company/build-business-website",
     },
     {
-      icon: ecommerce,
+      icon: affiliatemarketing,
       title: "Affiliate Marketing",
       description:
         "Crafting E-Commerce Excellence: Elevate your online retail with our bespoke e-commerce solutions. Boost sales, engage customers, and thrive online.",
       link: "/services/web-development-company/build-business-website",
     },
     {
-      icon: WebRevamp,
+      icon: AnalyticsandDataAnalysis,
       title: "Analytics and Data Analysis",
       description:
         "Revamp Your Online Presence: Transform and modernize your existing website with our web revamp services. Stay ahead and impress your audience.",
       link: "/services/web-development-company/build-business-website",
     },
     {
-      icon: crmermpannel,
+      icon: ConversionRateOptimization,
       title: "Conversion Rate Optimization",
       description:
         "Efficient CRM/ERM Solutions: Enhance business operations with our CRM/ERM panels. Streamline processes, manage data, and boost productivity effectively.",
       link: "/services/web-development-company/build-business-website",
     },
     {
-      icon: businesswebsite,
+      icon: MobileMarketing,
       title: "Mobile Marketing",
       description:
         "Catalyzing Business Success: Our business website solutions are designed to drive growth, enhance visibility, and boost profitability in the digital landscape.",
       link: "/services/web-development-company/build-business-website",
     },
     {
-      icon: ecommerce,
+      icon: VideoMarketing,
       title: "Video Marketing",
       description:
         "Crafting E-Commerce Excellence: Elevate your online retail with our bespoke e-commerce solutions. Boost sales, engage customers, and thrive online.",
       link: "/services/web-development-company/build-business-website",
     },
     {
-      icon: WebRevamp,
+      icon: LocalSEOandMarketing,
       title: "Local SEO and Marketing",
       description:
         "Revamp Your Online Presence: Transform and modernize your existing website with our web revamp services. Stay ahead and impress your audience.",
       link: "/services/web-development-company/build-business-website",
     },
     {
-      icon: crmermpannel,
+      icon: EcommerceMarketing,
       title: "Ecommerce Marketing",
       description:
         "Efficient CRM/ERM Solutions: Enhance business operations with our CRM/ERM panels. Streamline processes, manage data, and boost productivity effectively.",
       link: "/services/web-development-company/build-business-website",
     },
     {
-      icon: ecommerce,
+      icon: MarketingAutomation,
       title: "Marketing Automation",
       description:
         "Crafting E-Commerce Excellence: Elevate your online retail with our bespoke e-commerce solutions. Boost sales, engage customers, and thrive online.",
       link: "/services/web-development-company/build-business-website",
     },
     {
-      icon: WebRevamp,
+      icon: RemarketingandRetargeting,
       title: "Remarketing and Retargeting",
       description:
         "Revamp Your Online Presence: Transform and modernize your existing website with our web revamp services. Stay ahead and impress your audience.",
       link: "/services/web-development-company/build-business-website",
     },
     {
-      icon: crmermpannel,
+      icon: InfluencerMarketing,
       title: "Influencer Marketing",
       description:
         "Efficient CRM/ERM Solutions: Enhance business operations with our CRM/ERM panels. Streamline processes, manage data, and boost productivity effectively.",
@@ -307,142 +324,145 @@ export const MultiMediaCompany = {
     description:
       "Every business requires a unique website to effectively reach its customers or clients. At Cyber Space Digital, we're here to help you discover the best choices tailored to your needs.",
   },
+
+   
+
    services: [
     {
-      icon: businesswebsite,
+      icon: logodesign,
       title: "Logo Design",
       description:
         "Catalyzing Business Success: Our business website solutions are designed to drive growth, enhance visibility, and boost profitability in the digital landscape.",
       link: "/services/web-development-company/build-business-website",
     },
     {
-      icon: businesswebsite,
+      icon: BrandIdentityDesign,
       title: "Brand Identity Design",
       description:
         "Catalyzing Business Success: Our business website solutions are designed to drive growth, enhance visibility, and boost profitability in the digital landscape.",
       link: "/services/web-development-company/build-business-website",
     },
     {
-      icon: ecommerce,
+      icon: PrintDesign,
       title: "Print Design",
       description:
         "Crafting E-Commerce Excellence: Elevate your online retail with our bespoke e-commerce solutions. Boost sales, engage customers, and thrive online.",
       link: "/services/web-development-company/build-business-website",
     },
     {
-      icon: WebRevamp,
+      icon: WebDesign,
       title: "Web Design",
       description:
         "Revamp Your Online Presence: Transform and modernize your existing website with our web revamp services. Stay ahead and impress your audience.",
       link: "/services/web-development-company/build-business-website",
     },
     {
-      icon: crmermpannel,
+      icon: UserInterfaceDesign,
       title: "User Interface Design",
       description:
         "Efficient CRM/ERM Solutions: Enhance business operations with our CRM/ERM panels. Streamline processes, manage data, and boost productivity effectively.",
       link: "/services/web-development-company/build-business-website",
     },
     {
-      icon: businesswebsite,
+      icon: UserExperienceDesign,
       title: "User Experience Design",
       description:
         "Catalyzing Business Success: Our business website solutions are designed to drive growth, enhance visibility, and boost profitability in the digital landscape.",
       link: "/services/web-development-company/build-business-website",
     },
     {
-      icon: businesswebsite,
+      icon: PackagingDesign,
       title: "Packaging Design",
       description:
         "Catalyzing Business Success: Our business website solutions are designed to drive growth, enhance visibility, and boost profitability in the digital landscape.",
       link: "/services/web-development-company/build-business-website",
     },
     {
-      icon: ecommerce,
+      icon: PosterandFlyerDesign,
       title: "Poster and Flyer Design",
       description:
         "Crafting E-Commerce Excellence: Elevate your online retail with our bespoke e-commerce solutions. Boost sales, engage customers, and thrive online.",
       link: "/services/web-development-company/build-business-website",
     },
     {
-      icon: WebRevamp,
+      icon: BrochureDesign,
       title: "Brochure Design",
       description:
         "Revamp Your Online Presence: Transform and modernize your existing website with our web revamp services. Stay ahead and impress your audience.",
       link: "/services/web-development-company/build-business-website",
     },
     {
-      icon: crmermpannel,
+      icon: BannerDesign,
       title: "Banner Design",
       description:
         "Efficient CRM/ERM Solutions: Enhance business operations with our CRM/ERM panels. Streamline processes, manage data, and boost productivity effectively.",
       link: "/services/web-development-company/build-business-website",
     },
     {
-      icon: businesswebsite,
+      icon: IllustationServices,
       title: "Illustation Services",
       description:
         "Catalyzing Business Success: Our business website solutions are designed to drive growth, enhance visibility, and boost profitability in the digital landscape.",
       link: "/services/web-development-company/build-business-website",
     },
     {
-      icon: businesswebsite,
+      icon: InfographicDesign,
       title: "Infographic Design",
       description:
         "Catalyzing Business Success: Our business website solutions are designed to drive growth, enhance visibility, and boost profitability in the digital landscape.",
       link: "/services/web-development-company/build-business-website",
     },
     {
-      icon: ecommerce,
+      icon: SocialMediaGraphics,
       title: "Social Media Graphics",
       description:
         "Crafting E-Commerce Excellence: Elevate your online retail with our bespoke e-commerce solutions. Boost sales, engage customers, and thrive online.",
       link: "/services/web-development-company/build-business-website",
     },
     {
-      icon: WebRevamp,
+      icon: eBookandPrintBook,
       title: "eBook and Print Book Cover Design",
       description:
         "Revamp Your Online Presence: Transform and modernize your existing website with our web revamp services. Stay ahead and impress your audience.",
       link: "/services/web-development-company/build-business-website",
     },
     {
-      icon: crmermpannel,
+      icon: TShirtandMerchandiseDesign,
       title: "TShirt and Merchandise Design",
       description:
         "Efficient CRM/ERM Solutions: Enhance business operations with our CRM/ERM panels. Streamline processes, manage data, and boost productivity effectively.",
       link: "/services/web-development-company/build-business-website",
     },
     {
-      icon: crmermpannel,
+      icon: SignageandBillboardDesign,
       title: "Signage and Bill board Design",
       description:
         "Efficient CRM/ERM Solutions: Enhance business operations with our CRM/ERM panels. Streamline processes, manage data, and boost productivity effectively.",
       link: "/services/web-development-company/build-business-website",
     },
     {
-      icon: crmermpannel,
+      icon: BusinessCard,
       title: "Business Card and Stationery Design",
       description:
         "Efficient CRM/ERM Solutions: Enhance business operations with our CRM/ERM panels. Streamline processes, manage data, and boost productivity effectively.",
       link: "/services/web-development-company/build-business-website",
     },
     {
-      icon: crmermpannel,
+      icon: RenderingandVisualizationBannerDesign,
       title: "Rendering and Visualization",
       description:
         "Efficient CRM/ERM Solutions: Enhance business operations with our CRM/ERM panels. Streamline processes, manage data, and boost productivity effectively.",
       link: "/services/web-development-company/build-business-website",
     },
     {
-      icon: crmermpannel,
+      icon: MotionGraphics,
       title: "Motion Graphics and Animation",
       description:
         "Efficient CRM/ERM Solutions: Enhance business operations with our CRM/ERM panels. Streamline processes, manage data, and boost productivity effectively.",
       link: "/services/web-development-company/build-business-website",
     },
     {
-      icon: crmermpannel,
+      icon: PhotoEditing,
       title: "Photo Editing and Retouching",
       description:
         "Efficient CRM/ERM Solutions: Enhance business operations with our CRM/ERM panels. Streamline processes, manage data, and boost productivity effectively.",
@@ -470,86 +490,94 @@ export const BrandingCompany = {
     description:
       "Every business requires a unique website to effectively reach its customers or clients. At Cyber Space Digital, we're here to help you discover the best choices tailored to your needs.",
   },
+
    services: [
     {
-      icon: businesswebsite,
+      icon: BrandID,
       title: "Brand Identity Design Exclusive",
       description:
         "Catalyzing Business Success: Our business website solutions are designed to drive growth, enhance visibility, and boost profitability in the digital landscape.",
       link: "/services/web-development-company/build-business-website",
     },
     {
-      icon: ecommerce,
+      icon: BrandLogo,
+      title: "Brand Logo Design",
+      description:
+        "Catalyzing Business Success: Our business website solutions are designed to drive growth, enhance visibility, and boost profitability in the digital landscape.",
+      link: "/services/web-development-company/build-business-website",
+    },
+    {
+      icon: BrandGuide,
       title: "Brand Guidelines",
       description:
         "Crafting E-Commerce Excellence: Elevate your online retail with our bespoke e-commerce solutions. Boost sales, engage customers, and thrive online.",
       link: "/services/web-development-company/build-business-website",
     },
     {
-      icon: WebRevamp,
+      icon: BrandPosition,
       title: "Brand Positioning",
       description:
         "Revamp Your Online Presence: Transform and modernize your existing website with our web revamp services. Stay ahead and impress your audience.",
       link: "/services/web-development-company/build-business-website",
     },
     {
-      icon: crmermpannel,
+      icon: BrandStory,
       title: "Brand Storytelling",
       description:
         "Efficient CRM/ERM Solutions: Enhance business operations with our CRM/ERM panels. Streamline processes, manage data, and boost productivity effectively.",
       link: "/services/web-development-company/build-business-website",
     },
     {
-      icon: businesswebsite,
+      icon: BrandName,
       title: "Brand Naming",
       description:
         "Catalyzing Business Success: Our business website solutions are designed to drive growth, enhance visibility, and boost profitability in the digital landscape.",
       link: "/services/web-development-company/build-business-website",
     },
     {
-      icon: ecommerce,
+      icon: VisualID,
       title: "Visual Identity Design",
       description:
         "Crafting E-Commerce Excellence: Elevate your online retail with our bespoke e-commerce solutions. Boost sales, engage customers, and thrive online.",
       link: "/services/web-development-company/build-business-website",
     },
     {
-      icon: WebRevamp,
+      icon: BrandMessage,
       title: "Brand Messaging",
       description:
         "Revamp Your Online Presence: Transform and modernize your existing website with our web revamp services. Stay ahead and impress your audience.",
       link: "/services/web-development-company/build-business-website",
-    },
+    },  
     {
-      icon: crmermpannel,
+      icon: BrandExp,
       title: "Brand Experience Design",
       description:
         "Efficient CRM/ERM Solutions: Enhance business operations with our CRM/ERM panels. Streamline processes, manage data, and boost productivity effectively.",
       link: "/services/web-development-company/build-business-website",
     },
     {
-      icon: businesswebsite,
+      icon: BrandAwarness,
       title: "Brand Awareness Campaigns",
       description:
         "Catalyzing Business Success: Our business website solutions are designed to drive growth, enhance visibility, and boost profitability in the digital landscape.",
       link: "/services/web-development-company/build-business-website",
     },
     {
-      icon: ecommerce,
+      icon: Rebranding,
       title: "Rebranding Services",
       description:
         "Crafting E-Commerce Excellence: Elevate your online retail with our bespoke e-commerce solutions. Boost sales, engage customers, and thrive online.",
       link: "/services/web-development-company/build-business-website",
     },
     {
-      icon: WebRevamp,
+      icon: BrandResearch,
       title: "Brand Research and Analysis",
       description:
         "Revamp Your Online Presence: Transform and modernize your existing website with our web revamp services. Stay ahead and impress your audience.",
       link: "/services/web-development-company/build-business-website",
     },
     {
-      icon: crmermpannel,
+      icon: BrandTracking,
       title: "Brand Tracking and perfomance Evaluation",
       description:
         "Efficient CRM/ERM Solutions: Enhance business operations with our CRM/ERM panels. Streamline processes, manage data, and boost productivity effectively.",
@@ -577,72 +605,75 @@ export const AdvertisingCompany = {
     description:
       "Every business requires a unique website to effectively reach its customers or clients. At Cyber Space Digital, we're here to help you discover the best choices tailored to your needs.",
   },
+
+ 
+
    services: [
     {
-      icon: businesswebsite,
+      icon: DisplayAdvertising,
       title: "Display Advertising",
       description:
         "Catalyzing Business Success: Our business website solutions are designed to drive growth, enhance visibility, and boost profitability in the digital landscape.",
       link: "/services/web-development-company/build-business-website",
     },
     {
-      icon: businesswebsite,
+      icon: VideoAdvertising,
       title: "Video Advertising",
       description:
         "Catalyzing Business Success: Our business website solutions are designed to drive growth, enhance visibility, and boost profitability in the digital landscape.",
       link: "/services/web-development-company/build-business-website",
     },
     {
-      icon: ecommerce,
+      icon: NativeAdvertising,
       title: "Native Advertising",
       description:
         "Crafting E-Commerce Excellence: Elevate your online retail with our bespoke e-commerce solutions. Boost sales, engage customers, and thrive online.",
       link: "/services/web-development-company/build-business-website",
     },
     {
-      icon: WebRevamp,
+      icon: ProgrammaticAdvertising,
       title: "Programmatic Advertising",
       description:
         "Revamp Your Online Presence: Transform and modernize your existing website with our web revamp services. Stay ahead and impress your audience.",
       link: "/services/web-development-company/build-business-website",
     },
     {
-      icon: crmermpannel,
+      icon: OutdoorAdvertising,
       title: "Outdoor Advertising",
       description:
         "Efficient CRM/ERM Solutions: Enhance business operations with our CRM/ERM panels. Streamline processes, manage data, and boost productivity effectively.",
       link: "/services/web-development-company/build-business-website",
     },
     {
-      icon: businesswebsite,
+      icon: PrintAdvertising,
       title: "Print Advertising",
       description:
         "Catalyzing Business Success: Our business website solutions are designed to drive growth, enhance visibility, and boost profitability in the digital landscape.",
       link: "/services/web-development-company/build-business-website",
     },
     {
-      icon: businesswebsite,
+      icon: RadioAdvertising,
       title: "Radio Advertising",
       description:
         "Catalyzing Business Success: Our business website solutions are designed to drive growth, enhance visibility, and boost profitability in the digital landscape.",
       link: "/services/web-development-company/build-business-website",
     },
     {
-      icon: ecommerce,
+      icon: TVAdvertising,
       title: "TV Advertising",
       description:
         "Crafting E-Commerce Excellence: Elevate your online retail with our bespoke e-commerce solutions. Boost sales, engage customers, and thrive online.",
       link: "/services/web-development-company/build-business-website",
     },
     {
-      icon: WebRevamp,
+      icon: InGameAdvertising,
       title: "In-Game Advertising",
       description:
         "Revamp Your Online Presence: Transform and modernize your existing website with our web revamp services. Stay ahead and impress your audience.",
       link: "/services/web-development-company/build-business-website",
     },
     {
-      icon: crmermpannel,
+      icon: TheatreAdvertising,
       title: "Theatre Advertising",
       description:
         "Efficient CRM/ERM Solutions: Enhance business operations with our CRM/ERM panels. Streamline processes, manage data, and boost productivity effectively.",
