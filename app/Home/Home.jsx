@@ -7,7 +7,7 @@ import {
   TimeManage,
   OntimeDelivery,
   HiringModel,
-  goodfirms,
+  goodfirms,CSDLogo,
 } from "../../public/icons";
 import Image from "next/image";
 import {
@@ -33,14 +33,14 @@ const HomeTitle = () => {
           loop
           muted
           playsInline
-          className="absolute top-0 left-0 w-full h-full object-cover z-0 rounded-b-[500px]"
+          className="absolute top-0 left-0 w-full h-full object-cover z-0 "
         >
           <source src="/HomeHero.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
 
         {/* Overlay for darker text visibility */}
-        <div className="absolute top-0 left-0 w-full h-full bg-black/30 z-10 rounded-b-[500px]" />
+        <div className="absolute top-0 left-0 w-full h-full bg-black/30 z-10" />
 
         {/* Foreground Content */}
         <div className="relative z-20 flex items-center justify-center min-h-screen px-2">
@@ -165,12 +165,12 @@ const HomeTitle = () => {
             </div>
             <div className="md:w-5/12 lg:w-5/12">
               <Image
-                src={goodfirms}
+                src={CSDLogo}
                 alt="Cyber Space Digital Illustration"
                 loading="lazy"
                 width={500}
                 height={400}
-                className="rounded-xl shadow-lg"
+         
               />
             </div>
           </div>

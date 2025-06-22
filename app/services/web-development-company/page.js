@@ -1,5 +1,4 @@
 import React from "react";
-import Head from "next/head";
 import Link from "next/link";
 import { WebDevelopmentCompany } from "../../../public/PageData"; // Adjust the path as necessary
 
@@ -9,18 +8,19 @@ import { HomeCommunityCover } from "../../../public/images";
 import Image from "next/image";
 import { GlobalData } from "@/public/GlodalData";
 
+export const metadata = {
+  title: "Web Development Company - Cyber Space Digital",
+  description:
+    "Web Development and Digital Marketing Company. We are here to build your business online. One stop for all your digital needs.",
+  alternates: {
+    canonical: "https://cyberspacedigital.in/",
+  },
+};
+
 const webDevelopmentCompany = () => {
   return (
     <div className="services">
-      <Head>
-        <title>Cyber Space Digital - Services</title>
-        <meta
-          name="description"
-          content="Web Development and Digital Marketing Company. We are here to build you business online. One stop for all your digital needs."
-        />
-        <link rel="canonical" href="/services" />
-      </Head>
-
+    
       <main>
         {/* Title Card */}
         <section

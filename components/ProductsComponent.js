@@ -13,7 +13,7 @@ import {
 } from "../public/images";
 
 const ProductsComponent = () => {
-  const [selected, setSelected] = useState("Digital Marketing");
+  const [selected, setSelected] = useState("CRM Geni");
   const [fade, setFade] = useState(false);
 
   const handleButtonClick = (category) => {

@@ -1,3 +1,5 @@
+import CSDLogo from '@/public/favicon/csdv2Logowithtitle.png'
+
 import DigitalmarketingIcon from "./icons/digitalmarketingicon.svg";
 import Advertisingicon from "./icons/advertisingicon.svg";
 import Graphicdesignicon from "./icons/graphicdesignicon.svg";
@@ -98,7 +100,7 @@ import BrandTracking from './icons/Services_icons/Branding/Brand Tracking and pe
 import Rebranding from './icons/Services_icons/Branding/Rebranding Services.webp'
 import VisualID from './icons/Services_icons/Branding/Visual Identity Design.webp'
 
-export {
+export {CSDLogo,
   DisplayAdvertising,InGameAdvertising,NativeAdvertising,OutdoorAdvertising,PrintAdvertising,ProgrammaticAdvertising,RadioAdvertising,
 TheatreAdvertising,TVAdvertising,VideoAdvertising,
 
