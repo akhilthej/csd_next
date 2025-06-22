@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 import Link from "next/link";
 import { WebDevelopmentCompany } from "../../../public/PageData"; // Adjust the path as necessary
 
@@ -8,19 +9,18 @@ import { HomeCommunityCover } from "../../../public/images";
 import Image from "next/image";
 import { GlobalData } from "@/public/GlodalData";
 
-export const metadata = {
-  title: "Web Development Company - Cyber Space Digital",
-  description:
-    "Web Development and Digital Marketing Company. We are here to build your business online. One stop for all your digital needs.",
-  alternates: {
-    canonical: "https://cyberspacedigital.in/",
-  },
-};
-
-const webdevelopmentcompany = () => {
+const webDevelopmentCompany = () => {
   return (
     <div className="services">
-    
+      <Head>
+        <title>Cyber Space Digital - Services</title>
+        <meta
+          name="description"
+          content="Web Development and Digital Marketing Company. We are here to build you business online. One stop for all your digital needs."
+        />
+        <link rel="canonical" href="/services" />
+      </Head>
+
       <main>
         {/* Title Card */}
         <section
@@ -90,7 +90,7 @@ const webdevelopmentcompany = () => {
             </div>
           </section>
           <section className="my-12 px-6">
-          <div className="grid grid-cols-2 sm:grid-cols-5 gap-2 text-center">
+            <div className="grid grid-cols-2 sm:grid-cols-5 gap-2 text-center">
               {WebDevelopmentCompany.services.map((service, index) => {
                 return (
                   <div
@@ -99,7 +99,7 @@ const webdevelopmentcompany = () => {
                   >
                     <Image
                       src={service.icon}
-                      className=" ml-auto mx-auto justify-center" 
+                      className="w-8 h-8 ml-auto mx-auto justify-center" // Set width and height to 30px (8 * 4 = 32px, close to 30px)
                       alt="illustration"
                       loading="lazy"
                       width={30} 
@@ -196,4 +196,4 @@ const webdevelopmentcompany = () => {
   );
 };
 
-export default webdevelopmentcompany;
+export default webDevelopmentCompany;
