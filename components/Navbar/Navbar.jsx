@@ -23,7 +23,7 @@ import {
   faNetworkWired,
   faPhone,
   faEnvelope,
-  faBlog,
+  faBlog,faCalculator ,
   faInfoCircle,
   faAd,
   faHandHoldingUsd,
@@ -75,10 +75,15 @@ import {
   faShieldAlt,
   faDollarSign,
   faShoppingBag,
+  faFileInvoice,
+  faTools,
+  faBriefcase,
 } from "@fortawesome/free-solid-svg-icons";
+
 
 import NavbarLogo from "./csdv2Logo.svg";
 import Image from "next/image";
+
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -598,7 +603,19 @@ const Navbar = () => {
       path: "/services",
       title: "Services",
       description: "Creative and user-friendly app design.",
-      icon: faBlog,
+      icon: faTools,
+    },
+    {
+      path: "/contactus/calculate",
+      title: "Calculate",
+      description: "Creative and user-friendly app design.",
+      icon: faCalculator ,
+    },
+    {
+      path: "/contactus/getquotation",
+      title: "Get Quotation",
+      description: "Creative and user-friendly app design.",
+      icon: faFileInvoice
     },
     {
       path: "/blogs",
@@ -616,7 +633,7 @@ const Navbar = () => {
       path: "/Careers",
       title: "Careers",
       description: "Looking for a Job?",
-      icon: faInfoCircle,
+      icon: faBriefcase
     },
     {
       path: "/contactus",
@@ -1369,7 +1386,7 @@ const Navbar = () => {
                     </div>
 
                     <div className="w-1/3 p-4">
-                      {moreLinks.slice(0, 2).map((link) => (
+                      {moreLinks.slice(0, 3).map((link) => (
                         <Link href={link.path} key={link.path}>
                           <div className="block px-4 py-2 text-[12px] text-black hover:bg-yellow-500 hover:text-white">
                             <div className="flex items-center">
@@ -1389,7 +1406,7 @@ const Navbar = () => {
                       ))}
                     </div>
                     <div className="w-1/3 p-4">
-                      {moreLinks.slice(2, 5).map((link) => (
+                      {moreLinks.slice(3, 6).map((link) => (
                         <Link href={link.path} key={link.path}>
                           <div className="block px-4 py-2 text-[12px] text-black hover:bg-yellow-500 hover:text-white">
                             <div className="flex items-center">

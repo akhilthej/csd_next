@@ -10,6 +10,7 @@ import {
 import Image from "next/image";
 import { ServicesCoverImage, HomeCommunityCover } from "../../public/images";
 import ServicesTab from "../../components/ServicesComponent";
+import { GlobalData } from "@/public/GlodalData";
 
 const Services = () => {
   return (
@@ -53,7 +54,7 @@ const Services = () => {
                     </span>
                   </Link>
 
-                  <a href="https://api.whatsapp.com/send?phone=918143407758&text=Welcome%20to%20Cyberspacedigital">
+                  <a href={GlobalData.company.companyWhatsapp}>
                     <span className="transform rounded-md bg-white px-5 py-3 font-medium text-black transition-colors hover:bg-black hover:text-white">
                       WhatsApp
                     </span>
@@ -107,7 +108,7 @@ const Services = () => {
 
           <div className="flex items-center justify-center gap-4 flex-wrap">
             <a
-              href="https://api.whatsapp.com/send?phone=918143407758&text=Need%20Details%20about%20business%20website."
+              href={GlobalData.company.companyWhatsapp}
               className="text-xs sm:text-sm transform rounded bg-yellow-500 border border-slate-200 px-20 py-2 font-medium text-black transition-colors hover:bg-slate-50 "
             >
               Whatsapp

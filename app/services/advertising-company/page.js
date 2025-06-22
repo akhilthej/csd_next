@@ -90,7 +90,7 @@ const advertisingCompany = () => {
             </div>
           </section>
           <section className="my-12 px-6">
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
+          <div className="grid grid-cols-2 sm:grid-cols-5 gap-2 text-center">
               {AdvertisingCompany.services.map((service, index) => {
                 return (
                   <div

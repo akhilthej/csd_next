@@ -81,7 +81,7 @@ const Footer = () => {
                   <nav className="flex flex-col mt-4 space-y-2 text-[12px] text-gray-500">
                     <a href="/contactus"> Contact </a>
                     <a href="/contactus"> FAQs </a>
-                    <a href="https://api.whatsapp.com/send?phone=918143407758&text=Welcome%20to%20Cyberspacedigital">
+                    <a href={GlobalData.company.companyWhatsapp}>
                       {" "}
                       Live Chat{" "}
                     </a>

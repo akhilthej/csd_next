@@ -6,7 +6,6 @@ import { FcIdea } from "react-icons/fc";
 
 import {
   DigitalMarketingImage,
-  AdvertisingImage,
   BrandingImage,
   GraphicDesignImage,
   MobileAppDevImage,
@@ -28,7 +27,7 @@ const ProductsComponent = () => {
   const images = {
     "CRM Geni": DigitalMarketingImage,
     "The Gold Jar": WebDevelopmentImage,
-    Brandify: MobileAppDevImage,
+    "Ecommerce": MobileAppDevImage,
     "Smart invite": BrandingImage,
     "Magic QR": GraphicDesignImage,
   };
@@ -38,7 +37,7 @@ const ProductsComponent = () => {
       "Digital marketing involves promoting products or services through digital channels.",
     "The Gold Jar":
       "Web development is the work involved in developing a website for the Internet.",
-    Brandify:
+    "Ecommerce":
       "Mobile app development is the process of creating software applications for mobile devices.",
     "Smart invite":
       "Branding is the process of creating a unique name and image for a product in the consumer's mind.",
