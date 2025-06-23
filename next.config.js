@@ -7,7 +7,7 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'demo.cyberspacedigital.in', // Remove 'https://' from hostname
+        hostname: 'cyberspacedigital.in', // Remove 'https://' from hostname
         pathname: '/icons/**',
       },
     ],
