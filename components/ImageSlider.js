@@ -20,7 +20,7 @@ const ImageSlider = () => {
       description: "Create stunning websites, engage, grow online.",
       button1: {
         text: "Get Quotation",
-        link: "/services/best-web-developement-company",
+        link: "/contactus",
       },
       button2: {
         text: "Contact us",
@@ -33,7 +33,7 @@ const ImageSlider = () => {
       description: "Boost brands, reach audiences, measure results.",
       button1: {
         text: "Learn More",
-        link: "/services/best-digital-marketing-company",
+        link: "/contactus",
       },
       button2: {
         text: "Contact Us",
@@ -46,7 +46,7 @@ const ImageSlider = () => {
       description: "Design visuals, convey messages, inspire creativity.",
       button1: {
         text: "Explore",
-        link: "/services/best-graphic-designing-company",
+        link: "/contactus",
       },
       button2: {
         text: "Contact Us",
@@ -59,7 +59,7 @@ const ImageSlider = () => {
       description: "Craft identities, build trust, leave impressions.",
       button1: {
         text: "Learn More",
-        link: "/services/best-brand-services-company",
+        link: "/contactus",
       },
       button2: {
         text: "Contact us",
@@ -72,7 +72,7 @@ const ImageSlider = () => {
       description: "Promote products, captivate audiences, drive sales.",
       button1: {
         text: "Learn More",
-        link: "/services/best-advertising-company",
+        link: "/contactus",
       },
       button2: {
         text: "Contact us",

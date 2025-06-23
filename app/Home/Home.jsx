@@ -23,10 +23,18 @@ import {
 import ProductsComponent from "@/components/ProductsComponent";
 import ImageSlider from "@/components/ImageSlider";
 
+export const metadata = {
+  title: "Best Web Development Mobile app Development and Digital marketing Company.",
+  description:
+    "Cyber Space Digital is a leading web design and development, digital marketing, graphic designing, advertising, and branding company based in India.",
+  alternates: {
+    canonical: "https://cyberspacedigital.in/",
+  },
+};
+
 const HomeTitle = () => {
   return (
     <div>
-    
       <ImageSlider />
 
       {/* Foreground Content */}
