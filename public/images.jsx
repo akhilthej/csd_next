@@ -31,7 +31,19 @@ import Srikar from "./images/ourproducts_contact.jpg";
 import AboutCover from "./images/aboutcover.webp";
 import ServicesCoverImage from "./images/ServicesCoverImage.png"
 
+import AdvertisingCoverHomeImage from "./images/SliderImages/AdvertisingCoverHomeImage.webp";
+import BrandingCoverHomeImage from "./images/SliderImages/BrandingCoverHomeImage.webp";
+import DigiatalMarketingCoverHomeImage from "./images/SliderImages/DigiatalMarketingCoverHomeImage.webp";
+import GraphicDesigningCoverHomeImage from "./images/SliderImages/GraphicDesigningCoverHomeImage.webp";
+import WebDevelopmentCoverHomeImage from "./images/SliderImages/WebDevelopmentCoverHomeImage.webp";
+
 export {
+  AdvertisingCoverHomeImage,
+  BrandingCoverHomeImage,
+  DigiatalMarketingCoverHomeImage,
+  GraphicDesigningCoverHomeImage,
+  WebDevelopmentCoverHomeImage,
+  
   DigitalMarketingImage,AboutCover,ServicesCoverImage,
   AdvertisingImage,WebDesigningCoverImage,GraphicDesigningCoverImage,
   BrandingImage,AdvertisitngCoverImage,BrandingCoverImage,

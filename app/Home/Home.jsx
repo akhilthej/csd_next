@@ -7,7 +7,7 @@ import {
   TimeManage,
   OntimeDelivery,
   HiringModel,
-  goodfirms,CSDLogo,
+  CSDLogo,
 } from "../../public/icons";
 import Image from "next/image";
 import {
@@ -21,48 +21,34 @@ import {
   FaGraduationCap,
 } from "react-icons/fa";
 import ProductsComponent from "@/components/ProductsComponent";
+import ImageSlider from "@/components/ImageSlider";
 
 const HomeTitle = () => {
   return (
     <div>
-      {/*section -1*/}
-      <section className="relative min-h-screen w-full overflow-hidden">
-        {/* Background Video */}
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute top-0 left-0 w-full h-full object-cover z-0 "
-        >
-          <source src="/HomeHero.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+    
+      <ImageSlider />
 
-        {/* Overlay for darker text visibility */}
-        <div className="absolute top-0 left-0 w-full h-full bg-black/30 z-10" />
+      {/* Foreground Content */}
+      <div className="relative z-20 flex items-center justify-center px-2 mt-1">
+        <div className="flex flex-col items-center justify-center text-center">
+          <p className="text-[14px] sm:text-[24px] font-bold leading-8 text-black cursor-default">
+            DESIGN . DEVELOP & DEPLOY
+          </p>
 
-        {/* Foreground Content */}
-        <div className="relative z-20 flex items-center justify-center min-h-screen px-2">
-          <div className="flex flex-col items-center justify-center text-center">
-            <p className="text-[14px] sm:text-[24px] font-bold leading-8 text-white cursor-default">
-              DESIGN . DEVELOP & DEPLOY
-            </p>
+          <div className=" w-screen h-px bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0 my-4" />
 
-            <div className=" w-screen h-px bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0 my-4" />
+          <h1 className="upanddown text-4xl sm:text-6xl lg:text-9xl font-extrabold text-transparent bg-gradient-to-r from-yellow-400 to-orange-600 bg-clip-text leading-tight tracking-tight font-display cursor-default whitespace-nowrap">
+            CYBER SPACE DIGITAL
+          </h1>
 
-            <h1 className="upanddown text-4xl sm:text-6xl lg:text-9xl font-extrabold text-transparent bg-gradient-to-r from-yellow-400 to-orange-600 bg-clip-text leading-tight tracking-tight font-display cursor-default whitespace-nowrap">
-              CYBER SPACE DIGITAL
-            </h1>
+          <div className=" w-screen h-px  bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0 my-4" />
 
-            <div className=" w-screen h-px  bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0 my-4" />
-
-            <p className="text-sm text-white cursor-default">
-              Take your brand online today for a global presence.
-            </p>
-          </div>
+          <p className="text-sm text-black cursor-default">
+            Take your brand online today for a global presence.
+          </p>
         </div>
-      </section>
+      </div>
 
       {/*section -2*/}
       <Services />
@@ -170,7 +156,6 @@ const HomeTitle = () => {
                 loading="lazy"
                 width={500}
                 height={400}
-         
               />
             </div>
           </div>
@@ -178,8 +163,7 @@ const HomeTitle = () => {
       </div>
 
       {/*section -7*/}
-      <ProductsComponent/>
- 
+      <ProductsComponent />
 
       {/*section -8*/}
       <section className="text-center mx-auto mb-12 lg:px-20">
