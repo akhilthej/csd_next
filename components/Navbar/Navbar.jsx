@@ -1386,7 +1386,7 @@ const Navbar = () => {
                     </div>
 
                     <div className="w-1/3 p-4">
-                      {moreLinks.slice(0, 3).map((link) => (
+                      {moreLinks.slice(0, 4).map((link) => (
                         <Link href={link.path} key={link.path}>
                           <div className="block px-4 py-2 text-[12px] text-black hover:bg-yellow-500 hover:text-white">
                             <div className="flex items-center">
@@ -1406,7 +1406,7 @@ const Navbar = () => {
                       ))}
                     </div>
                     <div className="w-1/3 p-4">
-                      {moreLinks.slice(3, 6).map((link) => (
+                      {moreLinks.slice(4, 8).map((link) => (
                         <Link href={link.path} key={link.path}>
                           <div className="block px-4 py-2 text-[12px] text-black hover:bg-yellow-500 hover:text-white">
                             <div className="flex items-center">
