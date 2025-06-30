@@ -642,7 +642,7 @@ const Navbar = () => {
       icon: faPhone,
     },
     {
-      path: "auth/login",
+      path: "/auth/login",
       title: "Login/Signup",
       description: "If your a customer or exisitng user please login.",
       icon: faBlog,

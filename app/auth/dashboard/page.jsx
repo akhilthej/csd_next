@@ -38,14 +38,23 @@ export default function DashboardPage() {
       </div>
 
       <h2 className="text-2xl font-bold text-blue-600 mb-1">Welcome, {user.name}</h2>
-      <p className="text-gray-600 mb-2">{user.email}</p>
+      <p className="text-gray-600 mb-2">({user.id}) {user.email}</p>
       <p className="text-gray-500">Phone: {user.phone_number}</p>
+       <p className="text-gray-500">Role: {user.role}</p>
 
-      <Link href="/auth/contactus">
-        <div className="mt-4 bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-6 rounded-lg transition">
-          Contact Us
-        </div>
-      </Link>
+      {user.role !== "customer" && (
+  <Link href="/auth/contactus">
+    <div className="mt-4 bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-6 rounded-lg transition">
+      Contact Us
+    </div>
+  </Link>
+)}
+
+<Link href="/auth/dashboard/services">
+    <div className="mt-4 bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-6 rounded-lg transition">
+      Services
+    </div>
+  </Link>
 
       <button
         onClick={logout}
